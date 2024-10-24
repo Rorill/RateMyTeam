@@ -11,7 +11,7 @@ class AngersPlayerFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $players = [
-            ['firstName' => 'Yahia', 'lastName' => 'Fofana', 'birthday' => '2000-08-21', 'Position' => 'Goal','Number' => 30],
+            ['firstName' => 'Donovan', 'lastName' => 'Leon', 'birthday' => '2000-08-21', 'Position' => 'Goal','Number' => 16],
             ['firstName' => 'Melvin', 'lastName'=> 'Zinga', 'birthday' => '2002-03-16', 'Position' => 'Goal','Number' => 16],
             ['firstName' => 'Oumar', 'lastName'=> 'Pona', 'birthday' => '2006-06-21', 'Position' => 'Goal','Number' => 40],
             ['firstName' => 'Carlens','lastName'=> 'Arcus', 'birthday' => '1996-06-28', 'Position' => 'Defender','Number' => 2],
@@ -37,7 +37,7 @@ class AngersPlayerFixtures extends Fixture
             ['firstName' => 'Farid', 'lastName' => 'El Melali', 'birthday' => '1997-07-13', 'Position' => 'Midfielder','Number' => 28],
             ['firstName' => 'Haris', 'lastName' => 'Belkebla', 'birthday' => '1994-01-28', 'Position' => 'Midfielder','Number' => 93],
             ['firstName' => 'Ibrahima', 'lastName' => 'Niane', 'birthday' => '1999-03-11', 'Position' => 'Forward','Number' => 7],
-            ['firstName' => 'Loïs', 'Diony' => 'Ould Khaled', 'birthday' => '1992-12-20', 'Position' => 'Forward','Number' => 9],
+            ['firstName' => 'Loïs', 'lastName' => 'Diony', 'birthday' => '1992-12-20', 'Position' => 'Forward','Number' => 9],
             ['firstName' => 'Sidiki', 'lastName' => 'Cherif', 'birthday' => '2006-12-15', 'Position' => 'Forward','Number' => 11],
             ['firstName' => 'Jim', 'lastName' => 'Allevinah', 'birthday' => '1995-02-27', 'Position' => 'Forward','Number' => 18],
             ['firstName' => 'Estéban', 'lastName' => 'Lepaul', 'birthday' => '2000-04-18', 'Position' => 'Forward','Number' => 19],
