@@ -38,18 +38,22 @@ class AuxerrePlayersFixtures extends Fixture
             ['firstName' => 'Himad', 'lastName' => 'Abdelli', 'birthday' => '1999-11-17', 'Position' => 'Midfielder','Number' => 10],
             ['firstName' => 'Hamed Junior', 'lastName' => 'Traore', 'birthday' => '2000-01-14', 'Position' => 'Midfielder','Number' => 25],
             ['firstName' => 'Kevin', 'lastName' => 'Danois', 'birthday' => '2004-06-28', 'Position' => 'Midfielder','Number' => 27],
-            ['firstName' => 'Nicolas', 'lastName' => 'Mercier', 'birthday' => '1987-04-15', 'Position' => 'Midfielder','Number' => 15],
-            ['firstName' => 'Justin', 'lastName' => 'Kalumba', 'birthday' => '2004-12-25', 'Position' => 'Midfielder','Number' => 17],
-            ['firstName' => 'Zinedine', 'lastName' => 'Ferhat', 'birthday' => '1993-03-01', 'Position' => 'Midfielder','Number' => 20],
+            ['firstName' => 'Nicolas', 'lastName' => 'Mercier', 'birthday' => '2003-01-30', 'Position' => 'Midfielder','Number' => 27],
+            ['firstName' => 'Elisha', 'lastName' => 'Owusu', 'birthday' => '1997-11-07', 'Position' => 'Midfielder','Number' => 42],
+            ['firstName' => 'Aristide', 'lastName' => 'Zossou', 'birthday' => '2005-06-14', 'Position' => 'Midfielder','Number' => 77],
+            ['firstName' => 'Rayan', 'lastName' => 'Raveloson', 'birthday' => '1997-01-16', 'Position' => 'Midfielder','Number' => 97],
+
 
 
             //Forward
-            ['firstName' => 'Ibrahima', 'lastName' => 'Niane', 'birthday' => '1999-03-11', 'Position' => 'Forward','Number' => 7],
-            ['firstName' => 'Loïs', 'lastName' => 'Diony', 'birthday' => '1992-12-20', 'Position' => 'Forward','Number' => 9],
-            ['firstName' => 'Sidiki', 'lastName' => 'Cherif', 'birthday' => '2006-12-15', 'Position' => 'Forward','Number' => 11],
-            ['firstName' => 'Jim', 'lastName' => 'Allevinah', 'birthday' => '1995-02-27', 'Position' => 'Forward','Number' => 18],
-            ['firstName' => 'Estéban', 'lastName' => 'Lepaul', 'birthday' => '2000-04-18', 'Position' => 'Forward','Number' => 19],
-            ['firstName' => 'Bamba', 'lastName' => 'Dieng', 'birthday' => '2000-03-23', 'Position' => 'Forward','Number' => 99],
+            ['firstName' => 'Theo', 'lastName' => 'Bair', 'birthday' => '1999-08-27', 'Position' => 'Forward','Number' => 9],
+            ['firstName' => 'Gaetan', 'lastName' => 'Perrin', 'birthday' => '1996-06-07', 'Position' => 'Forward','Number' => 10],
+            ['firstName' => 'Eros', 'lastName' => 'Maddy', 'birthday' => '2001-02-05', 'Position' => 'Forward','Number' => 11],
+            ['firstName' => 'Lassine', 'lastName' => 'Sinayoko', 'birthday' => '1999-12-08', 'Position' => 'Forward','Number' => 17],
+            ['firstName' => 'Florian', 'lastName' => 'Aye', 'birthday' => '1997-01-19', 'Position' => 'Forward','Number' => 19],
+            ['firstName' => 'Lasso', 'lastName' => 'Coulibaly', 'birthday' => '2002-10-19', 'Position' => 'Forward','Number' => 21],
+            ['firstName' => 'Tidiane', 'lastName' => 'Diawara', 'birthday' => '2005-04-29', 'Position' => 'Forward','Number' => 22],
+            ['firstName' => 'Ado', 'lastName' => 'Onaiwu', 'birthday' => '1995-11-08', 'Position' => 'Forward','Number' => 45],
         ];
 
         foreach ($players as $playerData) {
