@@ -11,12 +11,9 @@ class AngersPlayerFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $players = [
-            ['firstName' => 'Donovan', 'lastName' => 'Leon', 'birthday' => '1992-11-03', 'Position' => 'Goal','Number' => 16],
-            ['firstName' => 'Tom', 'lastName'=> 'Negrel', 'birthday' => '2003-04-13', 'Position' => 'Goal','Number' => 30],
-            ['firstName' => 'Raphael', 'lastName'=> 'Adiceam', 'birthday' => '1990-07-03', 'Position' => 'Goal','Number' => 37],
-            ['firstName' => 'Theo','lastName'=> 'De Percin', 'birthday' => '2001-02-02', 'Position' => 'Goal','Number' => 40],
-            ['firstName' => 'Gabriel', 'lastName'=> 'Osho', 'birthday' => '1998-08-14', 'Position' => 'Defender','Number' => 3],
-            ['firstName' => 'Jubal', 'lastName'=> 'Rocha Mendes Junior', 'birthday' => '1993-08-29', 'Position' => 'Defender','Number' => 4],
+            ['firstName' => 'Melvin', 'lastName' => 'Zinga', 'birthday' => '2002-03-16', 'Position' => 'Goal','Number' => 16],
+            ['firstName' => 'Yahia', 'lastName'=> 'Fofana', 'birthday' => '2000-08-21', 'Position' => 'Goal','Number' => 30],
+            ['firstName' => 'Oumar', 'lastName'=> 'Pona', 'birthday' => '2006-06-21', 'Position' => 'Goal','Number' => 40],
             ['firstName' => 'Théo', 'lastName'=> 'Pellenard', 'birthday' => '1994-03-04', 'Position' => 'Defender','Number' => 5],
             ['firstName' => 'Saad', 'lastName'=> 'Agouzoul', 'birthday' => '1997-08-10', 'Position' => 'Defender','Number' => 6],
             ['firstName' => 'Gideon', 'lastName' => 'Mensah', 'birthday' => '1997-07-18', 'Position' => 'Defender','Number' => 14],
