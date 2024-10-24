@@ -23,6 +23,12 @@ class MonacoPlayers
     #[ORM\Column(type: Types::DATE_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Position = null;
+
+    #[ORM\Column]
+    private ?int $Number = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +66,30 @@ class MonacoPlayers
     public function setBirthday(\DateTimeInterface $birthday): static
     {
         $this->birthday = $birthday;
+
+        return $this;
+    }
+
+    public function getPosition(): ?string
+    {
+        return $this->Position;
+    }
+
+    public function setPosition(string $Position): static
+    {
+        $this->Position = $Position;
+
+        return $this;
+    }
+
+    public function getNumber(): ?int
+    {
+        return $this->Number;
+    }
+
+    public function setNumber(int $Number): static
+    {
+        $this->Number = $Number;
 
         return $this;
     }
