@@ -11,12 +11,15 @@ class AngersPlayerFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $players = [
-            ['firstName' => 'Donovan', 'lastName' => 'Leon', 'birthday' => '2000-08-21', 'Position' => 'Goal','Number' => 16],
-            ['firstName' => 'Melvin', 'lastName'=> 'Zinga', 'birthday' => '2002-03-16', 'Position' => 'Goal','Number' => 16],
-            ['firstName' => 'Oumar', 'lastName'=> 'Pona', 'birthday' => '2006-06-21', 'Position' => 'Goal','Number' => 40],
-            ['firstName' => 'Carlens','lastName'=> 'Arcus', 'birthday' => '1996-06-28', 'Position' => 'Defender','Number' => 2],
-            ['firstName' => 'Jacques', 'lastName'=> 'Ekomié', 'birthday' => '2003-08-19', 'Position' => 'Defender','Number' => 3],
-            ['firstName' => 'Marius', 'lastName' => 'Courcouli', 'birthday' => '2007-01-01', 'Position' => 'Defender','Number' => 5],
+            ['firstName' => 'Donovan', 'lastName' => 'Leon', 'birthday' => '1992-11-03', 'Position' => 'Goal','Number' => 16],
+            ['firstName' => 'Tom', 'lastName'=> 'Negrel', 'birthday' => '2003-04-13', 'Position' => 'Goal','Number' => 30],
+            ['firstName' => 'Raphael', 'lastName'=> 'Adiceam', 'birthday' => '1990-07-03', 'Position' => 'Goal','Number' => 37],
+            ['firstName' => 'Theo','lastName'=> 'De Percin', 'birthday' => '2001-02-02', 'Position' => 'Goal','Number' => 40],
+            ['firstName' => 'Gabriel', 'lastName'=> 'Osho', 'birthday' => '1998-08-14', 'Position' => 'Defender','Number' => 3],
+            ['firstName' => 'Jubal', 'lastName'=> 'Rocha Mendes Junior', 'birthday' => '1993-08-29', 'Position' => 'Defender','Number' => 4],
+            ['firstName' => 'Théo', 'lastName'=> 'Pellenard', 'birthday' => '1994-03-04', 'Position' => 'Defender','Number' => 5],
+            ['firstName' => 'Saad', 'lastName'=> 'Agouzoul', 'birthday' => '1997-08-10', 'Position' => 'Defender','Number' => 6],
+            ['firstName' => 'Gideon', 'lastName' => 'Mensah', 'birthday' => '1997-07-18', 'Position' => 'Defender','Number' => 14],
             ['firstName' => 'Jordan', 'lastName' => 'Lefort', 'birthday' => '1993-08-09', 'Position' => 'Defender','Number' => 21],
             ['firstName' => 'Cédric', 'lastName' => 'Houtondji', 'birthday' => '1994-01-19', 'Position' => 'Defender','Number' => 22],
             ['firstName' => 'Abdoulaye', 'lastName' => 'Bamba', 'birthday' => '1990-04-25', 'Position' => 'Defender','Number' => 25],
