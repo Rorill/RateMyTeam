@@ -11,9 +11,12 @@ class AngersPlayerFixtures extends Fixture
     public function load(ObjectManager $manager): void
     {
         $players = [
+            // goalkeepers
             ['firstName' => 'Melvin', 'lastName' => 'Zinga', 'birthday' => '2002-03-16', 'Position' => 'Goal','Number' => 16],
             ['firstName' => 'Yahia', 'lastName'=> 'Fofana', 'birthday' => '2000-08-21', 'Position' => 'Goal','Number' => 30],
             ['firstName' => 'Oumar', 'lastName'=> 'Pona', 'birthday' => '2006-06-21', 'Position' => 'Goal','Number' => 40],
+
+            // Defenders
             ['firstName' => 'Théo', 'lastName'=> 'Pellenard', 'birthday' => '1994-03-04', 'Position' => 'Defender','Number' => 5],
             ['firstName' => 'Saad', 'lastName'=> 'Agouzoul', 'birthday' => '1997-08-10', 'Position' => 'Defender','Number' => 6],
             ['firstName' => 'Gideon', 'lastName' => 'Mensah', 'birthday' => '1997-07-18', 'Position' => 'Defender','Number' => 14],
@@ -23,6 +26,8 @@ class AngersPlayerFixtures extends Fixture
             ['firstName' => 'Florent', 'lastName' => 'Hanin', 'birthday' => '1990-02-04', 'Position' => 'Defender','Number' => 26],
             ['firstName' => 'Ousmane', 'lastName' => 'Camara', 'birthday' => '2003-03-06', 'Position' => 'Defender','Number' => 29],
             ['firstName' => 'Yacine', 'lastName' => 'Gaya', 'birthday' => '2004-12-15', 'Position' => 'Defender','Number' => 70],
+
+            // Midfielders
             ['firstName' => 'Jean-Eudes', 'lastName' => 'Aholou', 'birthday' => '1994-03-20', 'Position' => 'Midfielder','Number' => 6],
             ['firstName' => 'Joseph', 'lastName' => 'Lopy', 'birthday' => '1992-03-15', 'Position' => 'Midfielder','Number' => 6],
             ['firstName' => 'Himad', 'lastName' => 'Abdelli', 'birthday' => '1999-11-17', 'Position' => 'Midfielder','Number' => 10],
@@ -36,6 +41,8 @@ class AngersPlayerFixtures extends Fixture
             ['firstName' => 'Lilian', 'lastName' => 'Raolisoa', 'birthday' => '2000-06-16', 'Position' => 'Midfielder','Number' => 27],
             ['firstName' => 'Farid', 'lastName' => 'El Melali', 'birthday' => '1997-07-13', 'Position' => 'Midfielder','Number' => 28],
             ['firstName' => 'Haris', 'lastName' => 'Belkebla', 'birthday' => '1994-01-28', 'Position' => 'Midfielder','Number' => 93],
+
+            // Forwards
             ['firstName' => 'Ibrahima', 'lastName' => 'Niane', 'birthday' => '1999-03-11', 'Position' => 'Forward','Number' => 7],
             ['firstName' => 'Loïs', 'lastName' => 'Diony', 'birthday' => '1992-12-20', 'Position' => 'Forward','Number' => 9],
             ['firstName' => 'Sidiki', 'lastName' => 'Cherif', 'birthday' => '2006-12-15', 'Position' => 'Forward','Number' => 11],
