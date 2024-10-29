@@ -16,7 +16,7 @@ class MonacoPlayersFixtures extends Fixture
 
             // Goalkeepers
             ['firstName' => 'Radoslaw', 'lastName' => 'Majecki', 'birthday' => '1999-11-16', 'Position' => 'Goal','Number' => 1],
-            ['firstName' => 'Philipp', 'lastName'=> 'Köhn', 'birthday' => '1998-04-02', 'Position' => 'Goal','Number' => g],
+            ['firstName' => 'Philipp', 'lastName'=> 'Köhn', 'birthday' => '1998-04-02', 'Position' => 'Goal','Number' => 16],
             ['firstName' => 'Jules', 'lastName'=> 'Stawiecki', 'birthday' => '2007-04-10', 'Position' => 'Goal','Number' => 40],
             ['firstName' => 'Yann', 'lastName'=> 'Lienard', 'birthday' => '2003-03-16', 'Position' => 'Goal','Number' => 50],
 
@@ -34,7 +34,7 @@ class MonacoPlayersFixtures extends Fixture
             ['firstName' => 'Samuel Kondi', 'lastName' => 'Nibombe', 'birthday' => '2007-08-15', 'Position' => 'Defender','Number' => 44],
             ['firstName' => 'Aurélien', 'lastName' => 'Platret', 'birthday' => '2003-02-20', 'Position' => 'Defender','Number' => 46],
 
-                // Midfielders
+            // Midfielders
             ['firstName' => 'Denis', 'lastName' => 'Zakaria', 'birthday' => '1996-11-20', 'Position' => 'Midfielder','Number' => 6],
             ['firstName' => 'Eliesse', 'lastName' => 'Ben Seghir', 'birthday' => '2005-02-16', 'Position' => 'Midfielder','Number' => 7],
             ['firstName' => 'Eliot', 'lastName' => 'Matazo', 'birthday' => '2002-02-15', 'Position' => 'Midfielder','Number' => 8],
@@ -48,7 +48,7 @@ class MonacoPlayersFixtures extends Fixture
             ['firstName' => 'Soungoutou', 'lastName' => 'Magassa', 'birthday' => '2003-10-08', 'Position' => 'Midfielder','Number' => 88],
 
 
-                // Forwards
+            // Forwards
             ['firstName' => 'Folarin', 'lastName' => 'Balogun', 'birthday' => '2001-07-03', 'Position' => 'Forward','Number' => 9],
             ['firstName' => 'Takumi', 'lastName' => 'Minamino', 'birthday' => '1995-01-16', 'Position' => 'Forward','Number' => 18],
             ['firstName' => 'George', 'lastName' => 'Ilenikhena', 'birthday' => '2006-08-18', 'Position' => 'Forward','Number' => 21],
