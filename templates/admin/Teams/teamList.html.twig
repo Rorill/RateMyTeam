@@ -1,0 +1,34 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des Équipes{% endblock %}
+
+{% block body %}
+    <h1>Liste des Équipes</h1>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Entraîneur</th>
+            <th>Nombre de Joueurs</th>
+            <th>Actions</th> {# Ajoutez une colonne pour les actions #}
+        </tr>
+        </thead>
+        <tbody>
+        {% for team in teams %}
+            <tr>
+                <td>{{ team.id }}</td>
+                <td>{{ team.displayName }}</td>
+                <td>{{ team.coach }}</td>
+                <td>{{ team.players | length }}</td>
+                <td>
+                    <a href="{{ path('admin_team_players', { id: team.id }) }}" class="btn">Gérer l'équipe</a> {# Bouton pour gérer l'équipe #}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    <a href="{{ path('admin_dashboard') }}">Retour au Dashboard</a>
+{% endblock %}

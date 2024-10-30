@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Dashboard Admin{% endblock %}
+
+{% block body %}
+    <div class="dashboard-container">
+        <h1 class="dashboard-title">Tableau de Bord Administratif</h1>
+
+        <section class="dashboard-section">
+            <h2>Vue d’ensemble</h2>
+            <div class="stats-grid">
+                <div class="stat-card">Nombre d'utilisateurs: {{ userCount }}</div>
+                <div class="stat-card">Nombre d'équipes: {{ teamCount }}</div>
+                <div class="stat-card">Joueurs Inscrits dans la base de donnée: {{ playerCount }}</div>
+            </div>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Gestion des Utilisateurs</h2>
+            <a href="{{ path('admin_users') }}" class="dashboard-link">Voir tous les utilisateurs</a>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Gestion des Équipes</h2>
+            <a href="{{ path('admin_team_list') }}" class="btn-team-list">Voir toutes les équipes</a>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Gestion des Joueurs</h2>
+            <a href="{{ path('home') }}" class="dashboard-link">Voir tous les joueurs</a>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Modération des Commentaires</h2>
+            <a href="{{ path('home') }}" class="dashboard-link">Voir tous les commentaires</a>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Rapports et Statistiques</h2>
+            <a href="{{ path('home') }}" class="dashboard-link">Voir les rapports</a>
+        </section>
+
+        <section class="dashboard-section">
+            <h2>Paramètres du Site</h2>
+            <a href="{{ path('home') }}" class="dashboard-link">Gérer les paramètres</a>
+        </section>
+    </div>
+{% endblock %}
