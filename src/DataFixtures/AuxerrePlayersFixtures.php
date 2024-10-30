@@ -1,15 +1,17 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\AuxerrePlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
-
-class AuxerrePlayersFixtures extends Fixture
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+class AuxerrePlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $AJA = $this->getReference('AJA');
+
         $players = [
             // goals
             ['firstName' => 'Donovan', 'lastName' => 'Leon', 'birthday' => '1992-11-03', 'Position' => 'Goal','Number' => 16],
@@ -57,15 +59,26 @@ class AuxerrePlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new AuxerrePlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($AJA);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }
+

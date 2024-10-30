@@ -1,15 +1,17 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\NicePlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class NicePlayersFixtures extends Fixture
+class NicePlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $Nice = $this->getReference('OGCN');
         $players = [
 
 
@@ -56,15 +58,25 @@ class NicePlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new NicePlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($Nice);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }

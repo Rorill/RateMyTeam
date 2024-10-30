@@ -1,15 +1,18 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\ReimsPlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class ReimsPlayersFixtures extends Fixture
+
+class ReimsPlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $Reims = $this->getReference('SRRC');
         $players = [
 
 
@@ -25,7 +28,7 @@ class ReimsPlayersFixtures extends Fixture
             // Defenders
             ['firstName' => 'Joseph','lastName'=> 'Okumu', 'birthday' => '1997-05-26', 'Position' => 'Defender','Number' => 2],
             ['firstName' => 'Maxime', 'lastName'=> 'Busi', 'birthday' => '1999-10-14', 'Position' => 'Defender','Number' => 4],
-            ['firstName' => 'Emmanuel', 'lastName' => 'Agbadou', 'birthday' => '1997v-06-17', 'Position' => 'Defender','Number' => 5],
+            ['firstName' => 'Emmanuel', 'lastName' => 'Agbadou', 'birthday' => '1997-06-17', 'Position' => 'Defender','Number' => 5],
             ['firstName' => 'Sergio', 'lastName' => 'Akieme ', 'birthday' => '1997-12-16', 'Position' => 'Defender','Number' => 18],
             ['firstName' => 'Cédric', 'lastName' => 'Kipre', 'birthday' => '1996-12-09', 'Position' => 'Defender','Number' => 21],
             ['firstName' => 'Aurélio', 'lastName' => 'Buta', 'birthday' => '1997-02-10', 'Position' => 'Defender','Number' => 23],
@@ -61,15 +64,25 @@ class ReimsPlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new ReimsPlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($Reims);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }

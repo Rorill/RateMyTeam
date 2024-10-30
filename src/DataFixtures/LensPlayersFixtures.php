@@ -1,16 +1,18 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\HacPlayers;
-use App\Entity\LensPlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class LensPlayersFixtures extends Fixture
+class LensPlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $Lens = $this->getReference('RCL');
+
         $players = [
             // goals
             ['firstName' => 'Denis', 'lastName'=> 'Petric', 'birthday' => '1988-05-24', 'Position' => 'Goal','Number' => 1],
@@ -63,15 +65,25 @@ class LensPlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new LensPlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($Lens);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }

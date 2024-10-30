@@ -1,15 +1,30 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\AssePlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
-
-class ASSEPlayersFixtures extends Fixture
+use Symfony\Component\Validator\Constraints\DateTime;
+use Monolog\DateTimeImmutable;
+use Doctrine\DBAL\Exception;
+use RuntimeException;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
+class ASSEPlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $asseteam = $this->getReference('ASSE');
+        function dateStringToDateTimeInterface(string $dateString): DateTimeInterface
+        {
+            $dateTime = DateTimeImmutable::createFromFormat('Y-m-d', $dateString);
+
+            if ($dateTime === false) {
+                throw new RuntimeException("Failed to parse date string {$dateString}");
+            }
+
+            return $dateTime;
+        }
         $players = [
 
             // Goalkeepers
@@ -42,7 +57,7 @@ class ASSEPlayersFixtures extends Fixture
             ['firstName' => 'Igor', 'lastName' => 'Miladinovic', 'birthday' => '2003-06-08', 'Position' => 'Midfielder','Number' => 28],
             ['firstName' => 'Aïmen', 'lastName' => 'Moueffek', 'birthday' => '2001-04-09', 'Position' => 'Midfielder','Number' => 29],
             ['firstName' => 'Cheikh', 'lastName' => 'Fall', 'birthday' => '2004-02-25', 'Position' => 'Midfielder','Number' => 31],
-            ['firstName' => 'Antoine', 'lastName' => 'Gauthier', 'birthday' => '2O04-07-01', 'Position' => 'Midfielder','Number' => 34],
+            ['firstName' => 'Antoine', 'lastName' => 'Gauthier', 'birthday' => '2004-07-01', 'Position' => 'Midfielder','Number' => 34],
             ['firstName' => 'Marwann', 'lastName' => 'Nzuzi', 'birthday' => '2004-05-16', 'Position' => 'Midfielder','Number' => 34],
             ['firstName' => 'Jebryl', 'lastName' => 'Sahraoui', 'birthday' => '2005-02-04', 'Position' => 'Midfielder','Number' => 36],
             ['firstName' => 'Mathis', 'lastName' => 'Amougou', 'birthday' => '2006-01-18', 'Position' => 'Midfielder','Number' => 37],
@@ -60,15 +75,31 @@ class ASSEPlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new AssePlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
-            $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
+
+            $date = \DateTime::createFromFormat('Y-m-d', $playerData['birthday']);
+            if ($date !== false) {
+                $player->setBirthday($date);
+            } else {
+                // Handle the error here
+                throw new Exception('Invalid date format: ' . $playerData['birthday']);
+            }
+
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($asseteam);
+
             $manager->persist($player);
         }
 
         $manager->flush();
     }
+    public function getDependencies(): array
+{
+    return [
+        Ligue1TeamsFixtures::class,
+    ];
+}
 }

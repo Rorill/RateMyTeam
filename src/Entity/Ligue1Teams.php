@@ -33,9 +33,30 @@ class Ligue1Teams
     #[ORM\OneToMany(targetEntity: User::class, mappedBy: 'SelectedTeam')]
     private Collection $users;
 
+    /**
+     * @var Collection<int, Game>
+     */
+    #[ORM\OneToMany(targetEntity: Game::class, mappedBy: 'TeamHome')]
+    private Collection $HomeGames;
+
+    /**
+     * @var Collection<int, Game>
+     */
+    #[ORM\OneToMany(targetEntity: Game::class, mappedBy: 'TeamAway')]
+    private Collection $AwayGames;
+
+    /**
+     * @var Collection<int, Players>
+     */
+    #[ORM\OneToMany(targetEntity: Players::class, mappedBy: 'team')]
+    private Collection $players;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
+        $this->HomeGames = new ArrayCollection();
+        $this->AwayGames = new ArrayCollection();
+        $this->players = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -115,6 +136,96 @@ class Ligue1Teams
             // set the owning side to null (unless already changed)
             if ($user->getSelectedTeam() === $this) {
                 $user->setSelectedTeam(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Game>
+     */
+    public function getHomeGames(): Collection
+    {
+        return $this->HomeGames;
+    }
+
+    public function addGame(Game $game): static
+    {
+        if (!$this->HomeGames->contains($game)) {
+            $this->HomeGames->add($game);
+            $game->setTeamHome($this);
+        }
+
+        return $this;
+    }
+
+    public function removeGame(Game $game): static
+    {
+        if ($this->HomeGames->removeElement($game)) {
+            // set the owning side to null (unless already changed)
+            if ($game->getTeamHome() === $this) {
+                $game->setTeamHome(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Game>
+     */
+    public function getAwayGames(): Collection
+    {
+        return $this->AwayGames;
+    }
+
+    public function addAwayGame(Game $awayGame): static
+    {
+        if (!$this->AwayGames->contains($awayGame)) {
+            $this->AwayGames->add($awayGame);
+            $awayGame->setTeamAway($this);
+        }
+
+        return $this;
+    }
+
+    public function removeAwayGame(Game $awayGame): static
+    {
+        if ($this->AwayGames->removeElement($awayGame)) {
+            // set the owning side to null (unless already changed)
+            if ($awayGame->getTeamAway() === $this) {
+                $awayGame->setTeamAway(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Players>
+     */
+    public function getPlayers(): Collection
+    {
+        return $this->players;
+    }
+
+    public function addPlayer(Players $player): static
+    {
+        if (!$this->players->contains($player)) {
+            $this->players->add($player);
+            $player->setTeam($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayer(Players $player): static
+    {
+        if ($this->players->removeElement($player)) {
+            // set the owning side to null (unless already changed)
+            if ($player->getTeam() === $this) {
+                $player->setTeam(null);
             }
         }
 

@@ -1,15 +1,17 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\MonacoPlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class MonacoPlayersFixtures extends Fixture
+class MonacoPlayersFixtures extends Fixture implements DependentFixtureInterface
 {
     public function load(ObjectManager $manager): void
     {
+        $Monaco = $this->getReference('ASM');
         $players = [
 
 
@@ -58,15 +60,25 @@ class MonacoPlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new MonacoPlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($Monaco);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }

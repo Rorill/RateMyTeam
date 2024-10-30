@@ -1,15 +1,19 @@
 <?php
 namespace App\DataFixtures;
 
-use App\Entity\BrestPlayers;
+use App\Entity\Players;
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Persistence\ObjectManager;
 use phpDocumentor\Reflection\Types\Integer;
+use Doctrine\Common\DataFixtures\DependentFixtureInterface;
 
-class BrestPlayersFixtures extends Fixture
+class BrestPlayersFixtures extends Fixture implements DependentFixtureInterface
 {
+
     public function load(ObjectManager $manager): void
     {
+        $brest = $this->getReference('Brest');
+
         $players = [
             // goals
             ['firstName' => 'Grégoire', 'lastName'=> 'Coudert', 'birthday' => '1999-04-03', 'Position' => 'Goal','Number' => 30],
@@ -55,15 +59,26 @@ class BrestPlayersFixtures extends Fixture
         ];
 
         foreach ($players as $playerData) {
-            $player = new BrestPlayers();
+            $player = new Players();
             $player->setFirstName($playerData['firstName']);
             $player->setLastName($playerData['lastName']);
             $player->setBirthday(new \DateTimeImmutable($playerData['birthday']));
             $player->setPosition($playerData['Position']);
             $player->setNumber($playerData['Number']);
+            $player->setTeam($brest);
+
             $manager->persist($player);
         }
 
+
         $manager->flush();
     }
+    public function getDependencies(): array
+    {
+        return [
+            Ligue1TeamsFixtures::class,
+        ];
+    }
+
 }
+

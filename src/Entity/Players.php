@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\MonacoPlayersRepository;
+use App\Repository\PlayersRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: MonacoPlayersRepository::class)]
-class MonacoPlayers
+#[ORM\Entity(repositoryClass: PlayersRepository::class)]
+class Players
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -15,19 +15,23 @@ class MonacoPlayers
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $FirstName = null;
+    private ?string $firstName = null;
 
     #[ORM\Column(length: 255)]
     private ?string $LastName = null;
 
-    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $Position = null;
+    private ?string $position = null;
 
     #[ORM\Column]
-    private ?int $Number = null;
+    private ?int $number = null;
+
+    #[ORM\ManyToOne(inversedBy: 'players')]
+    #[ORM\JoinColumn(nullable: false)]
+    private ?Ligue1Teams $team = null;
 
     public function getId(): ?int
     {
@@ -36,12 +40,12 @@ class MonacoPlayers
 
     public function getFirstName(): ?string
     {
-        return $this->FirstName;
+        return $this->firstName;
     }
 
-    public function setFirstName(string $FirstName): static
+    public function setFirstName(string $firstName): static
     {
-        $this->FirstName = $FirstName;
+        $this->firstName = $firstName;
 
         return $this;
     }
@@ -72,24 +76,36 @@ class MonacoPlayers
 
     public function getPosition(): ?string
     {
-        return $this->Position;
+        return $this->position;
     }
 
-    public function setPosition(string $Position): static
+    public function setPosition(string $position): static
     {
-        $this->Position = $Position;
+        $this->position = $position;
 
         return $this;
     }
 
     public function getNumber(): ?int
     {
-        return $this->Number;
+        return $this->number;
     }
 
-    public function setNumber(int $Number): static
+    public function setNumber(int $number): static
     {
-        $this->Number = $Number;
+        $this->number = $number;
+
+        return $this;
+    }
+
+    public function getTeam(): ?Ligue1Teams
+    {
+        return $this->team;
+    }
+
+    public function setTeam(?Ligue1Teams $team): static
+    {
+        $this->team = $team;
 
         return $this;
     }
