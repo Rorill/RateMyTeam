@@ -1,14 +1,38 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Éditer le joueur : {{ player.firstName }} {{ player.lastName }}{% endblock %}
-
 {% block body %}
-    <h1>Éditer le joueur : {{ player.firstName }} {{ player.lastName }}</h1>
+    <div class="edit-player-container">
+        <h1 class="page-title">Édition du Joueur</h1>
+        <h2>{{ player.firstName }} {{ player.lastName }}</h2>
+        <form method="post" class="edit-player-form">
+            {{ form_start(form) }}
 
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    <button class="btn">Enregistrer</button>
-    {{ form_end(form) }}
+            <div class="form-group">
+                {{ form_label(form.firstName, 'Prénom') }}
+                {{ form_widget(form.firstName, { 'attr': {'class': 'form-control'} }) }}
+            </div>
 
-    <a href="{{ path('admin_team_players', {'id': player.team.id}) }}" class="btn back-btn">Retour à la liste des joueurs</a>
+            <div class="form-group">
+                {{ form_label(form.lastName, 'Nom') }}
+                {{ form_widget(form.lastName, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.position, 'Poste') }}
+                {{ form_widget(form.position, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+
+            <div class="form-group">
+                {{ form_label(form.birthday, 'Date de naissance') }}
+                {{ form_widget(form.birthday, { 'attr': {'class': 'form-control'} }) }}
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn-save">Enregistrer</button>
+                <a href="{{ path('admin_team_players', { id: player.Team.id }) }}" class="btn-cancel">Annuler</a>
+            </div>
+
+            {{ form_end(form) }}
+        </form>
+    </div>
 {% endblock %}

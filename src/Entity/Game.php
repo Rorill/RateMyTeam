@@ -31,6 +31,16 @@ class Game
     #[ORM\Column(nullable: true)]
     private ?int $ScoreAway = null;
 
+    #[ORM\Column]
+    private ?int $matchday = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $stage = null;
+
+    #[ORM\Column]
+    private ?int $apiMatchId = null;
+
+
     public function getId(): ?int
     {
         return $this->id;
@@ -95,6 +105,43 @@ class Game
 
         return $this;
     }
+
+    public function getMatchday(): ?int
+    {
+        return $this->matchday;
+    }
+
+    public function setMatchday(int $matchday): static
+    {
+        $this->matchday = $matchday;
+
+        return $this;
+    }
+
+    public function getStage(): ?string
+    {
+        return $this->stage;
+    }
+
+    public function setStage(string $stage): static
+    {
+        $this->stage = $stage;
+
+        return $this;
+    }
+
+    public function getApiMatchId(): ?int
+    {
+        return $this->apiMatchId;
+    }
+
+    public function setApiMatchId(int $apiMatchId): static
+    {
+        $this->apiMatchId = $apiMatchId;
+
+        return $this;
+    }
+
 
 
 }

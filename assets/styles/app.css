@@ -1,329 +1,6 @@
-/* homepage Style */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    color: #333;
-    background-color: #f4f4f9;
-    line-height: 1.6;
-    padding: 20px;
-}
-
-header {
-    text-align: center;
-    padding: 20px;
-    background-color: #004d40;
-    color: white;
-}
-
-header h1 {
-    font-size: 2.5rem;
-}
-
-main {
-    max-width: 900px;
-    margin: 20px auto;
-    padding: 20px;
-}
-
-section {
-    margin-bottom: 40px;
-}
-
-section h2 {
-    color: #004d40;
-    font-size: 1.8rem;
-    margin-bottom: 15px;
-}
-
-section p {
-    font-size: 1rem;
-    margin-bottom: 10px;
-}
-
-ul {
-    list-style-type: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-}
-
-li {
-    margin-bottom: 8px;
-}
-
-footer {
-    text-align: center;
-    padding: 15px 0;
-    background-color: #004d40;
-    color: white;
-    margin-top: 20px;
-    font-size: 0.9rem;
-}
-
-footer p {
-    margin: 0;
-}
-
-.cta-button {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff5722;
-    color: white;
-    font-weight: bold;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background 0.3s;
-    margin-top: 20px;
-}
-
-.cta-button:hover {
-    background-color: #e64a19;
-}
-
-/* end of homepage style */
-
-
-/* registration form style */
-
-/* Style de la page de formulaire */
-.form-container {
-    max-width: 500px;
-    margin: 3rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.form-container h1 {
-    font-size: 1.8rem;
-    color: #003366;
-    text-align: center;
-    margin-bottom: 1.5rem;
-}
-
-.form-input,
-.form-select {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1rem;
-    border: 1px solid #cccccc;
-    border-radius: 5px;
-    margin-bottom: 1rem;
-    transition: border-color 0.3s;
-}
-
-.form-input:focus,
-.form-select:focus {
-    outline: none;
-    border-color: #003366;
-}
-
-.form-label {
-    font-size: 1rem;
-    color: #333333;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-.btn {
-    width: 100%;
-    padding: 0.8rem;
-    font-size: 1.1rem;
-    color: #ffffff;
-    background-color: #003366;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-    margin-top: 1rem;
-}
-
-.btn:hover {
-    background-color: #0055a5;
-}
-
-.form-message {
-    color: #cc0000;
-    font-size: 0.9rem;
-    margin-top: -0.8rem;
-    margin-bottom: 1rem;
-    display: block;
-    text-align: left;
-}
-
-
-/* end of registration form style */
-
-/* admin Dashnoard start style */
-
-.dashboard-container {
-    max-width: 1200px;
-    margin: 2rem auto;
-    padding: 2rem;
-    background-color: #ffffff;
-    border-radius: 8px;
-}
-
-.dashboard-title {
-    font-size: 2rem;
-    color: #003366;
-    margin-bottom: 1.5rem;
-    text-align: center;
-}
-
-.dashboard-section {
-    margin-top: 2rem;
-}
-
-.dashboard-section h2 {
-    font-size: 1.5rem;
-    color: #003366;
-    margin-bottom: 1rem;
-}
-
-.dashboard-link {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: #003366;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.dashboard-link:hover {
-    background-color: #0055a5;
-}
-
-.stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-}
-
-.stat-card {
-    padding: 1rem;
-    background-color: #f7f7f7;
-    border-radius: 5px;
-    text-align: center;
-    font-size: 1.2rem;
-}
-
-/* end of dashboard admin style */
-
-
-/* user management style */
-.user-form {
-    background-color: #f4f4f4;
-    border-radius: 8px;
-    padding: 25px;
-    margin: 25px 0;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
-}
-
-/* Styles pour les labels des formulaires */
-.user-form label {
-    font-weight: bold;
-    margin-bottom: 8px;
-    display: block;
-}
-
-/* Styles pour les champs de saisie dans les formulaires */
-.user-form input[type="email"],
-.user-form input[type="password"],
-.user-form select {
-    width: 100%;
-    padding: 12px;
-    margin-bottom: 18px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-
-/* Styles pour le bouton d'envoi */
-.user-form button {
-    background-color: #28a745;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 12px 20px;
-    cursor: pointer;
-}
-
-.user-form button:hover {
-    background-color: #218838;
-}
-
-/* Styles pour les messages d'erreur */
-.error-message {
-    color: red;
-    margin-top: 12px;
-}
-
-/* Styles pour le lien de retour */
-.user-form a {
-    display: inline-block;
-    margin-top: 20px;
-    color: #007bff;
-    text-decoration: none;
-}
-
-.user-form a:hover {
-    text-decoration: underline;
-}
-
-/* Styles pour le tableau de gestion des utilisateurs */
-.user-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-}
-
-.user-table th,
-.user-table td {
-    padding: 10px;
-    text-align: left;
-    border: 1px solid #ccc;
-}
-
-.user-table th {
-    background-color: #007bff;
-    color: white;
-}
-.header-container {
-    display: flex;
-    justify-content: space-between; /* Espace entre le titre et le bouton */
-    align-items: center; /* Centrer verticalement */
-    margin-bottom: 20px; /* Espacement sous le conteneur */
-}
-
-.btn-back {
-    padding: 10px 20px;
-    background-color: #007bff;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-}
-
-.btn-back:hover {
-    background-color: #0056b3;
-}
-
-
-/* end of user management style */
-
-
-/* Team management style */
-
 /* styles.css */
 
-/* Général */
+/* Styles généraux */
 body {
     font-family: Arial, sans-serif;
     background-color: #f8f9fa;
@@ -331,69 +8,223 @@ body {
     padding: 20px;
 }
 
-/* Titre principal */
-h1 {
-    color: #333;
+h1, h2, h3 {
+    color: #343a40;
 }
 
-/* Liste des joueurs */
-.player-list {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+.form-container {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-/* Éléments individuels des joueurs */
+.form-title {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Formulaires */
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.btn-submit, .btn-save, .btn, .btn-cancel, .btn-manage-team, .btn-team-list, .btn-add, .btn-back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-submit:hover, .btn-save:hover, .btn:hover, .btn-cancel:hover, .btn-manage-team:hover, .btn-team-list:hover, .btn-add:hover, .btn-back:hover {
+    background-color: #0056b3;
+}
+
+/* Tableaux */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #dee2e6;
+}
+
+th {
+    background-color: #f1f1f1;
+}
+
+/* Alertes */
+.alert {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.alert-danger {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+/* Éléments divers */
+.dashboard-container {
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.player-section {
+    margin-bottom: 20px;
+}
+
 .player-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #ffffff;
     border: 1px solid #dee2e6;
     border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-/* Informations sur le joueur */
 .player-info {
     flex-grow: 1;
 }
 
-.player-name {
-    font-weight: bold;
-    color: #007bff;
-}
-
-.player-position, .player-birthday {
-    color: #666;
-}
-
-/* Actions du joueur */
 .player-actions {
-    display: flex;
-}
-
-.btn {
-    padding: 8px 12px;
     margin-left: 10px;
-    color: #ffffff;
-    background-color: #007bff;
-    border: none;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 10px;
+}
+
+.stat-card {
+    background-color: #e9ecef;
     border-radius: 5px;
-    text-decoration: none;
+    padding: 15px;
+    text-align: center;
 }
 
-.btn:hover {
-    background-color: #0056b3;
+/* Responsive */
+@media (max-width: 768px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
-.add-btn {
+/* Style général pour la vue de gestion des équipes */
+.team-management-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.team-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.roster-title {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: #444;
+}
+
+.player-list {
     margin-top: 20px;
 }
 
-.back-btn {
-    margin-top: 10px;
-    background-color: #6c757d;
+.player-section {
+    margin-bottom: 30px;
 }
 
-/* end of style for team management */
+.player-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.player-info {
+    flex: 1;
+}
+
+.player-name {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.player-birthday {
+    color: #666;
+}
+
+.player-actions .btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.player-actions .btn:hover {
+    background-color: #0056b3;
+}
+
+.no-player {
+    text-align: center;
+    color: #888;
+}
+
+.add-btn, .back-btn {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+.add-btn {
+    background-color: #28a745;
+}
+
+.add-btn:hover {
+    background-color: #218838;
+}
+
+.back-btn {
+    background-color: #dc3545;
+}
+
+.back-btn:hover {
+    background-color: #c82333;
+}

@@ -11,10 +11,27 @@ use Doctrine\Persistence\ManagerRegistry;
  */
 class TeamsRepository extends ServiceEntityRepository
 {
+    private mixed $Ligue1Teams;
+
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, Ligue1Teams::class);
     }
+
+    public function findTeamsByIds(array $teamIds): array
+    {
+        return $this->createQueryBuilder('t')
+            ->where('t.id IN (:ids)')
+            ->setParameter('ids', $teamIds)
+            ->getQuery()
+            ->getResult();
+    }
+
+    private function getTeamByApiId(int $apiId): ?Ligue1Teams
+    {
+        return $this->Ligue1Teams->findOneBy(['apiId' => $apiId]);
+    }
+
 
     //    /**
     //     * @return Ligue1Teams[] Returns an array of Ligue1Teams objects

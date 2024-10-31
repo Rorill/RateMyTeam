@@ -9,35 +9,42 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
 
-class PlayerType extends AbstractType
+class AddPlayerType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('firstName', TextType::class, [
-                'label' => 'Prénom',
-                'required' => true,
-            ])
-            ->add('lastName', TextType::class, [
-                'label' => 'Nom',
-                'required' => true,
+            ->add('firstName')
+            ->add('lastName')
+            ->add('birthday', null, [
+                'widget' => 'single_text',
             ])
             ->add('position', ChoiceType::class, [
-                'label' => 'Poste',
                 'choices' => [
                     'Goal' => 'Goal',
                     'Defender' => 'Defender',
                     'Midfielder' => 'Midfielder',
                     'Forward' => 'Forward',
                 ],
-            ])
-            ->add('birthday', DateType::class, [
-                'label' => 'Date de naissance',
-                'widget' => 'single_text',
+            ])            ->add('number');
+
+        // add team input only if team assigned is false
+        if (!$options['team_assigned']) {
+            $builder->add('team', EntityType::class, [
+                'class' => Ligue1Teams::class,
+                'choice_label' => 'name',
             ]);
+        }
+    }
+
+    public function configureOptions(OptionsResolver $resolver): void
+    {
+        $resolver->setDefaults([
+            'data_class' => Players::class,
+            'team_assigned' => false,
+        ]);
+
+        $resolver->setDefined('team_assigned');
     }
 }
-

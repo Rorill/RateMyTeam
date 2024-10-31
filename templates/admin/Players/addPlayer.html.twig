@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ajouter un Joueur{% endblock %}
+
+{% block body %}
+    <div class="form-container">
+        <h1 class="form-title">Ajouter un Nouveau Joueur</h1>
+
+        {{ form_start(form, {'attr': {'class': 'add-player-form'}}) }}
+
+        <div class="form-group">
+            {{ form_label(form.firstName, 'Prénom') }}
+            {{ form_widget(form.firstName, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.firstName) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.lastName, 'Nom') }}
+            {{ form_widget(form.lastName, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.lastName) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.birthday, 'Date de Naissance') }}
+            {{ form_widget(form.birthday, {'attr': {'class': 'form-control', 'placeholder': 'YYYY-MM-DD'}}) }}
+            {{ form_errors(form.birthday) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.position, 'Poste') }}
+            {{ form_widget(form.position, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.position) }}
+        </div>
+
+        <div class="form-group">
+            {{ form_label(form.number, 'Numéro') }}
+            {{ form_widget(form.number, {'attr': {'class': 'form-control'}}) }}
+            {{ form_errors(form.number) }}
+        </div>
+
+        {# hidden if team is defined #}
+        {% if form.team is defined %}
+            <div class="form-group">
+                {{ form_label(form.team, 'Équipe') }}
+                {{ form_widget(form.team, {'attr': {'class': 'form-control'}}) }}
+                {{ form_errors(form.team) }}
+            </div>
+        {% endif %}
+
+        <div class="form-group">
+            <button type="submit" class="btn-submit">Ajouter le Joueur</button>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

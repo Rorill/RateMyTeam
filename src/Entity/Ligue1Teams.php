@@ -51,6 +51,9 @@ class Ligue1Teams
     #[ORM\OneToMany(targetEntity: Players::class, mappedBy: 'team')]
     private Collection $players;
 
+    #[ORM\Column]
+    private ?int $apiId = null;
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -228,6 +231,18 @@ class Ligue1Teams
                 $player->setTeam(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getApiId(): ?int
+    {
+        return $this->apiId;
+    }
+
+    public function setApiId(int $apiId): static
+    {
+        $this->apiId = $apiId;
 
         return $this;
     }

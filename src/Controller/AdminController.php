@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Entity\Ligue1Teams;
 use App\Entity\Players;
 use App\Entity\User;
+use App\Form\AddPlayerType;
 use App\Form\PlayerType;
 use App\Repository\PlayersRepository;
 use App\Repository\TeamsRepository;
@@ -126,17 +127,16 @@ return $this->render('admin/AdminDashboard.html.twig', [
     #[Route('/admin/team/{id}/players', name: 'admin_team_players')]
     public function teamPlayers(int $id, TeamsRepository $teamsRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
-        // Récupérer l'équipe par ID
+
         $team = $teamsRepository->find($id);
 
         if (!$team) {
             throw $this->createNotFoundException('Team not found');
         }
 
-        // Récupérer les joueurs de l'équipe
         $players = $team->getPlayers();
 
-        // Créer un joueur
+        // Create a new player
         $player = new Players();
         $form = $this->createForm(PlayerType::class, $player);
 
@@ -179,29 +179,33 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/team/{id}/add-player', name: 'admin_add_player')]
-    public function addPlayer(int $id, Request $request, EntityManagerInterface $entityManager, TeamsRepository $teamsRepository): Response
+    #[Route('/admin/team/{id}/add-player', name: 'admin_add_player')]
+    public function addPlayer(Request $request, EntityManagerInterface $entityManager, Ligue1Teams $team = null): Response
     {
-        $team = $teamsRepository->find($id);
-
-        if (!$team) {
-            throw $this->createNotFoundException('Team not found');
-        }
-
-        // Créer un joueur
         $player = new Players();
-        $form = $this->createForm(PlayerType::class, $player);
+
+        if ($team) {
+            $player->setTeam($team);
+            $form = $this->createForm(AddPlayerType::class, $player, [
+                'team_assigned' => true,
+            ]);
+        } else {
+            $form = $this->createForm(AddPlayerType::class, $player);
+        }
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // Assigner l'équipe au joueur
-            $player->setTeam($team);
+            if (!$team) {
+                $player->setTeam($form->get('team')->getData());
+            }
+
             $entityManager->persist($player);
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_team_players', ['id' => $team->getId()]);
+            return $this->redirectToRoute('admin_team_players', ['id' => $player->getTeam()->getId()]);
         }
 
-        return $this->render('admin/Teams/addPlayer.html.twig', [
+        return $this->render('admin/Players/addPlayer.html.twig', [
             'form' => $form->createView(),
             'team' => $team,
         ]);
@@ -218,7 +222,7 @@ return $this->render('admin/AdminDashboard.html.twig', [
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager->flush();
 
-            return $this->redirectToRoute('admin_team_management', ['id' => $player->getSelectedTeam()->getId()]);
+            return $this->redirectToRoute('admin_team_players', ['id' => $player->getTeam()->getId()]);
         }
 
         return $this->render('admin/Players/editPlayer.html.twig', [
