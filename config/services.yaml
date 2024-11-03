@@ -6,6 +6,9 @@
 parameters:
 
 services:
+
+    Twig\Extra\IntlExtension: ~
+
     # default configuration for services in *this* file
     _defaults:
         autowire: true      # Automatically injects dependencies in your services.
@@ -14,6 +17,8 @@ services:
     App\Controller\MatchController:
             arguments:
                 $gameRepository: '@App\Repository\GameRepository'
+
+
 
 
     # makes classes in src/ available to be used as services

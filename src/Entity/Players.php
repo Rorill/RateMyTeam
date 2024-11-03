@@ -14,11 +14,6 @@ class Players
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $firstName = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $LastName = null;
 
     #[ORM\Column(type: Types::DATETIME_MUTABLE)]
     private ?\DateTimeInterface $birthday = null;
@@ -26,53 +21,32 @@ class Players
     #[ORM\Column(length: 255)]
     private ?string $position = null;
 
-    #[ORM\Column]
-    private ?int $number = null;
-
     #[ORM\ManyToOne(inversedBy: 'players')]
     #[ORM\JoinColumn(nullable: false)]
     private ?Ligue1Teams $team = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $FullName = null;
+
+    #[ORM\Column(type: Types::DATE_MUTABLE)]
+    private ?\DateTimeInterface $DateOfBirth = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $Name = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Nationality = null;
+
+    #[ORM\Column]
+    private ?int $ApiId = null;
 
     public function getId(): ?int
     {
         return $this->id;
     }
 
-    public function getFirstName(): ?string
-    {
-        return $this->firstName;
-    }
 
-    public function setFirstName(string $firstName): static
-    {
-        $this->firstName = $firstName;
 
-        return $this;
-    }
-
-    public function getLastName(): ?string
-    {
-        return $this->LastName;
-    }
-
-    public function setLastName(string $LastName): static
-    {
-        $this->LastName = $LastName;
-
-        return $this;
-    }
-
-    public function getBirthday(): ?\DateTimeInterface
-    {
-        return $this->birthday;
-    }
-
-    public function setBirthday(\DateTimeInterface $birthday): static
-    {
-        $this->birthday = $birthday;
-
-        return $this;
-    }
 
     public function getPosition(): ?string
     {
@@ -86,17 +60,6 @@ class Players
         return $this;
     }
 
-    public function getNumber(): ?int
-    {
-        return $this->number;
-    }
-
-    public function setNumber(int $number): static
-    {
-        $this->number = $number;
-
-        return $this;
-    }
 
     public function getTeam(): ?Ligue1Teams
     {
@@ -106,6 +69,66 @@ class Players
     public function setTeam(?Ligue1Teams $team): static
     {
         $this->team = $team;
+
+        return $this;
+    }
+
+    public function getApiID(): ?int
+    {
+        return $this->apiID;
+    }
+
+    public function setApiID(?int $apiID): static
+    {
+        $this->apiID = $apiID;
+
+        return $this;
+    }
+
+    public function getFullName(): ?string
+    {
+        return $this->FullName;
+    }
+
+    public function setFullName(string $FullName): static
+    {
+        $this->FullName = $FullName;
+
+        return $this;
+    }
+
+    public function getDateOfBirth(): ?\DateTimeInterface
+    {
+        return $this->DateOfBirth;
+    }
+
+    public function setDateOfBirth(\DateTimeInterface $DateOfBirth): static
+    {
+        $this->DateOfBirth = $DateOfBirth;
+
+        return $this;
+    }
+
+    public function getName(): ?string
+    {
+        return $this->Name;
+    }
+
+    public function setName(string $Name): static
+    {
+        $this->Name = $Name;
+
+        return $this;
+    }
+
+    public function getNationality(): ?string
+    {
+        return $this->Nationality;
+    }
+
+    public function setNationality(?string $Nationality): static
+    {
+        $this->Nationality = $Nationality;
 
         return $this;
     }

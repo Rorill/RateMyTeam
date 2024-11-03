@@ -1,21 +1,20 @@
 <?php
 namespace App\Controller;
 
-use App\Entity\Ligue1Teams;
-use App\Entity\Players;
 use App\Entity\User;
 use App\Form\AddPlayerType;
 use App\Form\PlayerType;
-use App\Repository\PlayersRepository;
-use App\Repository\TeamsRepository;
+use App\Repository\GameRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
+use Psr\Log\LoggerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\HttpFoundation\Request;
-
+use Doctrine\ORM\QueryBuilder;
 class AdminController extends AbstractController
 {
 #[Route('/admin', name: 'admin_dashboard')]
@@ -179,7 +178,6 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/team/{id}/add-player', name: 'admin_add_player')]
-    #[Route('/admin/team/{id}/add-player', name: 'admin_add_player')]
     public function addPlayer(Request $request, EntityManagerInterface $entityManager, Ligue1Teams $team = null): Response
     {
         $player = new Players();
@@ -230,6 +228,31 @@ return $this->render('admin/AdminDashboard.html.twig', [
             'player' => $player,
         ]);
     }
+
+
+    // game management page
+    #[Route('/gestion-matches', name: 'match_management')]
+    public function manageMatches(GameRepository $matchRepository, Request $request): Response
+    {
+        $matchday = $request->query->get('matchday');
+
+        $criteria = [];
+        if ($matchday) {
+            $criteria['matchday'] = $matchday;
+        }
+        $matches = $matchRepository->findBy($criteria, ['matchday' => 'ASC']);
+
+
+        return $this->render('admin/Teams/GameManagement.html.twig', [
+            'matches' => $matches,
+            'selectedMatchday' => $matchday,
+        ]);
+    }
+
+
+    // Import Teams from api
+
+
 
 
 
