@@ -16,9 +16,9 @@
             {% for player in goalkeepers %}
                 <div class="player-item">
                     <div class="player-info">
-                        <span class="player-name">{{ player.firstName }} {{ player.lastName }}</span>
+                        <span class="player-name">{{ player.name }} </span>
                         <span class="player-birthday">
-                            Date de naissance : {{ player.birthday ? player.birthday|date('d m Y') : 'Date non renseignée' }}
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
                         </span>
                     </div>
                     <div class="player-actions">
@@ -36,9 +36,9 @@
             {% for player in defenders %}
                 <div class="player-item">
                     <div class="player-info">
-                        <span class="player-name">{{ player.firstName }} {{ player.lastName }}</span>
+                        <span class="player-name">{{ player.name }} </span>
                         <span class="player-birthday">
-                            Date de naissance : {{ player.birthday ? player.birthday|date('d m Y') : 'Date non renseignée' }}
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
                         </span>
                     </div>
                     <div class="player-actions">
@@ -56,9 +56,9 @@
             {% for player in midfielders %}
                 <div class="player-item">
                     <div class="player-info">
-                        <span class="player-name">{{ player.firstName }} {{ player.lastName }}</span>
+                        <span class="player-name">{{ player.name }}</span>
                         <span class="player-birthday">
-                            Date de naissance : {{ player.birthday ? player.birthday|date('d m Y') : 'Date non renseignée' }}
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
                         </span>
                     </div>
                     <div class="player-actions">
@@ -76,9 +76,9 @@
             {% for player in forwards %}
                 <div class="player-item">
                     <div class="player-info">
-                        <span class="player-name">{{ player.firstName }} {{ player.lastName }}</span>
+                        <span class="player-name">{{ player.name }} </span>
                         <span class="player-birthday">
-                            Date de naissance : {{ player.birthday ? player.birthday|date('d m Y') : 'Date non renseignée' }}
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
                         </span>
                     </div>
                     <div class="player-actions">

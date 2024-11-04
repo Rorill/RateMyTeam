@@ -73,14 +73,14 @@ class Players
         return $this;
     }
 
-    public function getApiID(): ?int
+    public function getApiId(): ?int
     {
-        return $this->apiID;
+        return $this->ApiId;
     }
 
-    public function setApiID(?int $apiID): static
+    public function setApiId(?int $apiID): static
     {
-        $this->apiID = $apiID;
+        $this->ApiId = $apiID;
 
         return $this;
     }

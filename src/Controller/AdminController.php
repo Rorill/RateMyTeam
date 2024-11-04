@@ -1,10 +1,14 @@
 <?php
 namespace App\Controller;
 
+use App\Entity\Ligue1Teams;
+use App\Entity\Players;
 use App\Entity\User;
 use App\Form\AddPlayerType;
 use App\Form\PlayerType;
 use App\Repository\GameRepository;
+use App\Repository\PlayersRepository;
+use App\Repository\TeamsRepository;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Psr\Log\LoggerInterface;
@@ -137,7 +141,7 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
         // Create a new player
         $player = new Players();
-        $form = $this->createForm(PlayerType::class, $player);
+        $form = $this->createForm(AddPlayerType::class, $player);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
