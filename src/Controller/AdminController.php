@@ -131,7 +131,7 @@ return $this->render('admin/AdminDashboard.html.twig', [
     public function teamPlayers(int $id, TeamsRepository $teamsRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
 
-        $team = $teamsRepository->find($id);
+        $team = $teamsRepository->findOneBy(['ApiId' => $id]);
 
         if (!$team) {
             throw $this->createNotFoundException('Team not found');
@@ -188,11 +188,9 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
         if ($team) {
             $player->setTeam($team);
-            $form = $this->createForm(AddPlayerType::class, $player, [
-                'team_assigned' => true,
-            ]);
-        } else {
             $form = $this->createForm(AddPlayerType::class, $player);
+        } else {
+            throw $this->createNotFoundException('Team not found');
         }
 
         $form->handleRequest($request);

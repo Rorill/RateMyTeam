@@ -14,9 +14,6 @@ class AddPlayerType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options): void
     {
         $builder
-            ->add('DateOfBirth', null, [
-                'widget' => 'single_text',
-            ])
             ->add('position')
             ->add('FullName')
             ->add('DateOfBirth', null, [
