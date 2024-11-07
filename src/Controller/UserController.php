@@ -2,13 +2,14 @@
 
 namespace App\Controller;
 
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use App\Repository\TeamsRepository;
 use App\Repository\GameRepository;
 use App\Entity\User;
-
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 class UserController extends AbstractController
 {
     #[Route('/user', name: 'app_user')]
@@ -20,9 +21,11 @@ class UserController extends AbstractController
     }
 
     #[Route('/index', name: 'app_game')]
-    public function mainPage(TeamsRepository $teamsRepository, GamesRepository $gamesRepository, user $user): Response
+    #[IsGranted('IS_AUTHENTICATED_FULLY')]
+    public function mainPage(TeamsRepository $teamsRepository, GameRepository $gamesRepository, UserRepository $userRepository): Response
     {
-        $selectedTeam = $user->getSelectedTeam();// Assume this gets the user's selected team
+        $user = $this->getUser(); // Get the authenticated user
+        $selectedTeam = $user->getSelectedTeam(); // Assume this gets the user's selected team
 
         // Fetch last game
         $lastGame = $gamesRepository->findLastGameByTeam($selectedTeam->getId());
@@ -36,5 +39,7 @@ class UserController extends AbstractController
             'nextGames' => $nextGames,
         ]);
     }
+
+
 
 }

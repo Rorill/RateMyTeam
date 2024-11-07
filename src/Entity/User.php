@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
@@ -38,6 +40,17 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\Column]
     private bool $isVerified = false;
+
+    /**
+     * @var Collection<int, PlayerRating>
+     */
+    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'User')]
+    private Collection $playerRatings;
+
+    public function __construct()
+    {
+        $this->playerRatings = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -134,6 +147,36 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setVerified(bool $isVerified): static
     {
         $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PlayerRating>
+     */
+    public function getPlayerRatings(): Collection
+    {
+        return $this->playerRatings;
+    }
+
+    public function addPlayerRating(PlayerRating $playerRating): static
+    {
+        if (!$this->playerRatings->contains($playerRating)) {
+            $this->playerRatings->add($playerRating);
+            $playerRating->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayerRating(PlayerRating $playerRating): static
+    {
+        if ($this->playerRatings->removeElement($playerRating)) {
+            // set the owning side to null (unless already changed)
+            if ($playerRating->getUser() === $this) {
+                $playerRating->setUser(null);
+            }
+        }
 
         return $this;
     }

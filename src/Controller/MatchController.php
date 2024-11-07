@@ -12,169 +12,79 @@ use Doctrine\ORM;
 use Doctrine\ORM\QueryBuilder;
 use App\Entity\Ligue1Teams;
 use App\Repository\TeamsRepository;
-use http\Env\Response;
+use Symfony\Component\HttpFoundation\Response;
 
 class MatchController extends AbstractController
 {
-    private HttpClientInterface $httpClient;
-    private EntityManagerInterface $entityManager;
-    private TeamsRepository $ligue1TeamsRepository;
+    private $entityManager;
+    private $client;
 
-    public function __construct(
-        HttpClientInterface $client,
-        EntityManagerInterface $entityManager,
-        TeamsRepository $ligue1TeamsRepository
-    ) {
-        $this->httpClient = $client;
+    public function __construct(EntityManagerInterface $entityManager, HttpClientInterface $client)
+    {
         $this->entityManager = $entityManager;
-        $this->ligue1TeamsRepository = $ligue1TeamsRepository;
+        $this->client = $client;
     }
 
-    #[Route('/import-matches', name: 'import_matches')]
-    public function importMatches(): JsonResponse
+
+    #[Route('/import-games', name:"import_games")]
+    public function importAllGames()
     {
-        $url = 'https://api.football-data.org/v4/competitions/FL1/matches';
-        $token = '78a7c9b17f784d6993ad0a9fcb3bed11';
+        // Get the current year for the season
+        $season = (int) date("Y");
 
-        // Fetch data from the API
-        $response = $this->httpClient->request('GET', $url, [
-            'headers' => [
-                'X-Auth-Token' => $token,
-            ],
-        ]);
-        $statusCode = $response->getStatusCode();
+        // Fetch all the games for the season using the API
+        $this->importGamesForSeason($season);
 
-        if ($statusCode !== 200) {
-            return new JsonResponse(['error' => 'Unable to fetch data from API'], $statusCode);
-        }
-
-        $content = $response->toArray();
-        $matches = $content['matches'] ?? [];
-        $count = 0;
-
-        foreach ($matches as $match) {
-            $game = new Game();
-            $game->setDate(new \DateTime($match['utcDate']));
-            $game->setMatchday($match['matchday']);
-            $game->setStage($match['stage']);
-            $game->setApiMatchId($match['id']);
-
-            // Find teams by their API ID
-            $homeTeam = $this->ligue1TeamsRepository->findOneBy(['ApiId' => $match['homeTeam']['id']]);
-            $awayTeam = $this->ligue1TeamsRepository->findOneBy(['ApiId' => $match['awayTeam']['id']]);
-
-            // Skip match if either team is missing
-            if (!$homeTeam || !$awayTeam) {
-                continue;
-            }
-
-            $game->setTeamHome($homeTeam);
-            $game->setTeamAway($awayTeam);
-
-            // Set score
-            $score = $match['score']['fullTime'] ?? null;
-            if ($score !== null) {
-                $game->setScoreHome($score['home']);
-                $game->setScoreAway($score['away']);
-            }
-
-            $this->entityManager->persist($game);
-            $count++;
-        }
-
-        // Flush all persisted games
-        $this->entityManager->flush();
-
-        return new JsonResponse(['status' => 'success', 'matches_imported' => $count]);
+        return new Response('Games imported successfully.');
     }
 
-
-    #[Route('/import-teams', name: 'import_teams')]
-    public function importTeams(): JsonResponse
+    private function importGamesForSeason(int $season)
     {
-
-        $url = 'https://api.football-data.org/v4/competitions/FL1/teams';
-        $token = '78a7c9b17f784d6993ad0a9fcb3bed11';
-
-        // Fetch data from the API
-        $response = $this->httpClient->request('GET', $url, [
+        $url = "https://v3.football.api-sports.io/fixtures?league=61&season={$season}";
+        $response = $this->client->request('GET', $url, [
             'headers' => [
-                'X-Auth-Token' => $token,
-            ],
+                'X-Auth-Token' => 'YOUR_API_TOKEN'
+            ]
         ]);
-        $statusCode = $response->getStatusCode();
 
-        if ($statusCode !== 200) {
-            return new JsonResponse(['error' => 'Unable to fetch data from API'], $statusCode);
+        // Check the structure of the response before accessing it
+        $responseData = $response->toArray();
+
+        // Log or debug the full response structure to see what's returned
+        dump($responseData); // Symfony's debug function
+
+        // Check if 'response' exists in the response data
+        if (!isset($responseData['response'])) {
+            // Handle the error - you can log the error or return a message
+            return new Response('No fixtures found in the response or invalid response format.', 500);
         }
 
-        $content = $response->toArray();
-        $teams = $content['teams'] ?? [];
-        foreach ($teams as $teamData) {
-            if (empty($teamData['id'])) {
-                continue; // Skip if no `id` is present for the team
-            }
-
-            $apiId = $teamData['id'];
-
-
-            $team = $this->entityManager->getRepository(Ligue1Teams::class)->findOneBy(['ApiId' => $apiId]);
-
-            if ($team) {
-                // Update only properties that have changed
-                if ($team->getName() !== ($teamData['name'] ?? null)) {
-                    $team->setName($teamData['name']);
-                }
-                if ($team->getShortName() !== ($teamData['shortName'] ?? null)) {
-                    $team->setShortName($teamData['shortName']);
-                }
-                if ($team->getTla() !== ($teamData['tla'] ?? null)) {
-                    $team->setTla($teamData['tla']);
-                }
-                if (isset($teamData['coach']['name']) && $team->getCoach() !== $teamData['coach']['name']) {
-                    $team->setCoach($teamData['coach']['name']);
-                } elseif (!isset($teamData['coach']['name'])) {
-                    $team->setCoach(null); // Set to null if no coach data is available
-                }
-                if ($team->getFounded() !== ($teamData['founded'] ?? null)) {
-                    $team->setFounded($teamData['founded']);
-                }
-                if ($team->getAddress() !== ($teamData['address'] ?? null)) {
-                    $team->setAddress($teamData['address']);
-                }
-                if ($team->getVenue() !== ($teamData['venue'] ?? null)) {
-                    $team->setVenue($teamData['venue']);
-                }
-            } else {
-                // Create a new team if it does not exist
-                $team = new Ligue1Teams();
-                $team->setApiId($apiId);
-                $team->setName($teamData['name'] ?? null);
-                $team->setShortName($teamData['shortName'] ?? null);
-                $team->setTla($teamData['tla'] ?? null);
-
-                if (isset($teamData['coach']['name'])) {
-                    $team->setCoach($teamData['coach']['name']);
-                } else {
-                    $team->setCoach(null);
-                }
-
-                $team->setFounded($teamData['founded'] ?? null);
-                $team->setAddress($teamData['address'] ?? null);
-                $team->setVenue($teamData['venue'] ?? null);
-
-                $this->entityManager->persist($team);
-            }
+        // Process the fixtures if they exist
+        foreach ($responseData['response'] as $game) {
+            $this->saveGame($game);
         }
-
-// Save all changes to the database
-        $this->entityManager->flush();
-
-        return new JsonResponse(['message' => 'Teams imported and updated successfully'], JsonResponse::HTTP_OK);
     }
 
+    private function saveGame(array $gameData)
+    {
+        // Fetch home and away teams by their API IDs
+        $teamHome = $this->entityManager->getRepository(Ligue1Teams::class)->find($gameData['teams']['home']['id']);
+        $teamAway = $this->entityManager->getRepository(Ligue1Teams::class)->find($gameData['teams']['away']['id']);
 
+        $game = new Game();
+        $game->setDate(new \DateTime($gameData['fixture']['date']));
+        $game->setTeamHome($teamHome);
+        $game->setTeamAway($teamAway);
+        $game->setScoreHome($gameData['score']['fulltime']['home']);
+        $game->setScoreAway($gameData['score']['fulltime']['away']);
+        $game->setMatchday($gameData['league']['round']);
+        $game->setStage($gameData['league']['round']);
+        $game->setApiMatchId($gameData['fixture']['id']);
 
-
+        // Persist the game to the database
+        $this->entityManager->persist($game);
+        $this->entityManager->flush();
+    }
 
 }
+

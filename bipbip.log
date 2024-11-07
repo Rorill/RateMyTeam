@@ -1,0 +1,155 @@
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"174973"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":174973,"name":"M. Zinga","firstname":"Melvin","lastname":"Zinga","age":22,"birth":{"date":"2002-03-16","place":"Montivilliers","country":"France"},"nationality":"France","height":"187 cm","weight":"80 kg","number":16,"position":"Goalkeeper","photo":"https:\/\/media.api-sports.io\/football\/players\/174973.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"64190"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":64190,"name":"Y. Fofana","firstname":"Yahia","lastname":"Fofana","age":24,"birth":{"date":"2000-08-21","place":"Paris","country":"France"},"nationality":"France","height":"194 cm","weight":"89 kg","number":30,"position":"Goalkeeper","photo":"https:\/\/media.api-sports.io\/football\/players\/64190.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"396308"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":396308,"name":"Oumar Pona","firstname":"Oumar Kalifa","lastname":"Pona","age":18,"birth":{"date":"2006-06-21","place":null,"country":"France"},"nationality":"France","height":null,"weight":null,"number":null,"position":"Goalkeeper","photo":"https:\/\/media.api-sports.io\/football\/players\/396308.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"20850"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":20850,"name":"C. Arcus","firstname":"Carlens Jean Fedlaire Ruby","lastname":"Arcus","age":28,"birth":{"date":"1996-06-28","place":"Port-au-Prince","country":"Haiti"},"nationality":"Haiti","height":"180 cm","weight":"73 kg","number":2,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/20850.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"343609"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":343609,"name":"J. Ekomi\u00e9","firstname":"Jacques Emmanuel","lastname":"Paul Ekomi\u00e9","age":21,"birth":{"date":"2003-08-19","place":"Libreville","country":"Gabon"},"nationality":"Gabon","height":"179 cm","weight":"74 kg","number":3,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/343609.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"425207"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":425207,"name":"M. Courcoul","firstname":"Marius","lastname":"Courcoul","age":17,"birth":{"date":"2007-01-01","place":null,"country":"France"},"nationality":"France","height":null,"weight":null,"number":5,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/425207.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"174723"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":174723,"name":"Z. Ould Khaled","firstname":"Zin\u00e9dine","lastname":"Ould Khaled","age":24,"birth":{"date":"2000-01-14","place":null,"country":"France"},"nationality":"France","height":"195 cm","weight":"79 kg","number":12,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/174723.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"21381"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":21381,"name":"J. Lefort","firstname":"Jordan","lastname":"Lefort","age":31,"birth":{"date":"1993-08-09","place":"Champigny-sur-Marne","country":"France"},"nationality":"France","height":"184 cm","weight":"81 kg","number":21,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/21381.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"3379"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":3379,"name":"C. Hountondji","firstname":"C\u00e9dric","lastname":"Hountondji","age":30,"birth":{"date":"1994-01-19","place":"Toulouse","country":"France"},"nationality":"Benin","height":"194 cm","weight":"81 kg","number":22,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/3379.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"3234"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":3234,"name":"A. Bamba","firstname":"Abdoulaye","lastname":"Bamba","age":34,"birth":{"date":"1990-04-25","place":"Abidjan","country":"C\u00f4te d'Ivoire"},"nationality":"C\u00f4te d'Ivoire","height":"182 cm","weight":"72 kg","number":25,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/3234.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"41146"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":41146,"name":"F. Hanin","firstname":"Florent Olivier Sylvain","lastname":"Hanin","age":34,"birth":{"date":"1990-02-04","place":"Le Havre","country":"France"},"nationality":"France","height":"177 cm","weight":"73 kg","number":26,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/41146.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"174660"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":174660,"name":"L. Rao-Lisoa","firstname":"Lillian","lastname":"Rao-Lisoa","age":24,"birth":{"date":"2000-06-16","place":null,"country":"France"},"nationality":"France","height":"178 cm","weight":"70 kg","number":27,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/174660.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"271540"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":271540,"name":"O. Camara","firstname":"Ousmane","lastname":"Camara","age":21,"birth":{"date":"2003-03-06","place":null,"country":"France"},"nationality":"France","height":"197 cm","weight":"90 kg","number":4,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/271540.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"456831"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":456831,"name":"M. Lou\u00e3r","firstname":null,"lastname":null,"age":17,"birth":{"date":null,"place":null,"country":null},"nationality":null,"height":null,"weight":null,"number":18,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/456831.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"76904"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":76904,"name":"H. \u0160abanovi\u0107","firstname":"Halid","lastname":"\u0160abanovi\u0107","age":25,"birth":{"date":"1999-08-22","place":"Sarajevo","country":"Bosnia and Herzegovina"},"nationality":"Bosnia and Herzegovina","height":"182 cm","weight":"75 kg","number":4,"position":"Defender","photo":"https:\/\/media.api-sports.io\/football\/players\/76904.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"103"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":103,"name":"J. Aholou","firstname":"Jean-Eudes Pascal Armand","lastname":"Aholou","age":30,"birth":{"date":"1994-03-20","place":"Yopougnon","country":"C\u00f4te d'Ivoire"},"nationality":"C\u00f4te d'Ivoire","height":"186 cm","weight":"71 kg","number":6,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/103.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"20725"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":20725,"name":"J. Lopy","firstname":"Joseph Romeric","lastname":"Lopy","age":32,"birth":{"date":"1992-03-15","place":"Boutoupa","country":"Senegal"},"nationality":"Senegal","height":"181 cm","weight":"68 kg","number":8,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/20725.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"20692"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":20692,"name":"H. Abdelli","firstname":"Himad Said","lastname":"Abdelli","age":24,"birth":{"date":"1999-11-17","place":"Montivilliers","country":"France"},"nationality":"Algeria","height":"185 cm","weight":"81 kg","number":10,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/20692.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"174708"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":174708,"name":"Y. Belkhdim","firstname":"Yassine","lastname":"Belkhdim","age":22,"birth":{"date":"2002-02-14","place":null,"country":"France"},"nationality":"France","height":"175 cm","weight":"70 kg","number":null,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/174708.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"21145"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":21145,"name":"P. Capelle","firstname":"Pierrick","lastname":"Capelle","age":37,"birth":{"date":"1987-04-15","place":"Lesquin","country":"France"},"nationality":"France","height":"181 cm","weight":"73 kg","number":15,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/21145.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"3175"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":3175,"name":"Z. Ferhat","firstname":"Zinedine","lastname":"Ferhat","age":31,"birth":{"date":"1993-03-01","place":"Bordj Mena\u00efel","country":"Algeria"},"nationality":"Algeria","height":"183 cm","weight":"77 kg","number":20,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/3175.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"385569"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":385569,"name":"E. Biumla","firstname":"Emmanuel Junior","lastname":"Biumla Bayiha","age":19,"birth":{"date":"2005-05-08","place":null,"country":"France"},"nationality":"France","height":"185 cm","weight":"75 kg","number":18,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/385569.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"20554"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":20554,"name":"H. Belkebla","firstname":"Haris","lastname":"Belkebla","age":30,"birth":{"date":"1994-01-28","place":"Drancy","country":"France"},"nationality":"Algeria","height":"177 cm","weight":"68 kg","number":93,"position":"Midfielder","photo":"https:\/\/media.api-sports.io\/football\/players\/20554.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"20537"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":20537,"name":"I. Niane","firstname":"Ibrahima","lastname":"Niane","age":25,"birth":{"date":"1999-03-11","place":"M'Bour","country":"Senegal"},"nationality":"Senegal","height":"187 cm","weight":"73 kg","number":7,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/20537.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"22100"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":22100,"name":"L. Diony","firstname":"Lo\u00efs","lastname":"Diony","age":31,"birth":{"date":"1992-12-20","place":"Mont-de-Marsan","country":"France"},"nationality":"France","height":"183 cm","weight":"85 kg","number":9,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/22100.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"421875"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":421875,"name":"S. Cherif","firstname":"Sidiki","lastname":"Cherif","age":17,"birth":{"date":"2006-12-15","place":"Conakry","country":"Guinea"},"nationality":"France","height":"185 cm","weight":null,"number":null,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/421875.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"405074"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":405074,"name":"J. Kalumba","firstname":"Justin-No\u00ebl","lastname":"Kalumba Mwana Ngongo","age":19,"birth":{"date":"2004-12-25","place":"Roubaix","country":"France"},"nationality":"France","height":"180 cm","weight":"75 kg","number":17,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/405074.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"21618"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":21618,"name":"J. Allevinah","firstname":"Jim \u00c9milien","lastname":"Ngowet Allevinah","age":29,"birth":{"date":"1995-02-27","place":null,"country":"Gabon"},"nationality":"Gabon","height":"172 cm","weight":null,"number":11,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/21618.png"}}]}
+Parsed API Response: {"get":"players\/profiles","parameters":{"player":"163004"},"errors":[],"results":1,"paging":{"current":1,"total":1},"response":[{"player":{"id":163004,"name":"E. Lepaul","firstname":"Esteban","lastname":"Lepaul","age":24,"birth":{"date":"2000-04-18","place":"Auxerre","country":"France"},"nationality":"France","height":"177 cm","weight":null,"number":9,"position":"Attacker","photo":"https:\/\/media.api-sports.io\/football\/players\/163004.png"}}]}
+Parsed API Response: {"get": "","parameters": [],"errors": {"rateLimit": "Too many requests. You have exceeded the limit of requests per minute of your subscription."},"results": 0,"paging": {"current": 1,"total": 1},"response": []}
+
+Requesting data for team: 77, URL: https://v3.football.api-sports.io/players/squads?team=77
+Requesting data for team: 79, URL: https://v3.football.api-sports.io/players/squads?team=79
+Requesting data for team: 80, URL: https://v3.football.api-sports.io/players/squads?team=80
+Requesting data for team: 81, URL: https://v3.football.api-sports.io/players/squads?team=81
+Requesting data for team: 82, URL: https://v3.football.api-sports.io/players/squads?team=82
+Error importing player data for team: 82
+No players data returned
+Requesting data for team: 83, URL: https://v3.football.api-sports.io/players/squads?team=83
+Error importing player data for team: 83
+No players data returned
+Requesting data for team: 84, URL: https://v3.football.api-sports.io/players/squads?team=84
+Requesting data for team: 85, URL: https://v3.football.api-sports.io/players/squads?team=85
+Requesting data for team: 91, URL: https://v3.football.api-sports.io/players/squads?team=91
+Error importing player data for team: 91
+No players data returned
+Requesting data for team: 93, URL: https://v3.football.api-sports.io/players/squads?team=93
+Error importing player data for team: 93
+No players data returned
+Requesting data for team: 94, URL: https://v3.football.api-sports.io/players/squads?team=94
+Requesting data for team: 95, URL: https://v3.football.api-sports.io/players/squads?team=95
+Requesting data for team: 96, URL: https://v3.football.api-sports.io/players/squads?team=96
+Requesting data for team: 106, URL: https://v3.football.api-sports.io/players/squads?team=106
+Requesting data for team: 108, URL: https://v3.football.api-sports.io/players/squads?team=108
+Requesting data for team: 111, URL: https://v3.football.api-sports.io/players/squads?team=111
+Error importing player data for team: 111
+No players data returned
+Requesting data for team: 116, URL: https://v3.football.api-sports.io/players/squads?team=116
+Requesting data for team: 1063, URL: https://v3.football.api-sports.io/players/squads?team=1063
+Requesting data for team: 77, URL: https://v3.football.api-sports.io/players/squads?team=77
+Requesting data for team: 79, URL: https://v3.football.api-sports.io/players/squads?team=79
+Requesting data for team: 80, URL: https://v3.football.api-sports.io/players/squads?team=80
+Error importing player data for team: 80
+No players data returned
+Requesting data for team: 81, URL: https://v3.football.api-sports.io/players/squads?team=81
+Requesting data for team: 82, URL: https://v3.football.api-sports.io/players/squads?team=82
+Requesting data for team: 83, URL: https://v3.football.api-sports.io/players/squads?team=83
+Requesting data for team: 84, URL: https://v3.football.api-sports.io/players/squads?team=84
+Requesting data for team: 85, URL: https://v3.football.api-sports.io/players/squads?team=85
+Requesting data for team: 91, URL: https://v3.football.api-sports.io/players/squads?team=91
+Error importing player data for team: 91
+No players data returned
+Requesting data for team: 93, URL: https://v3.football.api-sports.io/players/squads?team=93
+Error importing player data for team: 93
+No players data returned
+Requesting data for team: 94, URL: https://v3.football.api-sports.io/players/squads?team=94
+Error importing player data for team: 94
+No players data returned
+Requesting data for team: 95, URL: https://v3.football.api-sports.io/players/squads?team=95
+Requesting data for team: 96, URL: https://v3.football.api-sports.io/players/squads?team=96
+Requesting data for team: 106, URL: https://v3.football.api-sports.io/players/squads?team=106
+Requesting data for team: 108, URL: https://v3.football.api-sports.io/players/squads?team=108
+Requesting data for team: 111, URL: https://v3.football.api-sports.io/players/squads?team=111
+Error importing player data for team: 111
+No players data returned
+Requesting data for team: 116, URL: https://v3.football.api-sports.io/players/squads?team=116
+Requesting data for team: 1063, URL: https://v3.football.api-sports.io/players/squads?team=1063
+Requesting data for team: 77, URL: https://v3.football.api-sports.io/players/squads?team=77
+Requesting data for team: 79, URL: https://v3.football.api-sports.io/players/squads?team=79
+Requesting data for team: 80, URL: https://v3.football.api-sports.io/players/squads?team=80
+Requesting data for team: 81, URL: https://v3.football.api-sports.io/players/squads?team=81
+Requesting data for team: 82, URL: https://v3.football.api-sports.io/players/squads?team=82
+Requesting data for team: 83, URL: https://v3.football.api-sports.io/players/squads?team=83
+Requesting data for team: 84, URL: https://v3.football.api-sports.io/players/squads?team=84
+Requesting data for team: 85, URL: https://v3.football.api-sports.io/players/squads?team=85
+Requesting data for team: 91, URL: https://v3.football.api-sports.io/players/squads?team=91
+Requesting data for team: 93, URL: https://v3.football.api-sports.io/players/squads?team=93
+Requesting data for team: 94, URL: https://v3.football.api-sports.io/players/squads?team=94
+Error importing player data for team: 94
+No players data returned
+Requesting data for team: 95, URL: https://v3.football.api-sports.io/players/squads?team=95
+Error importing player data for team: 95
+No players data returned
+Requesting data for team: 96, URL: https://v3.football.api-sports.io/players/squads?team=96
+Error importing player data for team: 96
+No players data returned
+Requesting data for team: 106, URL: https://v3.football.api-sports.io/players/squads?team=106
+Error importing player data for team: 106
+No players data returned
+Requesting data for team: 108, URL: https://v3.football.api-sports.io/players/squads?team=108
+Error importing player data for team: 108
+No players data returned
+Requesting data for team: 111, URL: https://v3.football.api-sports.io/players/squads?team=111
+Error importing player data for team: 111
+No players data returned
+Requesting data for team: 116, URL: https://v3.football.api-sports.io/players/squads?team=116
+Error importing player data for team: 116
+No players data returned
+Requesting data for team: 1063, URL: https://v3.football.api-sports.io/players/squads?team=1063
+Error importing player data for team: 1063
+No players data returned
+Requesting data for team: 77, URL: https://v3.football.api-sports.io/players/squads?team=77
+Requesting data for team: 79, URL: https://v3.football.api-sports.io/players/squads?team=79
+Requesting data for team: 80, URL: https://v3.football.api-sports.io/players/squads?team=80
+Requesting data for team: 81, URL: https://v3.football.api-sports.io/players/squads?team=81
+Requesting data for team: 82, URL: https://v3.football.api-sports.io/players/squads?team=82
+Requesting data for team: 83, URL: https://v3.football.api-sports.io/players/squads?team=83
+Requesting data for team: 84, URL: https://v3.football.api-sports.io/players/squads?team=84
+Requesting data for team: 85, URL: https://v3.football.api-sports.io/players/squads?team=85
+Requesting data for team: 91, URL: https://v3.football.api-sports.io/players/squads?team=91
+Requesting data for team: 93, URL: https://v3.football.api-sports.io/players/squads?team=93
+Requesting data for team: 94, URL: https://v3.football.api-sports.io/players/squads?team=94
+Error importing player data for team: 94
+No players data returned
+Requesting data for team: 95, URL: https://v3.football.api-sports.io/players/squads?team=95
+Error importing player data for team: 95
+No players data returned
+Requesting data for team: 96, URL: https://v3.football.api-sports.io/players/squads?team=96
+Error importing player data for team: 96
+No players data returned
+Requesting data for team: 106, URL: https://v3.football.api-sports.io/players/squads?team=106
+Error importing player data for team: 106
+No players data returned
+Requesting data for team: 108, URL: https://v3.football.api-sports.io/players/squads?team=108
+Error importing player data for team: 108
+No players data returned
+Requesting data for team: 111, URL: https://v3.football.api-sports.io/players/squads?team=111
+Error importing player data for team: 111
+No players data returned
+Requesting data for team: 116, URL: https://v3.football.api-sports.io/players/squads?team=116
+Error importing player data for team: 116
+No players data returned
+Requesting data for team: 1063, URL: https://v3.football.api-sports.io/players/squads?team=1063
+Error importing player data for team: 1063
+No players data returned

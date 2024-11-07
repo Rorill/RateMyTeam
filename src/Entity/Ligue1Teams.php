@@ -53,9 +53,6 @@ class Ligue1Teams
     #[ORM\Column(length: 5, nullable: true)]
     private ?string $TLA = null;
 
-    #[ORM\Column(length: 255, nullable: true)]
-    private ?string $Address = null;
-
     #[ORM\Column(nullable: true)]
     private ?int $Founded = null;
 
@@ -254,17 +251,6 @@ class Ligue1Teams
         return $this;
     }
 
-    public function getAddress(): ?string
-    {
-        return $this->Address;
-    }
-
-    public function setAddress(?string $Address): static
-    {
-        $this->Address = $Address;
-
-        return $this;
-    }
 
     public function getFounded(): ?int
     {

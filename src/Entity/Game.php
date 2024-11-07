@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\GameRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -39,6 +41,17 @@ class Game
 
     #[ORM\Column]
     private ?int $apiMatchId = null;
+
+    /**
+     * @var Collection<int, PlayerRating>
+     */
+    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'game')]
+    private Collection $playerRatings;
+
+    public function __construct()
+    {
+        $this->playerRatings = new ArrayCollection();
+    }
 
 
     public function getId(): ?int
@@ -138,6 +151,36 @@ class Game
     public function setApiMatchId(int $apiMatchId): static
     {
         $this->apiMatchId = $apiMatchId;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PlayerRating>
+     */
+    public function getPlayerRatings(): Collection
+    {
+        return $this->playerRatings;
+    }
+
+    public function addPlayerRating(PlayerRating $playerRating): static
+    {
+        if (!$this->playerRatings->contains($playerRating)) {
+            $this->playerRatings->add($playerRating);
+            $playerRating->setGame($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayerRating(PlayerRating $playerRating): static
+    {
+        if ($this->playerRatings->removeElement($playerRating)) {
+            // set the owning side to null (unless already changed)
+            if ($playerRating->getGame() === $this) {
+                $playerRating->setGame(null);
+            }
+        }
 
         return $this;
     }
