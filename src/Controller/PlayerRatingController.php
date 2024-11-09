@@ -10,6 +10,7 @@ use App\Form\PlayerRatingType;
 use App\Entity\PlayerRating;
 use App\Repository\PlayersRepository;
 use App\Repository\GameRepository;
+use App\Repository\PlayerRatingRepository;
 
 class PlayerRatingController extends AbstractController
 {

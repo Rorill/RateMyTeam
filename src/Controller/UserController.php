@@ -25,8 +25,7 @@ class UserController extends AbstractController
     public function mainPage(TeamsRepository $teamsRepository, GameRepository $gamesRepository, UserRepository $userRepository): Response
     {
         $user = $this->getUser(); // Get the authenticated user
-        $selectedTeam = $user->getSelectedTeam(); // Assume this gets the user's selected team
-
+        $selectedTeam = $user->getSelectedTeam();
         // Fetch last game
         $lastGame = $gamesRepository->findLastGameByTeam($selectedTeam->getId());
 
