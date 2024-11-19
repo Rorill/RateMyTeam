@@ -34,7 +34,7 @@ class PlayerType extends AbstractType
                     'Forward' => 'Forward',
                 ],
             ])
-            ->add('birthday', DateType::class, [
+            ->add('dateOfBirth', DateType::class, [
                 'label' => 'Date de naissance',
                 'widget' => 'single_text',
             ]);

@@ -15,11 +15,11 @@ class AddPlayerType extends AbstractType
     {
         $builder
             ->add('position')
-            ->add('FullName')
+            ->add('firstName')
+            ->add('lastName')
             ->add('DateOfBirth', null, [
                 'widget' => 'single_text',
             ])
-            ->add('Name')
             ->add('Nationality')
             ->add('ApiId')
             ->add('team', EntityType::class, [

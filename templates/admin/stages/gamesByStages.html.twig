@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Games for Stage: {{ stage }}{% endblock %}
+
+{% block body %}
+    <h1>Games for Stage: {{ stage }}</h1>
+
+    {% if games is not empty %}
+        <table>
+            <thead>
+            <tr>
+                <th>Home Team</th>
+                <th>Away Team</th>
+                <th>Date</th>
+                <th>Score</th>
+                <th>Actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for game in games %}
+                <tr>
+                    <td>{{ game.teamHome.name }}</td>
+                    <td>{{ game.teamAway.name }}</td>
+                    <td>{{ game.date|date('Y-m-d H:i') }}</td>
+                    <td>{{ game.scoreHome }} - {{ game.scoreAway }}</td>
+                    <td>
+                        <form method="post" action="{{ path('importLineup', { id: game.id }) }}">
+                            <button type="submit">Import Lineup</button>
+                        </form>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No games found for this stage.</p>
+    {% endif %}
+{% endblock %}

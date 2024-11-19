@@ -33,6 +33,16 @@ class TeamsRepository extends ServiceEntityRepository
     }
 
 
+    public function findTeamByApiId(int $apiId): ?Ligue1Teams
+    {
+        return $this->createQueryBuilder('t')
+            ->andWhere('t.ApiId = :ApiId')
+            ->setParameter('ApiId', $apiId)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
+
+
     //    /**
     //     * @return Ligue1Teams[] Returns an array of Ligue1Teams objects
     //     */

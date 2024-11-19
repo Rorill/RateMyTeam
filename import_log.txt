@@ -1,0 +1,969 @@
+Starting import for stage: Regular Season - 7
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213806
+Starting import for stage: Regular Season - 2
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213756
+Error importing lineup for game ID: 622 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 3
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213766
+Error importing lineup for game ID: 631 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 3
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213766
+Error importing lineup for game ID: 631 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 3
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213766
+Error importing lineup for game ID: 631 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213767
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 20558
+Player not found with API ID: 84082
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 277191
+Player not found with API ID: 20541
+Player not found with API ID: 24284
+Player not found with API ID: 8445
+Player not found with API ID: 2704
+Player not found with API ID: 107199
+Player not found with API ID: 20861
+Player not found with API ID: 395762
+Player not found with API ID: 339601
+Player not found with API ID: 24743
+Player not found with API ID: 22003
+Player not found with API ID: 20648
+Successfully imported lineups for game ID: 632
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213768
+Error importing lineup for game ID: 633 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213773
+Error importing lineup for game ID: 634 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213770
+Error importing lineup for game ID: 635 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213769
+Error importing lineup for game ID: 636 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213772
+Error importing lineup for game ID: 637 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213771
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 174927
+Player not found with API ID: 20576
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 21103
+Player not found with API ID: 284071
+Player not found with API ID: 156465
+Player not found with API ID: 20542
+Player not found with API ID: 285
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191392
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 20732
+Player not found with API ID: 31057
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Successfully imported lineups for game ID: 638
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213765
+Error importing lineup for game ID: 639 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 5
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213784
+Error importing lineup for game ID: 649 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213789
+Error importing lineup for game ID: 650 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213790
+Error importing lineup for game ID: 651 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213785
+Error importing lineup for game ID: 652 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213791
+Error importing lineup for game ID: 653 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213787
+Error importing lineup for game ID: 654 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213788
+Error importing lineup for game ID: 655 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213786
+Player not found with API ID: 36878
+Player not found with API ID: 422595
+Player not found with API ID: 85914
+Player not found with API ID: 203483
+Player not found with API ID: 3333
+Player not found with API ID: 20780
+Player not found with API ID: 20558
+Player not found with API ID: 22258
+Player not found with API ID: 326068
+Player not found with API ID: 375000
+Player not found with API ID: 41323
+Error importing lineup for game ID: 656 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213783
+Error importing lineup for game ID: 657 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 9
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213825
+Error importing lineup for game ID: 685 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213826
+Error importing lineup for game ID: 686 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213827
+Error importing lineup for game ID: 687 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213820
+Player not found with API ID: 21628
+Player not found with API ID: 21635
+Player not found with API ID: 25287
+Player not found with API ID: 360114
+Player not found with API ID: 3007
+Player not found with API ID: 270509
+Player not found with API ID: 6231
+Player not found with API ID: 129169
+Player not found with API ID: 22261
+Player not found with API ID: 20761
+Player not found with API ID: 31318
+Error importing lineup for game ID: 688 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213822
+Error importing lineup for game ID: 689 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213823
+Error importing lineup for game ID: 690 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213819
+Error importing lineup for game ID: 691 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213824
+Error importing lineup for game ID: 692 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213821
+Error importing lineup for game ID: 693 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 2
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213756
+Error importing lineup for game ID: 622 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213763
+Error importing lineup for game ID: 623 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213760
+Error importing lineup for game ID: 624 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213759
+Player not found with API ID: 20541
+Player not found with API ID: 401568
+Player not found with API ID: 8445
+Player not found with API ID: 2704
+Player not found with API ID: 24284
+Player not found with API ID: 8624
+Player not found with API ID: 24743
+Player not found with API ID: 179856
+Player not found with API ID: 395762
+Player not found with API ID: 22003
+Player not found with API ID: 20648
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 174927
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 23637
+Player not found with API ID: 174937
+Player not found with API ID: 21103
+Player not found with API ID: 284071
+Player not found with API ID: 289304
+Player not found with API ID: 174915
+Successfully imported lineups for game ID: 625
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213762
+Player not found with API ID: 21628
+Player not found with API ID: 21635
+Player not found with API ID: 25287
+Player not found with API ID: 6231
+Player not found with API ID: 21568
+Player not found with API ID: 22261
+Player not found with API ID: 270509
+Player not found with API ID: 237191
+Player not found with API ID: 129169
+Player not found with API ID: 20761
+Player not found with API ID: 326073
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20558
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 84082
+Successfully imported lineups for game ID: 626
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213758
+Error importing lineup for game ID: 627 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213761
+Error importing lineup for game ID: 628 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213757
+Error importing lineup for game ID: 629 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213764
+Error importing lineup for game ID: 630 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 8
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213815
+Error importing lineup for game ID: 676 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213817
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 203483
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22170
+Player not found with API ID: 20558
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 20780
+Error importing lineup for game ID: 677 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213816
+Player not found with API ID: 20541
+Player not found with API ID: 1407
+Player not found with API ID: 2704
+Player not found with API ID: 22087
+Player not found with API ID: 157146
+Player not found with API ID: 174801
+Player not found with API ID: 278232
+Player not found with API ID: 395762
+Player not found with API ID: 22003
+Player not found with API ID: 20648
+Player not found with API ID: 24743
+Player not found with API ID: 21628
+Player not found with API ID: 360114
+Player not found with API ID: 25287
+Player not found with API ID: 6231
+Player not found with API ID: 3007
+Player not found with API ID: 22261
+Player not found with API ID: 270509
+Player not found with API ID: 237191
+Player not found with API ID: 20761
+Player not found with API ID: 21146
+Player not found with API ID: 31318
+Successfully imported lineups for game ID: 678
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213818
+Error importing lineup for game ID: 679 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213812
+Player not found with API ID: 24011
+Player not found with API ID: 162067
+Player not found with API ID: 20576
+Player not found with API ID: 64255
+Player not found with API ID: 21103
+Player not found with API ID: 2336
+Player not found with API ID: 284071
+Player not found with API ID: 128342
+Player not found with API ID: 20836
+Player not found with API ID: 174915
+Player not found with API ID: 156465
+Error importing lineup for game ID: 680 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213813
+Error importing lineup for game ID: 681 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213811
+Error importing lineup for game ID: 682 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213810
+Player not found with API ID: 20542
+Player not found with API ID: 162466
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 285
+Player not found with API ID: 20586
+Player not found with API ID: 323625
+Player not found with API ID: 7578
+Player not found with API ID: 20732
+Player not found with API ID: 31057
+Player not found with API ID: 20782
+Error importing lineup for game ID: 683 - Unrecognized field: App\Entity\Lineup::$game
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213814
+Error importing lineup for game ID: 684 - Unrecognized field: App\Entity\Lineup::$game
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$team
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$team
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$team
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$team
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$team
+Starting import for stage: Regular Season - 1
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213754
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 162443
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Player not found with API ID: 289304
+Error importing lineup for game ID: 613 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213747
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 22258
+Player not found with API ID: 20780
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 85772
+Error importing lineup for game ID: 614 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for game ID: 615 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for game ID: 616 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213753
+Player not found with API ID: 20542
+Player not found with API ID: 191392
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 20732
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Player not found with API ID: 32940
+Error importing lineup for game ID: 617 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for game ID: 618 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for game ID: 619 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for game ID: 620 - Unrecognized field: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for game ID: 621 - Unrecognized field: App\Entity\Lineup::$player
+Starting import for stage: Regular Season - 3
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213766
+Successfully imported lineups for game ID: 631
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213767
+Player not found with API ID: 36878
+Player not found with API ID: 22247
+Player not found with API ID: 20546
+Player not found with API ID: 85914
+Player not found with API ID: 1901
+Player not found with API ID: 24147
+Player not found with API ID: 20558
+Player not found with API ID: 84082
+Player not found with API ID: 2214
+Player not found with API ID: 22264
+Player not found with API ID: 277191
+Player not found with API ID: 20541
+Player not found with API ID: 24284
+Player not found with API ID: 8445
+Player not found with API ID: 2704
+Player not found with API ID: 107199
+Player not found with API ID: 20861
+Player not found with API ID: 395762
+Player not found with API ID: 339601
+Player not found with API ID: 24743
+Player not found with API ID: 22003
+Player not found with API ID: 20648
+Successfully imported lineups for game ID: 632
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213768
+Successfully imported lineups for game ID: 633
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213773
+Player not found with API ID: 48491
+Player not found with API ID: 50956
+Player not found with API ID: 39115
+Player not found with API ID: 243
+Player not found with API ID: 84128
+Player not found with API ID: 174724
+Successfully imported lineups for game ID: 634
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213770
+Player not found with API ID: 21628
+Player not found with API ID: 21635
+Player not found with API ID: 360114
+Player not found with API ID: 6231
+Player not found with API ID: 21568
+Player not found with API ID: 22261
+Player not found with API ID: 270509
+Player not found with API ID: 237191
+Player not found with API ID: 129169
+Player not found with API ID: 20761
+Player not found with API ID: 21715
+Successfully imported lineups for game ID: 635
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213769
+Successfully imported lineups for game ID: 636
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213772
+Successfully imported lineups for game ID: 637
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213771
+Player not found with API ID: 24011
+Player not found with API ID: 2336
+Player not found with API ID: 174927
+Player not found with API ID: 20576
+Player not found with API ID: 64255
+Player not found with API ID: 20836
+Player not found with API ID: 128342
+Player not found with API ID: 174937
+Player not found with API ID: 21103
+Player not found with API ID: 284071
+Player not found with API ID: 156465
+Player not found with API ID: 20542
+Player not found with API ID: 285
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191392
+Player not found with API ID: 20586
+Player not found with API ID: 21010
+Player not found with API ID: 20732
+Player not found with API ID: 31057
+Player not found with API ID: 90617
+Player not found with API ID: 51293
+Successfully imported lineups for game ID: 638
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213765
+Successfully imported lineups for game ID: 639
+Starting import for stage: Regular Season - 5
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213784
+Player not found with API ID: 20541
+Player not found with API ID: 1407
+Player not found with API ID: 8445
+Player not found with API ID: 2704
+Player not found with API ID: 107199
+Player not found with API ID: 174801
+Player not found with API ID: 278232
+Player not found with API ID: 395762
+Player not found with API ID: 24743
+Player not found with API ID: 322560
+Player not found with API ID: 22003
+Successfully imported lineups for game ID: 649
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213789
+Successfully imported lineups for game ID: 650
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213790
+Player not found with API ID: 21628
+Player not found with API ID: 21635
+Player not found with API ID: 360114
+Player not found with API ID: 6231
+Player not found with API ID: 3007
+Player not found with API ID: 22261
+Player not found with API ID: 270509
+Player not found with API ID: 237191
+Player not found with API ID: 129169
+Player not found with API ID: 20761
+Player not found with API ID: 326073
+Successfully imported lineups for game ID: 651
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213785
+Successfully imported lineups for game ID: 652
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213791
+Player not found with API ID: 24011
+Player not found with API ID: 174927
+Player not found with API ID: 20576
+Player not found with API ID: 64255
+Player not found with API ID: 2336
+Player not found with API ID: 1212
+Player not found with API ID: 21103
+Player not found with API ID: 284071
+Player not found with API ID: 20836
+Player not found with API ID: 174937
+Player not found with API ID: 174915
+Successfully imported lineups for game ID: 653
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213787
+Successfully imported lineups for game ID: 654
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213788
+Player not found with API ID: 20542
+Player not found with API ID: 285
+Player not found with API ID: 162466
+Player not found with API ID: 41300
+Player not found with API ID: 20206
+Player not found with API ID: 191189
+Player not found with API ID: 31057
+Player not found with API ID: 21010
+Player not found with API ID: 323625
+Player not found with API ID: 90617
+Player not found with API ID: 20782
+Successfully imported lineups for game ID: 655
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213786
+Player not found with API ID: 36878
+Player not found with API ID: 422595
+Player not found with API ID: 85914
+Player not found with API ID: 203483
+Player not found with API ID: 3333
+Player not found with API ID: 20780
+Player not found with API ID: 20558
+Player not found with API ID: 22258
+Player not found with API ID: 326068
+Player not found with API ID: 375000
+Player not found with API ID: 41323
+Player not found with API ID: 48491
+Player not found with API ID: 50956
+Player not found with API ID: 328648
+Player not found with API ID: 243
+Player not found with API ID: 84128
+Successfully imported lineups for game ID: 656
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213783
+Successfully imported lineups for game ID: 657
+Starting import for stage: Regular Season - 2
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213756
+Error importing lineup for game ID: 622 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213763
+Error importing lineup for game ID: 623 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213760
+Error importing lineup for game ID: 624 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213759
+Player not found with API ID: 20541
+Player not found with API ID: 401568
+Player not found with API ID: 8445
+Player not found with API ID: 2704
+Player not found with API ID: 24284
+Player not found with API ID: 8624
+Player not found with API ID: 24743
+Player not found with API ID: 179856
+Player not found with API ID: 395762
+Player not found with API ID: 22003
+Player not found with API ID: 20648
+Error importing lineup for game ID: 625 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213762
+Player not found with API ID: 21628
+Player not found with API ID: 21635
+Player not found with API ID: 25287
+Player not found with API ID: 6231
+Player not found with API ID: 21568
+Player not found with API ID: 22261
+Player not found with API ID: 270509
+Player not found with API ID: 237191
+Player not found with API ID: 129169
+Player not found with API ID: 20761
+Player not found with API ID: 326073
+Error importing lineup for game ID: 626 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213758
+Error importing lineup for game ID: 627 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213761
+Error importing lineup for game ID: 628 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213757
+Error importing lineup for game ID: 629 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213764
+Error importing lineup for game ID: 630 - Warning: Undefined property: App\Entity\Lineup::$player
+Starting import for stage: Regular Season - 3
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213766
+Error importing lineup for game ID: 631 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213767
+Error importing lineup for game ID: 632 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213768
+Error importing lineup for game ID: 633 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213773
+Error importing lineup for game ID: 634 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213770
+Error importing lineup for game ID: 635 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213769
+Error importing lineup for game ID: 636 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213772
+Error importing lineup for game ID: 637 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213771
+Error importing lineup for game ID: 638 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213765
+Error importing lineup for game ID: 639 - Warning: Undefined property: App\Entity\Lineup::$player
+Starting import for stage: Regular Season - 7
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213806
+Error importing lineup for game ID: 667 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213804
+Player not found with API ID: 20541
+Player not found with API ID: 1407
+Player not found with API ID: 8445
+Player not found with API ID: 22087
+Player not found with API ID: 157146
+Player not found with API ID: 174801
+Player not found with API ID: 278232
+Player not found with API ID: 395762
+Player not found with API ID: 179856
+Player not found with API ID: 20648
+Player not found with API ID: 24743
+Error importing lineup for game ID: 668 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213803
+Error importing lineup for game ID: 669 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213807
+Error importing lineup for game ID: 670 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213801
+Error importing lineup for game ID: 671 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213809
+Error importing lineup for game ID: 672 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213808
+Error importing lineup for game ID: 673 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213805
+Error importing lineup for game ID: 674 - Warning: Undefined property: App\Entity\Lineup::$player
+Fetching data from URL: https://v3.football.api-sports.io/fixtures?id=1213802
+Error importing lineup for game ID: 675 - Warning: Undefined property: App\Entity\Lineup::$player
+Starting import for stage: Regular Season - 1
+Fetching data for Game ID 613 from https://v3.football.api-sports.io/fixtures?id=1213754
+No lineups found for Game ID 613.
+Fetching data for Game ID 614 from https://v3.football.api-sports.io/fixtures?id=1213747
+No lineups found for Game ID 614.
+Fetching data for Game ID 615 from https://v3.football.api-sports.io/fixtures?id=1213752
+No lineups found for Game ID 615.
+Fetching data for Game ID 616 from https://v3.football.api-sports.io/fixtures?id=1213751
+No lineups found for Game ID 616.
+Fetching data for Game ID 617 from https://v3.football.api-sports.io/fixtures?id=1213753
+No lineups found for Game ID 617.
+Fetching data for Game ID 618 from https://v3.football.api-sports.io/fixtures?id=1213750
+No lineups found for Game ID 618.
+Fetching data for Game ID 619 from https://v3.football.api-sports.io/fixtures?id=1213748
+No lineups found for Game ID 619.
+Fetching data for Game ID 620 from https://v3.football.api-sports.io/fixtures?id=1213749
+No lineups found for Game ID 620.
+Fetching data for Game ID 621 from https://v3.football.api-sports.io/fixtures?id=1213755
+No lineups found for Game ID 621.
+Starting import for stag e: Regular Season - 2
+Fetching data for Game ID 622 from https://v3.football.api-sports.io/fixtures?id=1213756
+No lineups found for Game ID 622.
+Fetching data for Game ID 623 from https://v3.football.api-sports.io/fixtures?id=1213763
+No lineups found for Game ID 623.
+Fetching data for Game ID 624 from https://v3.football.api-sports.io/fixtures?id=1213760
+No lineups found for Game ID 624.
+Fetching data for Game ID 625 from https://v3.football.api-sports.io/fixtures?id=1213759
+No lineups found for Game ID 625.
+Fetching data for Game ID 626 from https://v3.football.api-sports.io/fixtures?id=1213762
+No lineups found for Game ID 626.
+Fetching data for Game ID 627 from https://v3.football.api-sports.io/fixtures?id=1213758
+No lineups found for Game ID 627.
+Fetching data for Game ID 628 from https://v3.football.api-sports.io/fixtures?id=1213761
+No lineups found for Game ID 628.
+Fetching data for Game ID 629 from https://v3.football.api-sports.io/fixtures?id=1213757
+No lineups found for Game ID 629.
+Fetching data for Game ID 630 from https://v3.football.api-sports.io/fixtures?id=1213764
+No lineups found for Game ID 630.
+Starting import for stage: Regular Season - 1
+Fetching data for Game ID 613 from https://v3.football.api-sports.io/fixtures?id=1213754
+Error importing lineup for Game ID 613: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 614 from https://v3.football.api-sports.io/fixtures?id=1213747
+Error importing lineup for Game ID 614: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 615 from https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for Game ID 615: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 616 from https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for Game ID 616: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 617 from https://v3.football.api-sports.io/fixtures?id=1213753
+Error importing lineup for Game ID 617: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 618 from https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for Game ID 618: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 619 from https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for Game ID 619: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 620 from https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for Game ID 620: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 621 from https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for Game ID 621: Unrecognized field: App\Entity\Lineup::$team.
+Starting import for stage: Regular Season - 2
+Fetching data for Game ID 622 from https://v3.football.api-sports.io/fixtures?id=1213756
+Error importing lineup for Game ID 622: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 623 from https://v3.football.api-sports.io/fixtures?id=1213763
+Error importing lineup for Game ID 623: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 624 from https://v3.football.api-sports.io/fixtures?id=1213760
+Error importing lineup for Game ID 624: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 625 from https://v3.football.api-sports.io/fixtures?id=1213759
+Created new player: G. Larsonneur with ID 20541
+Error importing lineup for Game ID 625: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 626 from https://v3.football.api-sports.io/fixtures?id=1213762
+Created new player: B. Samba with ID 21628
+Error importing lineup for Game ID 626: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 627 from https://v3.football.api-sports.io/fixtures?id=1213758
+Error importing lineup for Game ID 627: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 628 from https://v3.football.api-sports.io/fixtures?id=1213761
+Error importing lineup for Game ID 628: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 629 from https://v3.football.api-sports.io/fixtures?id=1213757
+Error importing lineup for Game ID 629: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 630 from https://v3.football.api-sports.io/fixtures?id=1213764
+Error importing lineup for Game ID 630: Unrecognized field: App\Entity\Lineup::$team.
+Starting import for stage: Regular Season - 4
+Fetching data for Game ID 640 from https://v3.football.api-sports.io/fixtures?id=1213780
+Created new player: G. Larsonneur with ID 20541
+Error importing lineup for Game ID 640: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 641 from https://v3.football.api-sports.io/fixtures?id=1213781
+Error importing lineup for Game ID 641: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 642 from https://v3.football.api-sports.io/fixtures?id=1213774
+Error importing lineup for Game ID 642: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 643 from https://v3.football.api-sports.io/fixtures?id=1213782
+Error importing lineup for Game ID 643: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 644 from https://v3.football.api-sports.io/fixtures?id=1213775
+Error importing lineup for Game ID 644: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 645 from https://v3.football.api-sports.io/fixtures?id=1213777
+Error importing lineup for Game ID 645: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 646 from https://v3.football.api-sports.io/fixtures?id=1213779
+Error importing lineup for Game ID 646: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 647 from https://v3.football.api-sports.io/fixtures?id=1213778
+Error importing lineup for Game ID 647: Unrecognized field: App\Entity\Lineup::$team.
+Fetching data for Game ID 648 from https://v3.football.api-sports.io/fixtures?id=1213776
+Created new player: B. Samba with ID 21628
+Error importing lineup for Game ID 648: Unrecognized field: App\Entity\Lineup::$team.
+Starting import for stage: Regular Season - 1
+Fetching data for Game ID 613 from https://v3.football.api-sports.io/fixtures?id=1213754
+Error importing lineup for Game ID 613: Warning: Undefined array key "Team".
+Fetching data for Game ID 614 from https://v3.football.api-sports.io/fixtures?id=1213747
+Error importing lineup for Game ID 614: Warning: Undefined array key "Team".
+Fetching data for Game ID 615 from https://v3.football.api-sports.io/fixtures?id=1213752
+Error importing lineup for Game ID 615: Warning: Undefined array key "Team".
+Fetching data for Game ID 616 from https://v3.football.api-sports.io/fixtures?id=1213751
+Error importing lineup for Game ID 616: Warning: Undefined array key "Team".
+Fetching data for Game ID 617 from https://v3.football.api-sports.io/fixtures?id=1213753
+Error importing lineup for Game ID 617: Warning: Undefined array key "Team".
+Fetching data for Game ID 618 from https://v3.football.api-sports.io/fixtures?id=1213750
+Error importing lineup for Game ID 618: Warning: Undefined array key "Team".
+Fetching data for Game ID 619 from https://v3.football.api-sports.io/fixtures?id=1213748
+Error importing lineup for Game ID 619: Warning: Undefined array key "Team".
+Fetching data for Game ID 620 from https://v3.football.api-sports.io/fixtures?id=1213749
+Error importing lineup for Game ID 620: Warning: Undefined array key "Team".
+Fetching data for Game ID 621 from https://v3.football.api-sports.io/fixtures?id=1213755
+Error importing lineup for Game ID 621: Warning: Undefined array key "Team".
+Starting import for stage: Regular Season - 3
+Fetching data for Game ID 631 from https://v3.football.api-sports.io/fixtures?id=1213766
+Error importing lineup for Game ID 631: Warning: Undefined array key "Team".
+Fetching data for Game ID 632 from https://v3.football.api-sports.io/fixtures?id=1213767
+Error importing lineup for Game ID 632: Warning: Undefined array key "Team".
+Fetching data for Game ID 633 from https://v3.football.api-sports.io/fixtures?id=1213768
+Error importing lineup for Game ID 633: Warning: Undefined array key "Team".
+Fetching data for Game ID 634 from https://v3.football.api-sports.io/fixtures?id=1213773
+Error importing lineup for Game ID 634: Warning: Undefined array key "Team".
+Fetching data for Game ID 635 from https://v3.football.api-sports.io/fixtures?id=1213770
+Error importing lineup for Game ID 635: Warning: Undefined array key "Team".
+Fetching data for Game ID 636 from https://v3.football.api-sports.io/fixtures?id=1213769
+Error importing lineup for Game ID 636: Warning: Undefined array key "Team".
+Fetching data for Game ID 637 from https://v3.football.api-sports.io/fixtures?id=1213772
+Error importing lineup for Game ID 637: Warning: Undefined array key "Team".
+Fetching data for Game ID 638 from https://v3.football.api-sports.io/fixtures?id=1213771
+Error importing lineup for Game ID 638: Warning: Undefined array key "Team".
+Fetching data for Game ID 639 from https://v3.football.api-sports.io/fixtures?id=1213765
+Error importing lineup for Game ID 639: Warning: Undefined array key "Team".

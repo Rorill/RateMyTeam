@@ -1,0 +1,104 @@
+/* /mobile.css  */
+@media(max-width: 481px){
+    /* Général */
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #85B6F0;
+        font-family: Arial, sans-serif;
+        color: #FFFFFF;
+    }
+
+    /* Header */
+    .header {
+        background-color: #4F4C69;
+        text-align: center;
+        padding: 20px 10px;
+    }
+
+    .header-title {
+        font-size: 1.8rem;
+        margin: 0;
+    }
+
+    .LoginButton {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #85B6F0;
+        border-radius: 5px;
+    }
+
+    .LoginButton:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 15px;
+    }
+
+    .section {
+        margin-bottom: 20px;
+        padding: 10px;
+        background-color: #4F4C69;
+        border-radius: 8px;
+    }
+
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        margin-bottom: 10px;
+        line-height: 1.5;
+        text-align: justify;
+    }
+
+    /* Features Section */
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .features-item {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        padding: 5px 10px;
+        background-color: #6FADE8;
+        border-radius: 5px;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: block;
+        text-align: center;
+        margin: 20px auto;
+        padding: 12px 20px;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        background-color: #85B6F0;
+        text-decoration: none;
+        border-radius: 5px;
+        max-width: 200px;
+    }
+
+    .cta-button:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Footer */
+    .footer {
+        background-color: #4F4C69;
+        text-align: center;
+        padding: 15px 10px;
+        font-size: 0.9rem;
+    }
+}

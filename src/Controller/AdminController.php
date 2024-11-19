@@ -131,22 +131,25 @@ return $this->render('admin/AdminDashboard.html.twig', [
     #[Route('/admin/team/{id}/players', name: 'admin_team_players')]
     public function teamPlayers(int $id, TeamsRepository $teamsRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
-
-        $team = $teamsRepository->findOneBy(['ApiId' => $id]);
+        // Find the team by the database id (not ApiId)
+        $team = $teamsRepository->find($id);  // Use find() instead of findOneBy()
 
         if (!$team) {
             throw $this->createNotFoundException('Team not found');
         }
 
+        // You can now access ApiId from the $team object
+        $apiId = $team->getApiId();  // Access the actual ApiId if needed
+
         $players = $team->getPlayers();
 
-        // Create a new player
+        // Create a new player form
         $player = new Players();
         $form = $this->createForm(AddPlayerType::class, $player);
 
         $form->handleRequest($request);
         if ($form->isSubmitted() && $form->isValid()) {
-            // Assigner l'équipe au joueur
+            // Assign the team to the new player
             $player->setTeam($team);
             $entityManager->persist($player);
             $entityManager->flush();
@@ -486,7 +489,7 @@ return $this->render('admin/AdminDashboard.html.twig', [
                             $player = new Players();
                             $player->setApiId($playerData['id']);
                             $player->setTeam($team);
-                            $player->setPosition($playerData['position']);
+                            $player->setPosition($playerData['position']); // Ensure position is set correctly
                             $player->setDateOfBirth(new \DateTime('1970-01-01'));
 
                             // Set FirstName and LastName from API response

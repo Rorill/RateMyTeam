@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Stages{% endblock %}
+
+{% block body %}
+    <h1>Stages</h1>
+
+    {% if stages is not empty %}
+        <ul>
+            {% for stage in stages %}
+                <li>
+                    <form action="{{ path('games_by_stage', {'stage': stage}) }}" method="get">
+                        <button type="submit">{{ stage }}</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No stages found.</p>
+    {% endif %}
+{% endblock %}
