@@ -18,11 +18,7 @@ class Lineup
     #[ORM\ManyToOne(inversedBy: 'lineups')]
     private ?Game $game = null;
 
-    /**
-     * @var Collection<int, Players>
-     */
-    #[ORM\ManyToMany(targetEntity: Players::class, inversedBy: 'lineups')]
-    private Collection $players;
+
 
     #[ORM\ManyToOne(inversedBy: 'lineups')]
     private ?Ligue1Teams $team = null; // Renamed from Team to team
@@ -30,10 +26,17 @@ class Lineup
     #[ORM\Column]
     private ?bool $isStarter = null;
 
+    /**
+     * @var Collection<int, Players>
+     */
+    #[ORM\ManyToMany(targetEntity: Players::class, mappedBy: 'Lineups')]
+    private Collection $players;
+
     public function __construct()
     {
         $this->players = new ArrayCollection();
     }
+
 
     public function getId(): ?int
     {
@@ -52,29 +55,11 @@ class Lineup
         return $this;
     }
 
-    /**
-     * @return Collection<int, Players>
-     */
-    public function getPlayers(): Collection
-    {
-        return $this->players;
-    }
 
-    public function addPlayer(Players $player): static
-    {
-        if (!$this->players->contains($player)) {
-            $this->players->add($player);
-        }
 
-        return $this;
-    }
 
-    public function removePlayer(Players $player): static
-    {
-        $this->players->removeElement($player);
 
-        return $this;
-    }
+
 
     public function getTeam(): ?Ligue1Teams
     {
@@ -96,6 +81,33 @@ class Lineup
     public function setStarter(bool $isStarter): static
     {
         $this->isStarter = $isStarter;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Players>
+     */
+    public function getPlayers(): Collection
+    {
+        return $this->players;
+    }
+
+    public function addPlayer(Players $player): static
+    {
+        if (!$this->players->contains($player)) {
+            $this->players->add($player);
+            $player->addLineup($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayer(Players $player): static
+    {
+        if ($this->players->removeElement($player)) {
+            $player->removeLineup($this);
+        }
 
         return $this;
     }

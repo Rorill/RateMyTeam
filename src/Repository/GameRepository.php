@@ -42,6 +42,14 @@ class GameRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+    public function findByApiId(int $id): ?Game
+    {
+        return $this->createQueryBuilder('g')
+            ->where('g.apiMatchId = :apiMatchId')
+            ->setParameter('apiMatchId', $id)
+            ->getQuery()
+            ->getOneOrNullResult();
+    }
 
 //    /**
 //     * @return Game[] Returns an array of Game objects

@@ -24,7 +24,7 @@
                     <td>{{ game.date|date('Y-m-d H:i') }}</td>
                     <td>{{ game.scoreHome }} - {{ game.scoreAway }}</td>
                     <td>
-                        <form method="post" action="{{ path('importLineup', { id: game.id }) }}">
+                        <form method="POST" action="{{ path('lineupPerGame', {'gameId': game.id}) }}">
                             <button type="submit">Import Lineup</button>
                         </form>
                     </td>

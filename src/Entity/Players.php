@@ -47,9 +47,16 @@ class Players
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $LastName = null;
 
+    /**
+     * @var Collection<int, Lineup>
+     */
+    #[ORM\ManyToMany(targetEntity: Lineup::class, inversedBy: 'players')]
+    private Collection $Lineups;
+
     public function __construct()
     {
         $this->playerRatings = new ArrayCollection();
+        $this->Lineups = new ArrayCollection();
     }
 
     public function getId(): ?int
@@ -174,6 +181,30 @@ class Players
     public function setLastName(?string $LastName): static
     {
         $this->LastName = $LastName;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, Lineup>
+     */
+    public function getLineups(): Collection
+    {
+        return $this->Lineups;
+    }
+
+    public function addLineup(Lineup $lineup): static
+    {
+        if (!$this->Lineups->contains($lineup)) {
+            $this->Lineups->add($lineup);
+        }
+
+        return $this;
+    }
+
+    public function removeLineup(Lineup $lineup): static
+    {
+        $this->Lineups->removeElement($lineup);
 
         return $this;
     }

@@ -24,10 +24,13 @@ use App\Repository\GameRepository;
 use Symfony\Component\Console\Logger;
 
 
+
 class MatchController extends AbstractController
 {
     private $entityManager;
     private $client;
+
+    private TeamsRepository $teamsRepository;
 
     private GameRepository $gameRepository;
 
@@ -115,6 +118,7 @@ class MatchController extends AbstractController
         $entityManager->persist($game);
         $entityManager->flush();
     }
+
     #[Route('/stages', name: 'stages')]
     public function stages(EntityManagerInterface $entityManager): Response
     {
@@ -146,76 +150,87 @@ class MatchController extends AbstractController
             'games' => $games,
         ]);
     }
-    #[Route('/import-lineup/{id}', name: 'importLineup', methods: ['POST'])]
-    public function importLineupForGame(
-        int $id,
-        EntityManagerInterface $entityManager,  // Use the EntityManager directly
-        GameRepository $gameRepository,
-        HttpClientInterface $httpClient,
-        TeamsRepository $teamsRepository,
-    ): Response {
-        // Find the game by ID (this is the internal game ID in your database)
-        $game = $gameRepository->find($id);
 
-        if (!$game) {
-            return $this->json(['error' => 'Game not found'], Response::HTTP_NOT_FOUND);
-        }
+    #[Route('/import-lineups/{gameId}', name: 'lineupPerGame')]
+    public function fetchDataAndInsertLineups(int $gameId, GameRepository $gameRepository, TeamsRepository $teamRepository, PlayersRepository $playersRepository, HttpClientInterface $client,): Response
+    {
+        $apiKey = '817f5048f12a77621a46a76d0ca25df6'; // Replace with your actual API key
+        $apiUrl = "https://v3.football.api-sports.io/fixtures/lineups?fixture={$gameId}";
 
         try {
-            // Fetch the lineups from the API based on the apiMatchId (external ID from your database)
-            $externalApiId = $game->getApiMatchId();  // Get the external API match ID from your database
-
-            if (!$externalApiId) {
-                return $this->json(['error' => 'External API ID not found for the game'], Response::HTTP_BAD_REQUEST);
-            }
-
-            // Construct the API URL using the external API match ID
-            $url = "https://v3.football.api-sports.io/fixtures/lineups?fixture=$externalApiId";
-
-            // Send the request to the API
-            $response = $httpClient->request('GET', $url, [
+            // 1. Fetch lineup data from the API
+            $response = $client->request('GET', $apiUrl, [
                 'headers' => [
+                    'x-apisports-key' => $apiKey,
                     'x-rapidapi-host' => 'v3.football.api-sports.io',
-                    'x-rapidapi-key' => '817f5048f12a77621a46a76d0ca25df6',
                 ],
             ]);
 
-            // Get the response data as an array
+            $statusCode = $response->getStatusCode();
+            if ($statusCode !== 200) {
+                throw new \Exception("API request failed with status code: {$statusCode}");
+            }
+
             $data = $response->toArray();
+            $lineupsData = $data['response'];
 
-            // If lineups are available, proceed with processing
-            if (isset($data['response']) && count($data['response']) > 0) {
-                foreach ($data['response'] as $teamLineup) {
-                    // Find the team by its API ID (from the lineup data)
-                    $team = $teamsRepository->findOneBy(['ApiId' => $teamLineup['team']['id']]);
-                    if (!$team) {
-                        continue; // Skip if team not found
-                    }
-
-                    // Create and persist the lineup for the game and team
-                    $lineup = new Lineup();
-                    $lineup->setGame($game);
-                    $lineup->setTeam($team);
-
-                    // Add the starter lineup (just a simplified example, you can add more details later)
-                    $lineup->setStarter(true);
-                    $entityManager->persist($lineup);
-
-                    // Add the substitute lineup (again simplified)
-                    $lineup->setStarter(false);
-                    $entityManager->persist($lineup);
+            // 2. Process and insert data for each team in the lineup
+            foreach ($lineupsData as $lineup) {
+                $teamId = $lineup['team']['id'];
+                $team = $teamRepository->find($teamId);
+                if (!$team) {
+                    throw new \Exception("Team with ID {$teamId} not found.");
                 }
 
-                // Persist the lineups to the database
-                $entityManager->flush();
-            }
-        } catch (\Exception $e) {
-            return $this->json(['error' => $e->getMessage()], Response::HTTP_INTERNAL_SERVER_ERROR);
-        }
+                $game = $gameRepository->find($gameId);
+                if (!$game) {
+                    throw new \Exception("Game with ID {$gameId} not found.");
+                }
 
-        return $this->json(['message' => 'Lineup imported successfully']);
+                $starterLineup = new Lineup();
+                $starterLineup->setGame($game);
+                $starterLineup->setTeam($team);
+                $starterLineup->setStarter(true);
+                $this->entityManager->persist($starterLineup);
+
+                foreach ($lineup['startXI'] as $playerData) {
+                    $playerId = $playerData['player']['id'];
+                    $player = $playersRepository->findOneBy(['ApiId' => $playerId]);
+
+                    if (!$player) {
+                        throw new \Exception("Player with API ID {$playerId} not found in the database.");
+                    }
+
+                    $starterLineup->addPlayer($player);
+                }
+
+                $substituteLineup = new Lineup();
+                $substituteLineup->setGame($game);
+                $substituteLineup->setTeam($team);
+                $substituteLineup->setStarter(false);
+                $this->entityManager->persist($substituteLineup);
+
+                foreach ($lineup['substitutes'] as $playerData) {
+                    $playerId = $playerData['player']['id'];
+                    $player = $playersRepository->findOneBy(['ApiId' => $playerId]);
+
+                    if (!$player) {
+                        throw new \Exception("Player with API ID {$playerId} not found in the database.");
+                    }
+
+                    $substituteLineup->addPlayer($player);
+                }
+            }
+
+            $this->entityManager->flush();
+
+            // Redirect to the match page after the lineup import
+            return($this->redirectToRoute('stages'));
+
+        } catch (\Exception $e) {
+            $this->addFlash('error', 'An error occurred while importing lineups: ' . $e->getMessage());
+            return $this->redirectToRoute('game_show', ['id' => $gameId]); // Redirect to the game page on error
+        }
     }
 
 }
-
-
