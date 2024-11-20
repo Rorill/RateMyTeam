@@ -4,10 +4,10 @@
 
 {% block body %}
     <div class="main-page-container">
-        <h1 class="team-header">{{ selectedTeam.name }} - Games Overview</h1>
+        <h1 class="team-header">Bienvenue, {{ user.email }}</h1>
 
         <div class="last-game-section">
-            <h2>Last Game</h2>
+            <h2 class="section-title">Last Game</h2>
             {% if lastGame %}
                 <div class="game-details">
                     <p><strong>Date:</strong> {{ lastGame.date | date("d/m/Y") }}</p>
@@ -15,18 +15,19 @@
                     <p><strong>Score:</strong> {{ lastGame.ScoreHome }} - {{ lastGame.ScoreAway }}</p>
 
                     <!-- Button to go to the rating page -->
-                    <a href="{{ path('app_rate_game', { 'gameId': lastGame.id }) }}" class="btn-rate-game">
-                        Rate Players
-                    </a>
+                    <div class="rate-button-container">
+                        <a href="{{ path('app_rate_game', { 'gameId': lastGame.id }) }}" class="btn-rate-game">
+                            Rate Players
+                        </a>
+                    </div>
                 </div>
             {% else %}
                 <p>No recent games available.</p>
             {% endif %}
         </div>
 
-
         <div class="next-games-section">
-            <h2>Next 5 Games</h2>
+            <h2 class="section-title">Next 5 Games</h2>
             {% if nextGames|length > 0 %}
                 <ul class="next-games-list">
                     {% for game in nextGames %}
@@ -37,13 +38,6 @@
                                     {{ game.TeamAway.name }}
                                 {% else %}
                                     {{ game.TeamHome.name }}
-                                {% endif %}
-                            </p>
-                            <p><strong>Venue:</strong>
-                                {% if game.TeamHome.id == selectedTeam.id %}
-                                    Home
-                                {% else %}
-                                    Away
                                 {% endif %}
                             </p>
                         </li>

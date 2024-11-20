@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Profile - My Account{% endblock %}
+
+{% block body %}
+    <div class="profile-container">
+        <div class="profile-header">
+            <h1 class="profile-title">Profile</h1>
+            <p class="profile-description">Gestion de votre profil .</p>
+        </div>
+
+        <div class="profile-content">
+            <div class="profile-info">
+                <h2 class="profile-info-title">Informations </h2>
+                <p class="profile-info-label">Email:</p>
+                <p class="profile-info-value">{{ app.user.email }}</p>
+            </div>
+
+            <div class="profile-password-change">
+                <h2 class="profile-password-title">Changez votre mot de passe </h2>
+                <form method="POST" action="{{ path('app_profile_update_password') }}" class="profile-password-form">
+                    <div class="profile-form-group">
+                        <label for="newPassword" class="profile-form-label">Nouveau mot de passe</label>
+                        <input type="password" id="newPassword" name="newPassword" class="profile-form-input" required />
+                    </div>
+
+                    <div class="profile-form-group">
+                        <label for="confirmPassword" class="profile-form-label">Confirmez le mot de passe</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" class="profile-form-input" required />
+                    </div>
+
+                    <button type="submit" class="profile-form-button">Update Password</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}

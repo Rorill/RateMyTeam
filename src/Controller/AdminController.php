@@ -20,9 +20,12 @@ use Symfony\Component\PasswordHasher\Hasher\UserPasswordHasherInterface;
 use Symfony\Component\HttpFoundation\Request;
 use Doctrine\ORM\QueryBuilder;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 class AdminController extends AbstractController
 {
 #[Route('/admin', name: 'admin_dashboard')]
+#[isGranted('ROLE_ADMIN')]
+
 public function index(TeamsRepository $teamsRepository, EntityManagerInterface $entityManager): Response
 {
     $userCount = $entityManager->getRepository(User::class)->count([]);
@@ -42,6 +45,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 // User Management
 }
     #[Route('/admin/users', name: 'admin_users')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function manageUsers(UserRepository $userRepository): Response
     {
         $users = $userRepository->findAll(); // Récupérer tous les utilisateurs
@@ -55,6 +60,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     // add user
 
     #[Route('/admin/users/add', name: 'admin_add_user')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function addUser(Request $request, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager, TeamsRepository $teamsRepository): Response
     {
         $teams = $teamsRepository->findAll();
@@ -84,6 +91,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
     // edit User
     #[Route('/admin/users/edit/{id}', name: 'admin_edit_user')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function editUser(Request $request, UserPasswordHasherInterface $passwordHasher, EntityManagerInterface $entityManager, TeamsRepository $teamsRepository, int $id): Response
     {
         $user = $entityManager->getRepository(User::class)->find($id);
@@ -120,6 +129,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/users/delete/{id}', name: 'admin_delete_user')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function deleteUser(Request $request, User $user, EntityManagerInterface $entityManager, TeamsRepository $teamsRepository): Response
     {
         $entityManager->remove($user);
@@ -129,6 +140,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/team/{id}/players', name: 'admin_team_players')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function teamPlayers(int $id, TeamsRepository $teamsRepository, Request $request, EntityManagerInterface $entityManager): Response
     {
         // Find the team by the database id (not ApiId)
@@ -165,6 +178,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/teams', name: 'admin_team_list')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function teamListing(TeamsRepository $teamsRepository): Response
     {
         // Récupère toutes les équipes
@@ -186,6 +201,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/admin/team/{id}/add-player', name: 'admin_add_player')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function addPlayer(Request $request, EntityManagerInterface $entityManager, Ligue1Teams $team = null): Response
     {
         $player = new Players();
@@ -218,6 +235,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
     // edit players
     #[Route('/admin/player/edit/{id}', name: 'admin_edit_player')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function editPlayer(Request $request,Players $player, PlayersRepository $playersRepository, EntityManagerInterface $entityManager, int $id): Response
     {
         $form = $this->createForm(PlayerType::class, $player);
@@ -238,6 +257,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
     // game management page
     #[Route('/gestion-matches', name: 'match_management')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function manageMatches(GameRepository $matchRepository, Request $request): Response
     {
         $matchday = $request->query->get('matchday');
@@ -257,6 +278,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
 
     #[Route('/import-teams', name: 'match_management')]
+    #[isGranted('ROLE_ADMIN')]
+
 
     public function fetchTeams(HttpClientInterface $client, EntityManagerInterface $entityManager): Response
     {
@@ -442,6 +465,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
 
     // Import players from api
     #[Route('/import-players', name: 'import_players')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function importPlayers(HttpClientInterface $client, EntityManagerInterface $entityManager): Response
     {
         $this->importPlayersData($client, $entityManager);
@@ -566,6 +591,8 @@ return $this->render('admin/AdminDashboard.html.twig', [
     }
 
     #[Route('/update-player-names', name: 'appPlayeUpdate')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function updatePlayerNames(HttpClientInterface $client, EntityManagerInterface $entityManager): Response
     {
         // Logic to update player names for players with missing FirstName/LastName

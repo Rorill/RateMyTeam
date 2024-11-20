@@ -12,16 +12,28 @@ class SecurityController extends AbstractController
     #[Route(path: '/login', name: 'app_login')]
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        // if ($this->getUser()) {
-        //     return $this->redirectToRoute('target_path');
-        // }
+        // If the user is already authenticated
+        if ($this->getUser()) {
+            // Check if the user has the ROLE_ADMIN role
+            if (in_array('ROLE_ADMIN', $this->getUser()->getRoles())) {
+                // Redirect to admin dashboard if the user is an admin
+                return $this->redirectToRoute('admin_dashboard');
+            }
 
-        // get the login error if there is one
+            // Otherwise, redirect to the game page if the user is not an admin
+            return $this->redirectToRoute('app_game');
+        }
+
+        // Get the login error if there is one
         $error = $authenticationUtils->getLastAuthenticationError();
-        // last username entered by the user
+        // Get the last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        // Render the login form with the error and last username
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error,
+        ]);
     }
 
     #[Route(path: '/logout', name: 'app_logout')]

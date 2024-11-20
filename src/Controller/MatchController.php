@@ -8,6 +8,7 @@ use App\Repository\LineupRepository;
 use App\Repository\PlayersRepository;
 use Psr\Log\LoggerInterface;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Symfony\Component\Security\Http\Attribute\IsGranted;
 use Symfony\Contracts\HttpClient\HttpClientInterface;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -42,6 +43,8 @@ class MatchController extends AbstractController
 
 
     #[Route('/import-games', name: "import_games")]
+    #[isGranted('ROLE_ADMIN')]
+
     public function importAllGames(HttpClientInterface $client, EntityManagerInterface $entityManager): Response
     {
         // Get the current year for the season
@@ -120,6 +123,8 @@ class MatchController extends AbstractController
     }
 
     #[Route('/stages', name: 'stages')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function stages(EntityManagerInterface $entityManager): Response
     {
         // Fetch all unique stages from the database (assuming games are already imported)
@@ -152,6 +157,8 @@ class MatchController extends AbstractController
     }
 
     #[Route('/import-lineups/{gameId}', name: 'lineupPerGame')]
+    #[isGranted('ROLE_ADMIN')]
+
     public function fetchDataAndInsertLineups(int $gameId, GameRepository $gameRepository, TeamsRepository $teamRepository, PlayersRepository $playersRepository, HttpClientInterface $client,): Response
     {
         $apiKey = '817f5048f12a77621a46a76d0ca25df6'; // Replace with your actual API key

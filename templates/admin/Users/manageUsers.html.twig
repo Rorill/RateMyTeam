@@ -20,7 +20,7 @@
         {% for user in users %}
             <tr>
                 <td>{{ user.email }}</td>
-                <td>{{ user.selectedTeam ? user.selectedTeam.displayName : 'Aucune équipe sélectionnée' }}</td>
+                <td>{{ user.selectedTeam ? user.selectedTeam.name : 'Aucune équipe sélectionnée' }}</td>
                 <td>                         {# Vérification de l'état de vérification #}
                     {{ user.isVerified ? 'Vérifié' : 'Non vérifié' }}
                 </td>
