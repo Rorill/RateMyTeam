@@ -18,11 +18,7 @@ class Ligue1Teams
     #[ORM\Column(length: 255)]
     private ?string $Name = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $DisplayName = null;
 
-    #[ORM\Column(length: 255)]
-    private ?string $Stadium = null;
 
     #[ORM\Column(length: 255)]
     private ?string $Coach = null;
@@ -51,6 +47,24 @@ class Ligue1Teams
     #[ORM\OneToMany(targetEntity: Players::class, mappedBy: 'team')]
     private Collection $players;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $ShortName = null;
+
+    #[ORM\Column(length: 5, nullable: true)]
+    private ?string $TLA = null;
+
+    #[ORM\Column(nullable: true)]
+    private ?int $Founded = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $Venue = null;
+
+    #[ORM\Column(length: 255)]
+    private ?string $ApiId = null;
+
+
+
+
     public function __construct()
     {
         $this->users = new ArrayCollection();
@@ -64,6 +78,7 @@ class Ligue1Teams
         return $this->id;
     }
 
+
     public function getName(): ?string
     {
         return $this->Name;
@@ -76,29 +91,7 @@ class Ligue1Teams
         return $this;
     }
 
-    public function getDisplayName(): ?string
-    {
-        return $this->DisplayName;
-    }
 
-    public function setDisplayName(string $DisplayName): static
-    {
-        $this->DisplayName = $DisplayName;
-
-        return $this;
-    }
-
-    public function getStadium(): ?string
-    {
-        return $this->Stadium;
-    }
-
-    public function setStadium(string $Stadium): static
-    {
-        $this->Stadium = $Stadium;
-
-        return $this;
-    }
 
     public function getCoach(): ?string
     {
@@ -228,6 +221,69 @@ class Ligue1Teams
                 $player->setTeam(null);
             }
         }
+
+        return $this;
+    }
+
+
+
+    public function getShortName(): ?string
+    {
+        return $this->ShortName;
+    }
+
+    public function setShortName(?string $ShortName): static
+    {
+        $this->ShortName = $ShortName;
+
+        return $this;
+    }
+
+    public function getTLA(): ?string
+    {
+        return $this->TLA;
+    }
+
+    public function setTLA(?string $TLA): static
+    {
+        $this->TLA = $TLA;
+
+        return $this;
+    }
+
+
+    public function getFounded(): ?int
+    {
+        return $this->Founded;
+    }
+
+    public function setFounded(?int $Founded): static
+    {
+        $this->Founded = $Founded;
+
+        return $this;
+    }
+
+    public function getVenue(): ?string
+    {
+        return $this->Venue;
+    }
+
+    public function setVenue(?string $Venue): static
+    {
+        $this->Venue = $Venue;
+
+        return $this;
+    }
+
+    public function getApiId(): ?string
+    {
+        return $this->ApiId;
+    }
+
+    public function setApiId(string $ApiId): static
+    {
+        $this->ApiId = $ApiId;
 
         return $this;
     }

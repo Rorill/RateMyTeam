@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des matchs{% endblock %}
+
+{% block body %}
+    <h1>Gestion des matchs</h1>
+
+    <!-- Matchday filter dropdown -->
+    <form method="get" action="{{ path('match_management') }}">
+        <label for="matchday">Sélectionner une journée :</label>
+        <select id="matchday" name="matchday" onchange="this.form.submit()">
+            <option value="">Toutes les journées</option>
+            {% for day in 1..34 %}
+                <option value="{{ day }}" {% if day == selectedMatchday %}selected{% endif %}>Journée {{ day }}</option>
+            {% endfor %}
+        </select>
+    </form>
+
+    <!-- Match list -->
+    <ul id="match-list">
+        {% if selectedMatchday %}
+            <h2>Matchs pour la journée {{ selectedMatchday }}</h2>
+        {% else %}
+            <h2>Tous les matchs</h2>
+        {% endif %}
+
+        {% for match in matches %}
+            <li>Journée {{ match.matchday }}: {{ match.TeamHome.name }} vs {{ match.TeamAway.name }}</li>
+        {% else %}
+            <li>Aucun match trouvé pour cette journée.</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

@@ -3,12 +3,16 @@
 namespace App\Entity;
 
 use App\Repository\UserRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 #[ORM\Entity(repositoryClass: UserRepository::class)]
 #[ORM\UniqueConstraint(name: 'UNIQ_IDENTIFIER_EMAIL', fields: ['email'])]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
 class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
@@ -33,6 +37,20 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
 
     #[ORM\ManyToOne(inversedBy: 'users')]
     private ?Ligue1Teams $SelectedTeam = null;
+
+    #[ORM\Column]
+    private bool $isVerified = false;
+
+    /**
+     * @var Collection<int, PlayerRating>
+     */
+    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'User')]
+    private Collection $playerRatings;
+
+    public function __construct()
+    {
+        $this->playerRatings = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -117,6 +135,48 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     public function setSelectedTeam(?Ligue1Teams $SelectedTeam): static
     {
         $this->SelectedTeam = $SelectedTeam;
+
+        return $this;
+    }
+
+    public function isVerified(): bool
+    {
+        return $this->isVerified;
+    }
+
+    public function setVerified(bool $isVerified): static
+    {
+        $this->isVerified = $isVerified;
+
+        return $this;
+    }
+
+    /**
+     * @return Collection<int, PlayerRating>
+     */
+    public function getPlayerRatings(): Collection
+    {
+        return $this->playerRatings;
+    }
+
+    public function addPlayerRating(PlayerRating $playerRating): static
+    {
+        if (!$this->playerRatings->contains($playerRating)) {
+            $this->playerRatings->add($playerRating);
+            $playerRating->setUser($this);
+        }
+
+        return $this;
+    }
+
+    public function removePlayerRating(PlayerRating $playerRating): static
+    {
+        if ($this->playerRatings->removeElement($playerRating)) {
+            // set the owning side to null (unless already changed)
+            if ($playerRating->getUser() === $this) {
+                $playerRating->setUser(null);
+            }
+        }
 
         return $this;
     }

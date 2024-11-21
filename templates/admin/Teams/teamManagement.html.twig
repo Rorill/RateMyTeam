@@ -1,0 +1,97 @@
+{# templates/admin/Teams/teamPlayers.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}Joueurs de l'équipe : {{ team.name }}{% endblock %}
+
+{% block body %}
+    <h1>Joueurs de l'équipe : {{ team.name }}</h1>
+
+    <h2>Effectif de l'équipe</h2>
+
+    {# Créer des sections pour chaque poste #}
+    <div class="player-list">
+        <h3>Gardiens</h3>
+        <div class="player-section">
+            {% set goalkeepers = players|filter(p => p.position == 'Goalkeeper') %}
+            {% for player in goalkeepers %}
+                <div class="player-item">
+                    <div class="player-info">
+                        <span class="player-name">{{ player.FirstName }} {{ player.LastName }}</span>
+                        <span class="player-birthday">
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
+                        </span>
+                    </div>
+                    <div class="player-actions">
+                        <a href="{{ path('admin_edit_player', {'id': player.id}) }}" class="btn edit-btn">Éditer</a>
+                    </div>
+                </div>
+            {% else %}
+                <div>Aucun gardien dans cette équipe.</div>
+            {% endfor %}
+        </div>
+
+        <h3>Défenseurs</h3>
+        <div class="player-section">
+            {% set defenders = players|filter(p => p.position == 'Defender') %}
+            {% for player in defenders %}
+                <div class="player-item">
+                    <div class="player-info">
+                        <span class="player-name">{{ player.FirstName }} {{ player.LastName }}</span>
+                        <span class="player-birthday">
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
+                        </span>
+                    </div>
+                    <div class="player-actions">
+                        <a href="{{ path('admin_edit_player', {'id': player.id}) }}" class="btn edit-btn">Éditer</a>
+                    </div>
+                </div>
+            {% else %}
+                <div>Aucun défenseur dans cette équipe.</div>
+            {% endfor %}
+        </div>
+
+        <h3>Milieux</h3>
+        <div class="player-section">
+            {% set midfielders = players|filter(p => p.position == 'Midfielder') %}
+            {% for player in midfielders %}
+                <div class="player-item">
+                    <div class="player-info">
+                        <span class="player-name">{{ player.FirstName }} {{ player.LastName }}</span>
+                        <span class="player-birthday">
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
+                        </span>
+                    </div>
+                    <div class="player-actions">
+                        <a href="{{ path('admin_edit_player', {'id': player.id}) }}" class="btn edit-btn">Éditer</a>
+                    </div>
+                </div>
+            {% else %}
+                <div>Aucun milieu dans cette équipe.</div>
+            {% endfor %}
+        </div>
+
+        <h3>Attaquants</h3>
+        <div class="player-section">
+            {% set forwards = players|filter(p => p.position == 'Attacker') %}
+            {% for player in forwards %}
+                <div class="player-item">
+                    <div class="player-info">
+                        <span class="player-name">{{ player.FirstName }} {{ player.LastName }}</span>
+                        <span class="player-birthday">
+                            Date de naissance : {{ player.DateOfBirth ? player.DateOfBirth|date('d m Y') : 'Date non renseignée' }}
+                        </span>
+                    </div>
+                    <div class="player-actions">
+                        <a href="{{ path('admin_edit_player', {'id': player.id}) }}" class="btn edit-btn">Éditer</a>
+                    </div>
+                </div>
+            {% else %}
+                <div>Aucun attaquant dans cette équipe.</div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <a href="{{ path('admin_add_player', {'id': team.id}) }}" class="btn add-btn">Ajouter un nouveau joueur</a>
+
+    <a href="{{ path('admin_team_list') }}" class="btn back-btn">Retour à la liste des équipes</a>
+{% endblock %}

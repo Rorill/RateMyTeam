@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des matchs{% endblock %}
+
+{% block body %}
+    <h1>Stages</h1>
+
+    <ul>
+        {% for stage in stages %}
+            <li>
+                <strong>{{ stage }}</strong>
+
+                <!-- Link to view lineups -->
+                <a href="{{ path('view_lineups_by_stage', { stage: stage }) }}">
+                    <button>View Lineups</button>
+                </a>
+
+                <!-- Form to trigger import of lineups -->
+                <form action="{{ path('import_lineups_by_stage', { stage: stage }) }}" method="POST" style="display:inline;">
+                    <button type="submit">Fetch Lineups</button>
+                </form>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <div id="flash-messages"></div>
+
+    <style>
+        .flash-message {
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 4px;
+            color: white;
+        }
+        .flash-success {
+            background-color: #28a745;
+        }
+        .flash-error {
+            background-color: #dc3545;
+        }
+    </style>
+{% endblock %}

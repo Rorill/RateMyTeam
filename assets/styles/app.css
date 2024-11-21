@@ -1,3 +1,544 @@
-body {
-    background-color: skyblue;
+/* Base Styles */
+@media (min-width: 768px) {
+
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #85B6F0;
+        font-family: Arial, sans-serif;
+        color: #FFFFFF;
+    }
+
+    /* Header */
+    .header {
+        background-color: #4F4C69;
+        text-align: center;
+        padding: 30px 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+    }
+
+    /* Header Content */
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+
+    /* Header Title */
+    .header-title {
+        font-size: 2.5rem;
+        margin: 0;
+        color: #FFFFFF;
+    }
+
+    /* Header Actions */
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    /* Burger Menu */
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        cursor: pointer;
+    }
+
+    .menu-line {
+        width: 30px;
+        height: 4px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
+    }
+
+    /* Dropdown Menu */
+    .burger-menu-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #4F4C69;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        display: none;
+    }
+
+    .burger-menu-dropdown.active {
+        display: block;
+    }
+
+    .dropdown-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-item {
+        padding: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-item:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Login Button */
+    .LoginButton {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #85B6F0;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .LoginButton:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 30px 100px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #4F4C69;
+        border-radius: 8px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: left;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+        margin-bottom: 15px;
+        line-height: 1.6;
+        text-align: justify;
+    }
+
+    /* Features Section */
+    .features-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .features-item {
+        margin-bottom: 8px;
+        font-size: 1rem;
+        padding: 10px;
+        background-color: #6FADE8;
+        border-radius: 5px;
+    }
+
+    /* CTA Button */
+    .cta-button {
+        display: inline-block;
+        text-align: center;
+        padding: 15px 25px;
+        font-size: 1.3rem;
+        color: #FFFFFF;
+        background-color: #85B6F0;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Footer */
+    .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        text-align: center;
+        background-color: #4F4C69;
+        padding: 20px 10px;
+        font-size: 1rem;
+    }
+
+    /* Main Page Styles */
+    .main-page-container {
+        padding: 30px 100px;
+        max-width: 1200px;
+        margin: 40px auto 0; /* Added top margin for spacing */
+        background-color: #4F4C69;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+
+    /* Team Header */
+    .team-header {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+
+    }
+
+    /* Last Game Section */
+    .last-game-section {
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #6FADE8;
+        border-radius: 8px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+        text-align: left;
+        color: #FFFFFF;
+    }
+
+    /* Game Details */
+    .game-details {
+        background-color: #4F4C69;
+        padding: 20px;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+
+    .game-details p {
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    /* Rate Button */
+    .rate-button-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .btn-rate-game {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        background-color: #85B6F0;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background-color 0.3s;
+    }
+
+    .btn-rate-game:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Next Games Section */
+    .next-games-section {
+        padding: 20px;
+        background-color: #6FADE8;
+        border-radius: 8px;
+    }
+
+    .next-games-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .game-item {
+        background-color: #4F4C69;
+        padding: 10px;
+        margin-bottom: 15px;
+        border-radius: 8px;
+    }
+
+    .game-item p {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+
+    /* Custom Form Styles */
+    .custom-form-style {
+        padding: 30px 100px;
+        max-width: 800px;
+        margin: 40px auto;
+        background-color: #4F4C69;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+
+    .custom-form-style h1 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    /* Form Group */
+    .custom-form-style .form-group {
+        margin-bottom: 20px;
+    }
+
+    /* Label Styling */
+    .custom-form-style .form-label {
+        display: block;
+        font-size: 1.1rem;
+        margin-bottom: 10px;
+    }
+
+    /* Input Fields */
+    .custom-form-style .form-control {
+        width: 100%;
+        padding: 10px;
+        font-size: 1rem;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #4F4C69;
+        border-radius: 5px;
+        margin-bottom: 10px;
+    }
+
+    /* Error Message Styling */
+    .custom-form-style .alert-danger {
+        color: #FF6347; /* Red for error messages */
+        font-size: 1rem;
+        padding: 15px;
+        border-radius: 5px;
+        margin-bottom: 20px;
+    }
+
+    /* Submit Button */
+    .custom-form-style .btn-primary {
+        display: inline-block;
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        background-color: #85B6F0;
+        color: #FFFFFF;
+        border-radius: 5px;
+        text-align: center;
+        transition: background-color 0.3s;
+    }
+
+    .custom-form-style .btn-primary:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Remember Me Checkbox */
+    .custom-form-style .checkbox {
+        color: #FFFFFF;
+        font-size: 1rem;
+    }
+
+    .custom-form-style .checkbox input {
+        margin-right: 10px;
+    }
+
+    .custom-form-style a {
+        color: #85B6F0;
+        text-decoration: none;
+    }
+
+    .custom-form-style a:hover {
+        text-decoration: underline;
+    }
+    /* Registration Form Container */
+    .registration-form-container {    width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #4F4C69;  /* Adjusted background color */
+        color: white; /* Make the text white to contrast with the dark background */
+        border-radius: 8px;
+        margin-top: 30px; /* Added space above the form container */
+
+
+    }
+
+    /* Registration Form Header */
+    .registration-header {
+        font-size: 1.5rem;
+        color: white; /* Set header color to white for contrast */
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 30px; /* Added space above the header */
+    }
+
+    /* Form Groups */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: white; /* Ensure labels are visible on the dark background */
+    }
+
+    .form-input {
+        width: 100%;
+        padding: 10px;
+        padding-right: 20px;  /* Add padding on the right side */
+        margin-right: 0;  /* Ensure no extra margin on the right */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+
+    }
+    .form-select {    width: 100%;
+        padding: 10px;
+        padding-right: 20px ;  /* Padding on the right side */
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;  /* Include padding in width calculation */
+
+    }
+
+    .form-input:focus,
+    .form-select:focus {
+        border-color: #007bff;
+    }
+
+    /* Error Message */
+    .form-message {
+        color: red;
+        font-size: 0.875rem;
+        margin-top: 5px;
+    }
+    .registration-form {
+        padding-right: 30px;
+
+    }
+
+    /* Submit Button */
+    .registration-submit-btn {
+        background-color: #007bff;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .registration-submit-btn:hover {
+        background-color: #0056b3;
+    }
+
+
+    /* Profile container */
+    .profile-container {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 30px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .profile-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .profile-title {
+        font-size: 28px;
+        font-weight: bold;
+        color: #4F4C69;
+    }
+
+    .profile-description {
+        font-size: 16px;
+        color: #6c757d;
+    }
+
+    /* Profile info */
+    .profile-info {
+        margin-bottom: 30px;
+    }
+
+    .profile-info-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #4F4C69;
+        margin-bottom: 15px;
+    }
+
+    .profile-info-label {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .profile-info-value {
+        font-size: 16px;
+        font-weight: bold;
+        color: #4F4C69;
+    }
+
+    /* Profile password change */
+    .profile-password-change {
+        margin-top: 30px;
+    }
+
+    .profile-password-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #4F4C69;
+        margin-bottom: 15px;
+    }
+
+    .profile-password-form {
+        display: grid;
+        gap: 15px;
+    }
+
+    .profile-form-group {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .profile-form-label {
+        font-size: 14px;
+        color: #6c757d;
+    }
+
+    .profile-form-input {
+        padding: 10px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 100%;
+        margin-top: 5px;
+    }
+
+    .profile-form-button {
+        padding: 12px;
+        font-size: 16px;
+        color: white;
+        background-color: #4F4C69;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        margin-top: 20px;
+        transition: background-color 0.3s;
+    }
+
+    .profile-form-button:hover {
+        background-color: #3d3a57;
+    }
+
 }

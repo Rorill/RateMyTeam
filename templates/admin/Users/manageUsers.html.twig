@@ -1,0 +1,37 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}User Management{% endblock %}
+
+{% block body %}
+    <h1>User Management</h1>
+    <a href="{{ path('admin_dashboard') }}" class="btn btn-back">Retour au Dashboard</a>
+
+
+    <table class="user-table">
+        <thead>
+        <tr>
+            <th>Email</th>
+            <th>Team</th>
+            <th>Utilisateur vérifié </th>
+            <th>Actions</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for user in users %}
+            <tr>
+                <td>{{ user.email }}</td>
+                <td>{{ user.selectedTeam ? user.selectedTeam.name : 'Aucune équipe sélectionnée' }}</td>
+                <td>                         {# Vérification de l'état de vérification #}
+                    {{ user.isVerified ? 'Vérifié' : 'Non vérifié' }}
+                </td>
+                <td>
+                    <a href="{{ path('admin_edit_user', {'id': user.id}) }}">Edit</a>
+                    <a href="{{ path('admin_delete_user', {'id': user.id}) }}">Delete</a>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_add_user') }}">Add User</a>
+{% endblock %}

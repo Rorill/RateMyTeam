@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des matchs{% endblock %}
+
+{% block body %}
+    <h1>Lineups for Stage: {{ stage }}</h1>
+
+    {% for data in lineupsData %}
+        <h2>Game ID: {{ data.game.id }} - {{ data.game.TeamHome.name }} vs {{ data.game.TeamAway.name }}</h2>
+        <h3>Lineups</h3>
+        <ul>
+            {% for lineup in data.lineups %}
+                <li>
+                    <strong>Team: {{ lineup.Team.name }}</strong> -
+                    {% if lineup.isStarter %} Starter {% else %} Substitute {% endif %}
+                    <ul>
+                        {% for player in lineup.Player %}
+                            <li>{{ player.getFirstName() }} {{ player.getLastName() }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    {% endfor %}
+
+{% endblock %}

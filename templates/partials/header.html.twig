@@ -1,0 +1,29 @@
+<header class="header">
+    <div class="header-content">
+        <h1 class="header-title">Bienvenue sur RateMyTeam</h1>
+
+        <div class="header-actions">
+            {% if is_granted('ROLE_USER') %}
+                <div id="menu-header" class="burger-menu" onclick="burger_click()">
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                    <div class="menu-line"></div>
+                </div>
+                <div class="burger-menu-dropdown">
+                    <ul class="dropdown-list">
+                        <li><a href="logout" class="dropdown-item">Se déconnecter</a></li>
+                        <li><a href='{{ path('app_user_profile') }}' class="dropdown-item">Profile</a></li>
+                    </ul>
+                </div>
+            {% else %}
+                <a class="LoginButton" href="login">Se connecter</a>
+            {% endif %}
+        </div>
+    </div>
+    <script>
+        function burger_click() {
+            const dropdown = document.querySelector('.burger-menu-dropdown');
+            dropdown.classList.toggle('active');
+        }
+    </script>
+</header>

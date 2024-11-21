@@ -6,6 +6,7 @@
     "require": {
         "php": ">=8.2",
         "ext-ctype": "*",
+        "ext-curl": "*",
         "ext-iconv": "*",
         "doctrine/dbal": "^3",
         "doctrine/doctrine-bundle": "^2.13",
@@ -25,6 +26,7 @@
         "symfony/http-client": "7.1.*",
         "symfony/intl": "7.1.*",
         "symfony/mailer": "7.1.*",
+        "symfony/mailjet-mailer": "7.1.*",
         "symfony/mime": "7.1.*",
         "symfony/monolog-bundle": "^3.0",
         "symfony/notifier": "7.1.*",
@@ -42,8 +44,11 @@
         "symfony/validator": "7.1.*",
         "symfony/web-link": "7.1.*",
         "symfony/yaml": "7.1.*",
+        "symfonycasts/reset-password-bundle": "^1.22",
+        "symfonycasts/verify-email-bundle": "^1.17",
         "twig/extra-bundle": "^2.12|^3.0",
-        "twig/twig": "^2.12|^3.0"
+        "twig/twig": "^2.12|^3.0",
+        "victor-prdh/recaptcha-bundle": "^1.9"
     },
     "config": {
         "allow-plugins": {

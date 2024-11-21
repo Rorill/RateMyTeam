@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="team-list-container">
+        <h1 class="page-title">Liste des Équipes</h1>
+        <table class="team-table">
+            <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom de l'équipe</th>
+                <th>Entraîneur</th>
+                <th>Nombre de joueurs</th>
+                <th>Action</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for team in teams %}
+                <tr>
+                    <td>{{ team.id }}</td>
+                    <td>{{ team.name }}</td>
+                    <td>{{ team.coach }}</td>
+                    <td>{{ team.players|length }}</td>
+                    <td>
+                        <a href="{{ path('admin_team_players', {id: team.id}) }}" class="btn-manage-team">Gérer</a>
+                    </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

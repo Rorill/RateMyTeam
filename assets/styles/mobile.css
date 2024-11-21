@@ -1,0 +1,289 @@
+@media (max-width: 767px) {
+
+    /* General Styles */
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        background-color: #85B6F0; /* Light blue background */
+        color: white; /* Default text color */
+        line-height: 1.6;
+    }
+
+    h1, h2 {
+        margin: 0;
+        font-size: 1.5em; /* Adjusted font size for smaller screens */
+    }
+
+    a {
+        text-decoration: none;
+        color: white;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 15px;
+    }
+
+    /* Sections */
+    .section {
+        background-color: #4F4C69; /* Dark container color */
+        border-radius: 8px;
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .section-title {
+        font-size: 1.3em;
+        margin-bottom: 8px;
+        color: white;
+    }
+
+    .section-text {
+        margin: 8px 0;
+    }
+
+    /* Button Styles */
+    .cta-button, .btn, .btn-rate-game {
+        display: inline-block;
+        background-color: #85B6F0; /* Light blue button */
+        color: black;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 1em;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        transition: background-color 0.3s ease;
+        margin-bottom: 10px;
+    }
+
+    .cta-button:hover, .btn:hover, .btn-rate-game:hover {
+        background-color: #4F4C69; /* Dark container hover */
+        color: white;
+    }
+
+    /* Footer Styles */
+    .footer {
+        background-color: #4F4C69; /* Dark container color */
+        text-align: center;
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    /* Main Page Styles */
+    .main-page-container {
+        background-color: #4F4C69; /* Dark container background */
+        padding: 15px;
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 100%; /* Full width for mobile */
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;  /* Horizontally center the content */
+        justify-content: center; /* Optionally, center vertically if desired */
+        text-align: center;  /* This ensures the text within the container is also centered */
+
+    }
+
+    .main-page-container h1.team-header {
+        font-size: 1.8em;
+        font-weight: bold;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    /* Game Sections */
+    .last-game-section, .next-games-section {
+        background-color: #6FADE8;
+        padding: 12px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .last-game-section h2, .next-games-section h2 {
+        font-size: 1.2em;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: white;
+        background-color: #6FADE8;
+    }
+
+    .game-details, .next-games-list {
+        padding: 8px;
+        border-radius: 8px;
+    }
+
+    .game-item {
+        background-color: #85B6F0; /* Light blue */
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 8px;
+        color: black;
+    }
+
+    .game-item p {
+        margin: 4px 0;
+    }
+
+    /* Form Styles */
+    .form-container {
+        background-color: #4F4C69;
+        color: white;
+        padding: 25px;
+        border-radius: 8px;
+        margin: 30px auto;
+        max-width: 100%; /* Full width for mobile */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-container h1 {
+        text-align: center;
+        font-size: 1.5em;
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-label {
+        font-weight: bold;
+        color: white;
+        display: block;
+        margin-bottom: 6px;
+    }
+
+    .form-input, .form-select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: white;
+        color: #333;
+        font-size: 1em;
+        margin-bottom: 6px;
+    }
+
+    .form-input:focus, .form-select:focus {
+        border-color: #6FADE8;
+        outline: none;
+        box-shadow: 0 0 5px rgba(111, 175, 232, 0.7);
+    }
+
+    .form-message {
+        color: #FF5B5B;
+        font-size: 0.9em;
+        margin-top: 5px;
+    }
+
+    /* Registration Form Button */
+    .btn {
+        background-color: #85B6F0;
+        color: black;
+        padding: 12px 25px;
+        border-radius: 5px;
+        font-size: 1.1em;
+        font-weight: bold;
+        border: none;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #4F4C69;
+        color: white;
+    }
+
+    /* Terms and Conditions Styles */
+    .termes {
+        background-color: #4F4C69;
+        padding: 20px;
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 100%;
+        color: white;
+    }
+
+    .termes__title {
+        font-size: 1.8em;
+        font-weight: bold;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .termes__intro {
+        font-size: 1.1em;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .termes__section-title {
+        font-size: 1.3em;
+        font-weight: bold;
+        margin-bottom: 8px;
+        color: white;
+        background-color: #6FADE8;
+        padding: 5px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .termes__text {
+        margin: 8px 0;
+        line-height: 1.6;
+    }
+
+    .termes__list {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .termes__list li {
+        margin: 4px 0;
+        padding: 4px 0;
+        border-radius: 5px;
+    }
+
+    .termes__list li:hover {
+        background-color: #85B6F0;
+    }
+    .burger-menu {
+        display: flex;
+        flex-direction: column;
+        cursor: pointer;
+        position: relative;
+        z-index: 999; /* Ensure the burger icon stays on top */
+    }
+
+    .burger-menu-dropdown {
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0;
+        background-color: #4F4C69;
+        padding: 10px;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        width: 200px;
+        z-index: 1000; /* Ensure dropdown stays on top of content */
+    }
+
+    .burger-menu-dropdown.show {
+        display: block; /* Show the menu when 'show' class is added */
+
+
+        .menu {
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            margin: 5px 0;
+        }
+
+
+    }
+}
+
+

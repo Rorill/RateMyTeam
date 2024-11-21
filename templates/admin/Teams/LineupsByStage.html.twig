@@ -1,0 +1,154 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Lineups for Stage: {{ stage }}{% endblock %}
+
+{% block body %}
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        .game-container {
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+        }
+
+        .team-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .team-header h2 {
+            margin: 0;
+            font-size: 20px;
+            color: #444;
+        }
+
+        .team-lineup {
+            margin: 10px 0;
+        }
+
+        .team-lineup h3 {
+            font-size: 18px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        .team-lineup ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .team-lineup li {
+            padding: 5px 10px;
+            margin: 5px 0;
+            background-color: #f3f3f3;
+            border-radius: 5px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .team-lineup li strong {
+            font-size: 16px;
+            color: #333;
+        }
+
+        .starter {
+            color: green;
+            font-weight: bold;
+        }
+
+        .substitute {
+            color: gray;
+            font-style: italic;
+        }
+
+        .import-button {
+            margin-top: 10px;
+        }
+
+        .import-button form {
+            display: inline-block;
+        }
+
+        .import-button button {
+            display: inline-block;
+            padding: 8px 12px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .import-button button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+    <h1>Lineups for Stage: {{ stage }}</h1>
+
+    {% for lineupData in lineupsData %}
+        <div class="game-container">
+            <div class="team-header">
+                <h2>{{ lineupData.game.teamHome.name }} vs {{ lineupData.game.teamAway.name }}</h2>
+                <span>{{ lineupData.game.date|date('Y-m-d H:i') }}</span>
+            </div>
+
+            <div class="import-button">
+                <form method="POST" action="{{ path('import_lineups_by_game', {gameId: lineupData.game.id}) }}">
+                    <button type="submit">Import Lineup</button>
+                </form>
+            </div>
+
+            <div class="team-lineup">
+                <h3>{{ lineupData.game.teamHome.name }} Lineup</h3>
+                <ul>
+                    {% for lineup in lineupData.homeTeamLineup %}
+                        {% for player in lineup.players %}
+                            <li>
+                                <strong>{{ player.firstName }} {{ player.lastName }}</strong>
+                                <span class="{{ lineup.isStarter ? 'starter' : 'substitute' }}">
+                                {{ lineup.isStarter ? 'Starter' : 'Substitute' }}
+                            </span>
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="team-lineup">
+                <h3>{{ lineupData.game.teamAway.name }} Lineup</h3>
+                <ul>
+                    {% for lineup in lineupData.awayTeamLineup %}
+                        {% for player in lineup.players %}
+                            <li>
+                                <strong>{{ player.firstName }} {{ player.lastName }}</strong>
+                                <span class="{{ lineup.isStarter ? 'starter' : 'substitute' }}">
+                                {{ lineup.isStarter ? 'Starter' : 'Substitute' }}
+                            </span>
+                            </li>
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endblock %}
+
