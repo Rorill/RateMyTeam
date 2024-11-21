@@ -31,7 +31,16 @@ class UserController extends AbstractController
     public function mainPage(TeamsRepository $teamsRepository, GameRepository $gamesRepository, UserRepository $userRepository): Response
     {
         $user = $this->getUser(); // Get the authenticated user
+
+        // Check if the user has ROLE_ADMIN
+        if (in_array('ROLE_ADMIN', $user->getRoles())) {
+            return $this->redirectToRoute('admin_dashboard'); // Redirect to admin dashboard
+        }
+
         $selectedTeam = $user->getSelectedTeam();
+        if($selectedTeam == null && $this->isGranted('ROLE_ADMIN') ){
+            return $this->redirectToRoute('admin_dashboard');
+        }
         // Fetch last game
         $lastGame = $gamesRepository->findLastGameByTeam($selectedTeam->getId());
 
