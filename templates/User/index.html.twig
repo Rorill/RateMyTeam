@@ -28,16 +28,19 @@
 
         <div class="next-games-section">
             <h2 class="section-title">Next 5 Games</h2>
+
+
             {% if nextGames|length > 0 %}
                 <ul class="next-games-list">
                     {% for game in nextGames %}
                         <li class="game-item">
                             <p><strong>Date:</strong> {{ game.date | date("d/m/Y") }}</p>
+
                             <p><strong>Opponent:</strong>
-                                {% if game.TeamHome.id == selectedTeam.id %}
-                                    {{ game.TeamAway.name }}
-                                {% else %}
-                                    {{ game.TeamHome.name }}
+g                                {% if game.TeamHome.id == selectedTeam.id %}
+                                    {{ game.TeamAway.name }}  <!-- Selected team is home, opponent is away -->
+                                {% elseif game.TeamAway.id == selectedTeam.id %}
+                                    {{ game.TeamHome.name }}  <!-- Selected team is away, opponent is home -->
                                 {% endif %}
                             </p>
                         </li>

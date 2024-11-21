@@ -42,6 +42,22 @@ class GameRepository extends ServiceEntityRepository
             ->getQuery()
             ->getResult();
     }
+
+    public function findNextGamesByTeamPerStage(int $teamId, int $limit = 5): array
+    {
+        // Fetch the next 5 distinct games per stage, ordered by stage and date
+        return $this->createQueryBuilder('g')
+            ->where('g.TeamHome = :teamId OR g.TeamAway = :teamId')
+            ->setParameter('teamId', $teamId)
+            ->andWhere('g.date > :now')
+            ->setParameter('now', new \DateTime())
+            ->orderBy('g.date', 'ASC')
+            ->groupBy('g.stage')  // Group by stage
+            ->setMaxResults($limit)
+            ->getQuery()
+            ->getResult();
+    }
+
     public function findByApiId(int $id): ?Game
     {
         return $this->createQueryBuilder('g')

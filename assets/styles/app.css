@@ -541,4 +541,150 @@
         background-color: #3d3a57;
     }
 
+    /* Admin Dashboard Container */
+    .admin-dashboard-container {
+        background-color: #85B6F0;
+        padding: 20px;
+    }
+
+    /* Title */
+    .admin-dashboard-title {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Section Title */
+    .section-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-bottom: 10px;
+    }
+
+    /* Stats Grid */
+    .stats-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+
+    .stat-card {
+        background-color: #fff;
+        padding: 15px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .stat-card-label {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .stat-card-value {
+        font-size: 1.25rem;
+        color: #007bff;
+    }
+
+    /* Button Styling */
+    .btn-team-list {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-team-list:hover {
+        background-color: #0056b3;
+    }
+
+    /* Section Specific Styling */
+    .users-management-section .btn-team-list {
+        background-color: #28a745;
+    }
+
+    .teams-management-section .btn-team-list {
+        background-color: #ffc107;
+    }
+
+    .players-management-section .btn-team-list {
+        background-color: #17a2b8;
+    }
+
+    .comments-moderation-section .btn-team-list {
+        background-color: #dc3545;
+    }
+
+    .reports-section .btn-team-list {
+        background-color: #6f42c1;
+    }
+
+    .settings-section .btn-team-list {
+        background-color: #007bff;
+    }
+
+    /* 404 Page Styling */
+    .error-page {
+        background-color: #85B6F0; /* Background color matches your app's theme */
+        color: #FFFFFF; /* Text color */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+
+    .error-container {
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: #4F4C69; /* Matches the container color in your theme */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Subtle shadow for elevation */
+    }
+
+    .error-code {
+        font-size: 8rem;
+        font-weight: bold;
+        margin: 0;
+        color: #FF6B6B; /* Contrasting error color */
+    }
+
+    .error-message {
+        font-size: 2rem;
+        margin: 10px 0;
+    }
+
+    .error-description {
+        font-size: 1rem;
+        margin: 10px 0 20px;
+        color: #DDDDDD;
+    }
+
+    .btn-home {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #FFFFFF;
+        color: #4F4C69; /* Button text matches your container text */
+        text-decoration: none;
+        font-size: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+        transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .btn-home:hover {
+        background-color: #FF6B6B;
+        color: #FFFFFF;
+        transform: translateY(-2px);
+    }
+
+    .contenairforLogin {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+
 }

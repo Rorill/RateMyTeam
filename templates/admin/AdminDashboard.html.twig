@@ -3,46 +3,52 @@
 {% block title %}Dashboard Admin{% endblock %}
 
 {% block body %}
-    <div class="dashboard-container">
-        <h1 class="dashboard-title">Tableau de Bord Administratif</h1>
+    <div class="admin-dashboard-container">
+        <h1 class="admin-dashboard-title">Tableau de Bord Administratif</h1>
 
-        <section class="dashboard-section">
-            <h2>Vue d’ensemble</h2>
+        <section class="admin-dashboard-section overview-section">
+            <h2 class="section-title">Vue d’ensemble</h2>
             <div class="stats-grid">
-                <div class="stat-card">Nombre d'utilisateurs: {{ userCount }}</div>
-                <div class="stat-card">Nombre d'équipes: {{ teamCount }}</div>
-                <div class="stat-card">Joueurs Inscrits dans la base de donnée: {{ playerCount }}</div>
+                <div class="stat-card user-count-card">
+                    <span class="stat-card-label">Nombre d'utilisateurs:</span> <span class="stat-card-value">{{ userCount }}</span>
+                </div>
+                <div class="stat-card team-count-card">
+                    <span class="stat-card-label">Nombre d'équipes:</span> <span class="stat-card-value">{{ teamCount }}</span>
+                </div>
+                <div class="stat-card player-count-card">
+                    <span class="stat-card-label">Joueurs Inscrits dans la base de donnée:</span> <span class="stat-card-value">{{ playerCount }}</span>
+                </div>
             </div>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Gestion des Utilisateurs</h2>
-            <a href="{{ path('admin_users') }}" class="btn-team-list">Voir tous les utilisateurs</a>
+        <section class="admin-dashboard-section users-management-section">
+            <h2 class="section-title">Gestion des Utilisateurs</h2>
+            <a href="{{ path('admin_users') }}" class="btn-team-list users-management-btn">Voir tous les utilisateurs</a>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Gestion des Équipes</h2>
-            <a href="{{ path('admin_team_list') }}" class="btn-team-list">Voir toutes les équipes</a>
+        <section class="admin-dashboard-section teams-management-section">
+            <h2 class="section-title">Gestion des Équipes</h2>
+            <a href="{{ path('admin_team_list') }}" class="btn-team-list teams-management-btn">Voir toutes les équipes</a>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Gestion des Joueurs</h2>
-            <a href="{{ path('home') }}" class="btn-team-list">Voir tous les joueurs</a>
+        <section class="admin-dashboard-section players-management-section">
+            <h2 class="section-title">Gestion des Joueurs</h2>
+            <a href="{{ path('home') }}" class="btn-team-list players-management-btn">Voir tous les joueurs</a>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Modération des Commentaires</h2>
-            <a href="{{ path('home') }}" class="btn-team-list">Voir tous les commentaires</a>
+        <section class="admin-dashboard-section comments-moderation-section">
+            <h2 class="section-title">Modération des Commentaires</h2>
+            <a href="{{ path('home') }}" class="btn-team-list comments-moderation-btn">Voir tous les commentaires</a>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Rapports et Statistiques</h2>
-            <a href="{{ path('home') }}" class="btn-team-list">Voir les rapports</a>
+        <section class="admin-dashboard-section reports-section">
+            <h2 class="section-title">Rapports et Statistiques</h2>
+            <a href="{{ path('home') }}" class="btn-team-list reports-btn">Voir les rapports</a>
         </section>
 
-        <section class="dashboard-section">
-            <h2>Paramètres du Site</h2>
-            <a href="{{ path('home') }}" class="btn-team-list">Gérer les paramètres</a>
+        <section class="admin-dashboard-section settings-section">
+            <h2 class="section-title">Paramètres du Site</h2>
+            <a href="{{ path('home') }}" class="btn-team-list settings-btn">Gérer les paramètres</a>
         </section>
     </div>
 {% endblock %}

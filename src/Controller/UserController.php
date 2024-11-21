@@ -45,7 +45,8 @@ class UserController extends AbstractController
         $lastGame = $gamesRepository->findLastGameByTeam($selectedTeam->getId());
 
         // Fetch next 5 games
-        $nextGames = $gamesRepository->findNextGamesByTeam($selectedTeam->getId(), 5);
+        $nextGames = $gamesRepository->findNextGamesByTeamPerStage($selectedTeam->getId(), 5);
+
 
         return $this->render('User/index.html.twig', [
             'selectedTeam' => $selectedTeam,

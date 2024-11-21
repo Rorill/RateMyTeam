@@ -39,7 +39,8 @@ class TeamsRepository extends ServiceEntityRepository
             ->andWhere('t.ApiId = :ApiId')
             ->setParameter('ApiId', $apiId)
             ->getQuery()
-            ->getOneOrNullResult();
+            ->getOneOrNullResult()
+            ->distinct();
     }
 
 

@@ -73,8 +73,9 @@ class RegistrationFormType extends AbstractType
                         'message' => 'You should agree to our terms.',
                     ]),
                 ],
-                'label' => 'J\'accepte les <a href="/termes/services" target="_blank">termes et conditions</a>',
+                'label'  => 'J\'accepte les <a href="/termes/services" target="_blank">termes et conditions</a>',
                 'label_html' => true,
+                'label_attr' => ['class' => 'acceptTerms'],
             ]);
         ;
     }

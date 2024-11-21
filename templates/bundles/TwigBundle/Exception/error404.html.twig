@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found</title>
+    <link rel="stylesheet" href="app.css"> <!-- Link to your stylesheet -->
+</head>
+<body class="error-page">
+<div class="error-container">
+    <div class="error-content">
+        <h1 class="error-code">404</h1>
+        <h2 class="error-message">Oops! Page non trouvée</h2>
+        <p class="error-description">La page que vous avez demandez n'existe pas ou a été supprimée .</p>
+        <a href='{{ path('home') }}' class="btn-home">Revenir a la page d'acceuil</a>
+    </div>
+</div>
+</body>
+</html>
