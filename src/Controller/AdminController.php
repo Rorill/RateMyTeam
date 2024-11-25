@@ -33,7 +33,8 @@ public function index(TeamsRepository $teamsRepository, EntityManagerInterface $
 
     $teamCount = $entityManager->getRepository(Ligue1Teams::class)->count([]);
 
-// Récupère le nombre total d'utilisateurs
+// Get user password
+
 $userCount = $entityManager->getRepository(User::class)->count([]);
 
 return $this->render('admin/AdminDashboard.html.twig', [
@@ -581,7 +582,7 @@ return $this->render('admin/AdminDashboard.html.twig', [
                     sleep(1);
 
                 } catch (\Exception $e) {
-                    file_put_contents('D:\Dev\RateMyTeam\bipbip.log', "Error importing player data for team: {$teamApiId}\n" . $e->getMessage() . "\n", FILE_APPEND);
+                    file_put_contents('D:\Dev\RateMyTeam\players.log', "Error importing player data for team: {$teamApiId}\n" . $e->getMessage() . "\n", FILE_APPEND);
                 }
             }
         }

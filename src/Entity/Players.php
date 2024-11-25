@@ -35,10 +35,7 @@ class Players
     #[ORM\Column]
     private ?int $ApiId = null;
 
-    /**
-     * @var Collection<int, PlayerRating>
-     */
-    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'Player')]
+    #[ORM\OneToMany(targetEntity: PlayersRating::class, mappedBy: 'Player')]
     private Collection $playerRatings;
 
     #[ORM\Column(length: 255, nullable: true)]

@@ -1,289 +1,626 @@
-@media (max-width: 767px) {
+/* General Styles for Mobile */
+@media (max-width: 768px) {
 
-    /* General Styles */
-    body {
+    html, body {
         margin: 0;
         padding: 0;
-        font-family: Arial, sans-serif;
-        background-color: #85B6F0; /* Light blue background */
-        color: white; /* Default text color */
-        line-height: 1.6;
-    }
-
-    h1, h2 {
-        margin: 0;
-        font-size: 1.5em; /* Adjusted font size for smaller screens */
-    }
-
-    a {
-        text-decoration: none;
-        color: white;
-    }
-
-    /* Main Content */
-    .main-content {
-        padding: 15px;
-    }
-
-    /* Sections */
-    .section {
-        background-color: #4F4C69; /* Dark container color */
-        border-radius: 8px;
-        padding: 15px;
-        margin-bottom: 15px;
-    }
-
-    .section-title {
-        font-size: 1.3em;
-        margin-bottom: 8px;
-        color: white;
-    }
-
-    .section-text {
-        margin: 8px 0;
-    }
-
-    /* Button Styles */
-    .cta-button, .btn, .btn-rate-game {
-        display: inline-block;
-        background-color: #85B6F0; /* Light blue button */
-        color: black;
-        padding: 10px 20px;
-        border-radius: 5px;
-        font-size: 1em;
-        font-weight: bold;
-        text-align: center;
+        height: 100%;
         width: 100%;
-        transition: background-color 0.3s ease;
-        margin-bottom: 10px;
+        background-color: #85B6F0;
     }
 
-    .cta-button:hover, .btn:hover, .btn-rate-game:hover {
-        background-color: #4F4C69; /* Dark container hover */
-        color: white;
+    /* Header */
+    .header {
+        background-color: #4F4C69;
+        padding: 20px 15px; /* Reduced padding for mobile */
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
     }
 
-    /* Footer Styles */
-    .footer {
-        background-color: #4F4C69; /* Dark container color */
-        text-align: center;
-        padding: 10px;
-        font-size: 0.9em;
+    /* Header Content */
+    .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
     }
 
-    /* Main Page Styles */
-    .main-page-container {
-        background-color: #4F4C69; /* Dark container background */
-        padding: 15px;
-        border-radius: 8px;
-        margin: 20px auto;
-        max-width: 100%; /* Full width for mobile */
-        color: white;
+    /* Header Title */
+    .header-title {
+        font-size: 1.8rem; /* Reduced font size for mobile */
+        margin: 0;
+        color: #FFFFFF;
+        text-align: left; /* Align left on mobile for better space */
+        flex: 1; /* Allow the title to grow */
+    }
+
+    /* Header Actions */
+    .header-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px; /* Reduced gap for mobile */
+        flex: 0 1 auto;
+    }
+
+    /* Burger Menu */
+    .burger-menu {
         display: flex;
         flex-direction: column;
-        align-items: center;  /* Horizontally center the content */
-        justify-content: center; /* Optionally, center vertically if desired */
-        text-align: center;  /* This ensures the text within the container is also centered */
-
+        gap: 6px;
+        cursor: pointer;
     }
 
-    .main-page-container h1.team-header {
-        font-size: 1.8em;
-        font-weight: bold;
-        text-align: center;
-        margin: 0 auto;
+    .menu-line {
+        width: 30px;
+        height: 4px;
+        background-color: #FFFFFF;
+        border-radius: 4px;
+        transition: transform 0.3s ease;
     }
 
-    /* Game Sections */
-    .last-game-section, .next-games-section {
+    /* Dropdown Menu */
+    .burger-menu-dropdown {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #4F4C69;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+        display: none;
+        width: 200px; /* Increased dropdown width for mobile */
+        border-radius: 5px;
+    }
+
+    .burger-menu-dropdown.active {
+        display: block;
+    }
+
+    .dropdown-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        text-align: left;
+        font-size: 1.2rem;
+    }
+
+    .dropdown-item {
+        padding: 15px;
+        color: #FFFFFF;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s;
+    }
+
+    .dropdown-item:hover {
         background-color: #6FADE8;
-        padding: 12px;
+    }
+
+    /* Login Button */
+    .LoginButton {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: #FFFFFF;
+        text-decoration: none;
+        background-color: #85B6F0;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+
+    .LoginButton:hover {
+        background-color: #6FADE8;
+    }
+
+
+    /* General reset for profile page */
+    .profile-container {
+        padding: 15px;
+        margin: 0;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Profile Header */
+    .profile-header {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .profile-title {
+        font-size: 2.5rem;
+        margin: 0;
+        font-weight: bold;
+
+    }
+
+    .profile-description {
+        font-size: 1.2rem;
+    }
+
+    /* Profile Content */
+    .profile-content {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .profile-info, .profile-password-change {
+        padding: 20px;
+        background-color: #4F4C69;
         border-radius: 8px;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        color: white;
+    }
+
+    /* Profile Info Section */
+    .profile-info-title {
+        font-size: 1.6rem;
+        color: white;
+        margin-bottom: 10px;
+
+    }
+
+    .profile-info-label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: white;
+        margin-bottom: 5px;
+    }
+
+    .profile-info-value {
+        font-size: 1.2rem;
+        color: white;
+
+    }
+
+    /* Password Change Section */
+    .profile-password-title {
+        font-size: 1.6rem;
+        color: white;
         margin-bottom: 15px;
     }
 
-    .last-game-section h2, .next-games-section h2 {
-        font-size: 1.2em;
+    .profile-form-group {
+        margin-bottom: 20px;
+    }
+
+    .profile-form-label {
+        font-size: 1.1rem;
         font-weight: bold;
-        margin-bottom: 8px;
         color: white;
+        margin-bottom: 5px;
+    }
+
+    .profile-form-input {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+
+    .profile-form-button {
+        width: 100%;
+        padding: 12px;
+        font-size: 1.2rem;
+        background-color: #85B6F0;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+    }
+
+    .profile-form-button:hover {
         background-color: #6FADE8;
     }
 
-    .game-details, .next-games-list {
-        padding: 8px;
-        border-radius: 8px;
-    }
 
-    .game-item {
-        background-color: #85B6F0; /* Light blue */
-        padding: 8px;
-        border-radius: 5px;
-        margin-bottom: 8px;
-        color: black;
-    }
+    /* end of profile page style  */
 
-    .game-item p {
-        margin: 4px 0;
-    }
-
-    /* Form Styles */
-    .form-container {
+    .custom-form-style {
+        width: 90%; /* Ensure form is not too wide */
+        max-width: 400px; /* Max width for readability */
+        margin: 0 auto;
+        padding: 20px;
+        box-sizing: border-box;
         background-color: #4F4C69;
         color: white;
-        padding: 25px;
-        border-radius: 8px;
-        margin: 30px auto;
-        max-width: 100%; /* Full width for mobile */
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 20px;
+        border-radius: 5%;
     }
 
-    .form-container h1 {
-        text-align: center;
-        font-size: 1.5em;
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-        margin-bottom: 15px;
-    }
-
-    .form-label {
-        font-weight: bold;
+    /* Title */
+    .h3.mb-3 {
         color: white;
-        display: block;
-        margin-bottom: 6px;
+        font-size: 1.8rem;
+        text-align: center;
+        margin-bottom: 30px;
     }
 
-    .form-input, .form-select {
-        width: 100%;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: white;
+    /* Form Labels */
+    label {
+        font-size: 1rem;
         color: #333;
-        font-size: 1em;
-        margin-bottom: 6px;
+        margin-bottom: 5px;
+        display: block;
     }
 
-    .form-input:focus, .form-select:focus {
-        border-color: #6FADE8;
-        outline: none;
-        box-shadow: 0 0 5px rgba(111, 175, 232, 0.7);
-    }
-
-    .form-message {
-        color: #FF5B5B;
-        font-size: 0.9em;
-        margin-top: 5px;
-    }
-
-    /* Registration Form Button */
-    .btn {
-        background-color: #85B6F0;
-        color: black;
-        padding: 12px 25px;
-        border-radius: 5px;
-        font-size: 1.1em;
-        font-weight: bold;
-        border: none;
-        cursor: pointer;
+    /* Input Fields */
+    .form-control {
         width: 100%;
+        padding: 15px;
+        font-size: 1rem;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+
+    /* Remember Me Checkbox */
+    .checkbox label {
+        font-size: 1rem;
+        color: #333;
+    }
+
+    /* Button */
+    .btn {
+        width: 100%;
+        padding: 15px;
+        font-size: 1.2rem;
+        background-color: #85B6F0;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
         transition: background-color 0.3s ease;
     }
 
     .btn:hover {
-        background-color: #4F4C69;
-        color: white;
-    }
-
-    /* Terms and Conditions Styles */
-    .termes {
-        background-color: #4F4C69;
-        padding: 20px;
-        border-radius: 8px;
-        margin: 20px auto;
-        max-width: 100%;
-        color: white;
-    }
-
-    .termes__title {
-        font-size: 1.8em;
-        font-weight: bold;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .termes__intro {
-        font-size: 1.1em;
-        margin-bottom: 15px;
-        text-align: center;
-    }
-
-    .termes__section-title {
-        font-size: 1.3em;
-        font-weight: bold;
-        margin-bottom: 8px;
-        color: white;
         background-color: #6FADE8;
-        padding: 5px;
+    }
+
+    /* Alert (error) */
+    .alert.alert-danger {
+        font-size: 1rem;
+        color: #fff;
+        background-color: #f44336;
+        padding: 10px;
+        margin-bottom: 20px;
         border-radius: 5px;
         text-align: center;
     }
 
-    .termes__text {
-        margin: 8px 0;
-        line-height: 1.6;
+    /* Forgot Password Link */
+    a {
+        font-size: 1rem;
+        color: #85B6F0;
+        display: block;
+        margin-bottom: 15px;
+        text-align: center;
     }
 
-    .termes__list {
-        list-style: none;
-        padding-left: 0;
+
+    a:hover {
+        color: #6FADE8;
     }
 
-    .termes__list li {
-        margin: 4px 0;
-        padding: 4px 0;
-        border-radius: 5px;
+    /* Logged-in User Info */
+    .mb-3 {
+        font-size: 1rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
     }
 
-    .termes__list li:hover {
-        background-color: #85B6F0;
-    }
-    .burger-menu {
-        display: flex;
-        flex-direction: column;
-        cursor: pointer;
-        position: relative;
-        z-index: 999; /* Ensure the burger icon stays on top */
+    .mb-3 a {
+        color: #85B6F0;
     }
 
-    .burger-menu-dropdown {
-        display: none;
-        position: absolute;
-        top: 50px;
-        right: 0;
-        background-color: #4F4C69;
+    .mb-3 a:hover {
+        color: #6FADE8;
+    }
+
+    .loginFormInput {
+        font-weight: bold;
+        color: white;
+    }
+    .rememberMeLogin {
+        color: white;
+    }
+
+    /* Registration Form Container */
+    .registration-form-container {
+        width: 90%; /* Reduce the width to fit on smaller screens */
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #4F4C69;  /* Keep the background color */
+        color: white; /* White text for contrast */
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Registration Form Header */
+    .registration-form-container .registration-header {
+        font-size: 1.5rem; /* Adjust header size for mobile */
+        margin-bottom: 20px;
+        text-align: center;
+        margin-top: 20px; /* Added space above the header */
+    }
+
+    /* Form Group */
+    .registration-form-container .form-group {
+        margin-bottom: 15px; /* Add space between form groups */
+    }
+
+    /* Form Label */
+    .registration-form-container .form-label {
+        font-size: 1rem;
+        margin-bottom: 5px;
+        text-align: left;
+    }
+
+    /* Form Input Fields */
+    .registration-form-container .form-input,
+    .registration-form-container .form-select {
+        width: 100%; /* Ensure inputs take full width on mobile */
         padding: 10px;
+        font-size: 1rem;
         border-radius: 5px;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-        width: 200px;
-        z-index: 1000; /* Ensure dropdown stays on top of content */
+        margin-bottom: 10px;
+        background-color: #FFFFFF;
+        color: #000000;
+        border: 1px solid #4F4C69;
     }
 
-    .burger-menu-dropdown.show {
-        display: block; /* Show the menu when 'show' class is added */
-
-
-        .menu {
-            width: 30px;
-            height: 3px;
-            background-color: white;
-            margin: 5px 0;
-        }
-
-
+    /* Form Errors */
+    .registration-form-container .form-message {
+        font-size: 0.9rem;
+        color: #FF6347; /* Red color for errors */
+        margin-top: 5px;
     }
+
+    /* Submit Button */
+    .registration-form-container .registration-submit-btn {
+        width: 100%; /* Full-width button for mobile */
+        padding: 12px;
+        font-size: 1.2rem;
+        background-color: #85B6F0;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .registration-form-container .registration-submit-btn:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Adjust the spacing for select dropdown */
+    .registration-form-container .registration-select {
+        width: 100%; /* Full width for the select input */
+        padding: 10px;
+    }
+
+    /* Ensure the entire form is centered */
+    .registration-form-container .registration-form {
+        display: block;
+        width: 100%;
+    }
+
+    #registration_form_plainPassword_second {
+        padding-right: 10px;
+        width: 95%;
+    }
+    #registration_form_plainPassword_first, #registration_form_email {
+        width: 95%;
+    }
+    .acceptTerms {
+        color: white;
+    }
+
+    /* user index page */
+
+    /* Main Page Container */
+    .main-page-container {
+        width: 90%; /* Ensures the container is not too wide on mobile */
+        padding: 15px;
+        margin-top: 20px;
+        background-color: #4F4C69;
+        color: white;
+        border-radius: 8px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Team Header */
+    .main-page-container .team-header {
+        font-size: 1.6rem; /* Adjust header size */
+        text-align: center;
+        margin-bottom: 15px;
+        font-weight: bold;
+    }
+
+    /* Last Game Section */
+    .main-page-container .last-game-section {
+        margin-bottom: 20px;
+    }
+
+    .main-page-container .last-game-section .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #6FADE8;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .main-page-container .last-game-section .game-details {
+        font-size: 1rem;
+        margin-bottom: 10px;
+    }
+
+    .main-page-container .last-game-section .game-details p {
+        margin-bottom: 5px;
+    }
+
+    /* Rate Button Container */
+    .main-page-container .last-game-section .rate-button-container {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .main-page-container .last-game-section .btn-rate-game {
+        background-color: #85B6F0;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+    }
+
+    .main-page-container .last-game-section .btn-rate-game:hover {
+        background-color: #6FADE8;
+    }
+
+    /* Next Games Section */
+    .main-page-container .next-games-section .section-title {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        text-align: center;
+        background-color: #6FADE8;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        border-radius: 5px;
+    }
+
+    .main-page-container .next-games-section .next-games-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .main-page-container .next-games-section .next-games-list .game-item {
+        margin-bottom: 15px;
+        font-size: 1rem;
+    }
+
+    .main-page-container .next-games-section .next-games-list .game-item p {
+        margin-bottom: 5px;
+    }
+
+    /* Add some padding and adjustments to make sure everything fits on mobile */
+    .main-page-container .next-games-section p {
+        text-align: center;
+    }
+
+    .btn-rate-game {
+        width: 50%;
+    }
+
+    .rate-button-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Main content area */
+    .main-content {
+        background-color: #85B6F0; /* Background color */
+        color: #000; /* Default text color for readability */
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+
+    /* Section Styles */
+    .main-content .section {
+        margin-bottom: 30px;
+        padding: 20px;
+        background-color: #4F4C69; /* Container color */
+        color: #FFF; /* Text color */
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-content .section-title {
+        font-size: 24px;
+        margin-bottom: 15px;
+        color: #FFF; /* Ensure the title stands out */
+    }
+
+    .main-content .section-text {
+        font-size: 16px;
+        line-height: 1.5;
+        margin-bottom: 10px;
+    }
+
+    /* Features List */
+    .main-content .features-list {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .main-content .features-item {
+        font-size: 16px;
+        margin: 5px 0;
+        padding: 8px 12px;
+        background-color: #FFF; /* White background for contrast */
+        color: #000; /* Black text for readability */
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Call to Action Button */
+    .main-content .cta-button {
+        display: inline-block;
+        background-color: #FFF; /* White background */
+        color: #4F4C69; /* Button text matches container color */
+        padding: 12px 20px;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        border-radius: 5px;
+        border: 2px solid #4F4C69;
+        transition: background-color 0.3s, color 0.3s;
+    }
+
+    .main-content .cta-button:hover {
+        background-color: #4F4C69; /* Hover background matches container */
+        color: #FFF; /* Hover text color changes to white */
+    }
+
+    /* Footer */
+    .footer {
+        text-align: center;
+        background-color: #4F4C69; /* Match container color */
+        color: #FFF; /* White text */
+        padding: 10px 0;
+        margin-top: 30px;
+        font-size: 14px;
+    }
+
+    /* Input fields (if any are added in the future) */
+    .main-content input {
+        background-color: #FFF; /* White input fields */
+        color: #000; /* Black text */
+        padding: 10px;
+        border: 1px solid #4F4C69; /* Match container border */
+        border-radius: 5px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .main-content input:focus {
+        outline: none;
+        border-color: #85B6F0; /* Focus effect matches background color */
+        box-shadow: 0 0 5px #85B6F0;
+    }
+
+
+
+
 }
-
-

@@ -40,10 +40,7 @@ class Game
     #[ORM\Column]
     private ?int $apiMatchId = null;
 
-    /**
-     * @var Collection<int, PlayerRating>
-     */
-    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'game')]
+    #[ORM\OneToMany(targetEntity: PlayersRating::class, mappedBy: 'game')]
     private Collection $playerRatings;
 
     public function __construct()

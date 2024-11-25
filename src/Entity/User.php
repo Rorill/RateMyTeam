@@ -41,10 +41,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private bool $isVerified = false;
 
-    /**
-     * @var Collection<int, PlayerRating>
-     */
-    #[ORM\OneToMany(targetEntity: PlayerRating::class, mappedBy: 'User')]
+    #[ORM\OneToMany(targetEntity: PlayersRating::class, mappedBy: 'User')]
     private Collection $playerRatings;
 
     public function __construct()
