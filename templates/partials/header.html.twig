@@ -1,6 +1,8 @@
 <header class="header">
     <div class="header-content">
-        <h1 class="header-title">Bienvenue sur RateMyTeam</h1>
+        <img src="/assets/Images/RateMyTeamLogoff.jpg" alt="Logo" class="header-logo" />
+
+        <div class="header-title">Bienvenue sur RateMyTeam</div>
 
         <div class="header-actions">
             {% if is_granted('ROLE_USER') %}
@@ -11,7 +13,7 @@
                 </div>
                 <div class="burger-menu-dropdown">
                     <ul class="dropdown-list">
-                        <li><a href="logout" class="dropdown-item">Se déconnecter</a></li>
+                        <li><a href="{{ path('app_logout') }}" class="dropdown-item" onclick="logout_confirmation(event)">Se déconnecter</a></li>
                         <li><a href='{{ path('app_user_profile') }}' class="dropdown-item">Profile</a></li>
                     </ul>
                 </div>
@@ -25,5 +27,14 @@
             const dropdown = document.querySelector('.burger-menu-dropdown');
             dropdown.classList.toggle('active');
         }
+
+        function logout_confirmation(event) {
+            event.preventDefault();
+            const confirmation = confirm("Êtes-vous sûr de vouloir vous déconnecter?");
+            if (confirmation) {
+                window.location.href = event.target.href;
+            }
+        }
     </script>
 </header>
+
