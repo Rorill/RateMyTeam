@@ -19,6 +19,15 @@
         position: relative;
     }
 
+    .logo {
+        height: 50px;
+        width: 50px;
+    }
+
+
+
+;
+
     /* Header Content */
     .header-content {
         display: flex;
@@ -528,9 +537,90 @@
         justify-content: center;
     }
 
+    /* Container */
+    .user-management-container {
+        padding: 15px;
+        margin: 10px auto;
+        width: 95%; /* Réduit la largeur pour les petits écrans */
+        border-radius: 8px;
+        background-color: #4F4C69;
+    }
 
+    /* Title */
+    .user-management-title {
+        font-size: 1.5rem; /* Taille réduite pour le titre */
+        text-align: center;
+        margin-bottom: 15px;
+    }
+
+    /* Back Button */
+    .btn-back {
+        display: block;
+        margin: 0 auto 15px; /* Centré et espacé du contenu */
+        padding: 8px 15px;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* User Table */
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.9rem; /* Réduit la taille de la police */
+    }
+
+    .user-table-header {
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    .user-table-row {
+        display: flex;
+        flex-direction: column; /* Transforme les lignes en colonnes */
+        margin-bottom: 10px; /* Espace entre les entrées */
+        background-color: #6FADE8;
+        border-radius: 8px;
+        padding: 10px;
+    }
+
+    .user-table-data {
+        margin-bottom: 8px; /* Ajoute de l'espace entre les éléments */
+        padding: 5px 10px;
+        background-color: #4F4C69; /* Fond pour différencier les données */
+        color: #FFFFFF;
+        border-radius: 5px;
+    }
+
+    /* Actions Column */
+    .user-table-actions {
+        display: flex;
+        justify-content: center;
+        gap: 10px; /* Espace entre les boutons */
+    }
+
+    .user-table-actions a {
+        padding: 5px 10px;
+        font-size: 0.8rem;
+    }
+
+    /* Add User Button */
+    .btn-add-user {
+        display: block;
+        width: 90%;
+        margin: 20px auto;
+        text-align: center;
+        padding: 10px;
+        font-size: 1rem;
+    }
 
 }
+
+
+
+
+
+
+
 
 
 

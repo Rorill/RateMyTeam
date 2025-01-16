@@ -20,6 +20,10 @@
         position: relative;
     }
 
+    .logo {
+        height: 75px;
+        width: 75px;
+    }
     /* Header Content */
     .header-content {
         display: flex;
@@ -163,6 +167,7 @@
         text-decoration: none;
         border-radius: 5px;
         transition: background-color 0.3s;
+
     }
 
     .cta-button:hover {
@@ -684,6 +689,115 @@
         display: flex;
         flex-direction: column;
     }
+
+    /* User Management Page */
+
+    /* Container */
+    .user-management-container {
+        padding: 20px;
+        margin: 20px auto;
+        max-width: 90%;
+        background-color: #4F4C69;
+        border-radius: 8px;
+        color: #FFFFFF;
+    }
+
+    /* Title */
+    .user-management-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+
+    /* Back Button */
+    .btn-back {
+        display: inline-block;
+        margin-bottom: 20px;
+        padding: 10px 20px;
+        font-size: 1rem;
+        color: #FFFFFF;
+        background-color: #85B6F0;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn-back:hover {
+        background-color: #6FADE8;
+    }
+
+    /* User Table */
+    .user-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .user-table-header {
+        background-color: #85B6F0;
+        color: #FFFFFF;
+        font-weight: bold;
+    }
+
+    .user-table-row:nth-child(even) {
+        background-color: #4F4C69;
+    }
+
+    .user-table-row:nth-child(odd) {
+        background-color: #6FADE8;
+    }
+
+    .user-table-data {
+        padding: 10px;
+        text-align: left;
+        color: #FFFFFF;
+        border: 1px solid #FFFFFF;
+    }
+
+    .user-table-actions a {
+        margin-right: 10px;
+        padding: 5px 10px;
+        color: #FFFFFF;
+        text-decoration: none;
+        font-size: 0.9rem;
+        border-radius: 4px;
+    }
+
+    .user-table-actions .btn-edit {
+        background-color: #4CAF50;
+    }
+
+    .user-table-actions .btn-edit:hover {
+        background-color: #45A049;
+    }
+
+    .user-table-actions .btn-delete {
+        background-color: #FF6347;
+    }
+
+    .user-table-actions .btn-delete:hover {
+        background-color: #E55347;
+    }
+
+    /* Add User Button */
+    .btn-add-user {
+        display: block;
+        margin: 20px auto;
+        padding: 10px 20px;
+        font-size: 1.1rem;
+        color: #FFFFFF;
+        background-color: #007BFF;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+        max-width: 200px;
+    }
+
+    .btn-add-user:hover {
+        background-color: #0056B3;
+    }
+
 
 
 

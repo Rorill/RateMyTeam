@@ -1,15 +1,6 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Accueil</title>
-    <link rel="stylesheet" href="{{ asset('/styles/app.css') }}">
-</head>
-<body>
-<header class="header">
-    <h1 class="header-title">Bienvenue sur l'Application de Notation des Joueurs de Ligue 1</h1>
-</header>
+{% extends 'base.html.twig' %}
+
+{% block body %}
 <main class="main-content">
     <section class="section about">
         <h2 class="section-title">À propos de l'application</h2>
@@ -38,8 +29,7 @@
         <a href="{{ path('app_register') }}" class="cta-button">S'inscrire</a>
     </section>
 </main>
-<footer class="footer">
-    <p>&copy; {{ 'now'|date('Y') }} Guillaume Herold</p>
-</footer>
-</body>
-</html>
+    </body>
+{% endblock %}
+
+

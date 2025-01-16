@@ -1,24 +1,25 @@
 <header class="header">
     <div class="header-content">
-        <img src="/assets/Images/RateMyTeamLogoff.jpg" alt="Logo" class="header-logo" />
+
+        <a> <img class="logo" alt="logo" src= "{{ asset('/Images/logo.webp')}}"></a>
 
         <div class="header-title">Bienvenue sur RateMyTeam</div>
 
         <div class="header-actions">
             {% if is_granted('ROLE_USER') %}
-                <div id="menu-header" class="burger-menu" onclick="burger_click()">
+                <div id="menu-header" class="burger-menu" onclick="burger_click(    )">
                     <div class="menu-line"></div>
                     <div class="menu-line"></div>
                     <div class="menu-line"></div>
                 </div>
                 <div class="burger-menu-dropdown">
                     <ul class="dropdown-list">
-                        <li><a href="{{ path('app_logout') }}" class="dropdown-item" onclick="logout_confirmation(event)">Se déconnecter</a></li>
-                        <li><a href='{{ path('app_user_profile') }}' class="dropdown-item">Profile</a></li>
+                        <li><a href="{{ path('app_logout') }}" aria-label="déconnexion" class="dropdown-item" onclick="logout_confirmation(event)">Se déconnecter</a></li>
+                        <li><a href='{{ path('app_user_profile') }}' aria-label="profil" class="dropdown-item">Profile</a></li>
                     </ul>
                 </div>
             {% else %}
-                <a class="LoginButton" href="login">Se connecter</a>
+                <a class="LoginButton"  aria-label="connexion" href="login">Se connecter</a>
             {% endif %}
         </div>
     </div>
